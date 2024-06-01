@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Care Our Pets</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e0f8cc;
+            color: #333;
+        }
+
+        header {
+            background-color: #0e305b;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 30px;
+            width: auto;
+        }
+
+        .user-section a {
+            color: #ffffff;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .user-section a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding-top: 70px; /* Отступ для контента, чтобы не перекрывался хедер */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 20px;
+            margin-bottom: 80px; /* Для учета высоты футера */
+        }
+
+        .filters {
+            width: 200px;
+            margin-right: 20px;
+        }
+
+        .filters h2 {
+            color: #0e305b;
+        }
+
+        .filters label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .filters select, .filters button {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .pet-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 40px); /* Расчет ширины карточки с учетом отступов */
+            margin: 20px; /* Отступ между карточками */
+        }
+
+        .pet-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .pet-details {
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .footer {
+            background-color: #0e305b;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            bottom: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .rights-info {
+            background-color: #010a27;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .rights-info a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .rights-info a:hover {
+            text-decoration: underline;
+        }
+        .disabled-btn {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+<div class="logo">
+    <a th:href="@{/firstPage}"><img src="/img/logo.jpg" alt=""></a>
+</div>
+<div class="center-content">
+    <div class="language">
+        <select>
+            <option value="en">English</option>
+            <option value="es">Polish</option>
+        </select>
+    </div>
+</div>
+<div class="right-content">
+    <div th:if="${#authorization.expression('isAuthenticated()')}">
+        <a th:href="@{/blog}">Blog</a>
+        <a th:href="@{/pets}">Pets</a>
+        <div class="user-avatar" id="userAvatar">
+            <img src="/img/user.jpg" alt="User">
+            <div class="menu" id="userMenu" style="display: none;">
+                <span th:text="${#authentication.principal.username}"></span>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit">Logout</button>
+                </form>
+                <a th:href="@{/user/settings}">Settings</a>
+                <a th:href="@{/pet/bookings}">Bookings</a>
+            </div>
+        </div>
+    </div>
+    <div th:unless="${#authorization.expression('isAuthenticated()')}">
+        <a th:href="@{/blog}">Blog</a>
+        <a th:href="@{/pets}">Pets</a>
+        <button class="favorite-btn">Favorites</button>
+        <a th:href="@{/login}">Login</a>
+        <a th:href="@{/users/registration}">Registration</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="filters">
+        <h2>Filter Pets</h2>
+        <form id="filterForm" th:action="@{/admin/pets-info}" method="get">
+            <label for="species">Species:</label>
+            <select id="species" name="species">
+                <option value="">All</option>
+                <option th:each="specie : ${species}" th:value="${specie.id}" th:text="${specie.name}">Species</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <select id="age" name="age">
+                <option value="">All</option>
+                <script>
+                    for (var i = 0; i <= 20; i++) {
+                        document.write('<option value="' + i + '">' + i + '</option>');
+                    }
+                </script>
+            </select>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="">All</option>
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+            </select>
+
+            <label for="isAvailable">Is Available:</label>
+            <select id="isAvailable" name="isAvailable">
+                <option value="">All</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <input type="hidden" id="hiddenSpecies" name="species">
+            <input type="hidden" id="hiddenAge" name="age">
+            <input type="hidden" id="hiddenGender" name="gender">
+            <input type="hidden" id="hiddenIsAvailable" name="isAvailable">
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+    <h1>All Pets</h1>
+    <div class="pets-list">
+        <div th:if="${not #lists.isEmpty(pets)}">
+            <div th:each="pet : ${pets.content}" class="pet-card">
+                <div class="pet-details">
+                    <img th:src="${pet.imageUrl}" alt="Pet Photo" class="pet-photo">
+                    <p>Species: <span th:text="${pet.species.name}"></span></p>
+                    <p>Breed: <span th:text="${pet.breed}"></span></p>
+                    <p>Name: <span th:text="${pet.name}"></span></p>
+                    <p>Age: <span th:text="${pet.age}"></span></p>
+                    <p>Gender: <span th:text="${pet.gender}"></span></p>
+                    <p>Description: <span th:text="${pet.description}"></span></p>
+                    <p>Available: <span th:text="${pet.isAvailable}"></span></p>
+                    <p>
+                        Medical Record:
+                        <a th:href="@{/admin/medical-record-info/{id}(id=${pet.id})}">
+                            View Medical Records
+                        </a>
+                    </p>
+                    <a th:href="@{/admin/update-pet/{id}(id=${pet.id})}">Update</a>
+                </div>
+            </div>
+        </div>
+        <div th:if="${#lists.isEmpty(pets.content)}">
+            <p>No pets found.</p>
+        </div>
+        <div>
+            <div>
+                <a th:href="@{/admin/pets-info(page=${pets.previousOrFirstPageable().pageNumber})}">&lt;&lt;</a>
+            </div>
+
+            <span th:each="i : ${#numbers.sequence(0, pets.getTotalPages() - 1)}">
+                <span th:if="${i != pets.getNumber()}">
+                    <a th:href="@{/admin/pets-info(page=${i})}" th:text="${i + 1}"></a>
+                </span>
+                <span th:unless="${i != pets.getNumber()}">
+                    <span th:text="${i + 1}"></span>
+                </span>
+            </span>
+            <div>
+                <a th:href="@{/admin/pets-info(page=${pets.nextOrLastPageable().pageNumber})}">&gt;&gt;</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rights-info">
+    <p>© 2024 All rights reserved by Company</p>
+</div>
+<script th:inline="javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('filterForm');
+        form.addEventListener('submit', function() {
+            var species = document.getElementById('species').value;
+            var age = document.getElementById('age').value;
+            var gender = document.getElementById('gender').value;
+            var isAvailable = document.getElementById('isAvailable').value;
+
+            document.getElementById('hiddenSpecies').value = species;
+            document.getElementById('hiddenAge').value = age;
+            document.getElementById('hiddenGender').value = gender;
+            document.getElementById('hiddenIsAvailable').value = isAvailable;
+
+            localStorage.setItem('species', species);
+            localStorage.setItem('age', age);
+            localStorage.setItem('gender', gender);
+            localStorage.setItem('isAvailable', isAvailable);
+        });
+        
+        var species = localStorage.getItem('species');
+        var age = localStorage.getItem('age');
+        var gender = localStorage.getItem('gender');
+        var isAvailable = localStorage.getItem('isAvailable');
+        if (species !== null) document.getElementById('species').value = species;
+        if (age !== null) document.getElementById('age').value = age;
+        if (gender !== null) document.getElementById('gender').value = gender;
+        if (isAvailable !== null) document.getElementById('isAvailable').value = isAvailable;
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var avatar = document.getElementById("userAvatar");
+        var menu = document.getElementById("userMenu");
+
+        avatar.addEventListener("click", function(event) {
+            event.stopPropagation();
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+
+        document.addEventListener("click", function(event) {
+            if (event.target !== avatar && !menu.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    });
+</script>
+</body>
+</html>

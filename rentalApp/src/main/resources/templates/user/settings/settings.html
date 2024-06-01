@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Settings</title>
+    <style>
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        input[readonly] {
+            background-color: #f2f2f2;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<h1>User Settings</h1>
+<div class="tabs">
+    <button onclick="window.location.href='/user/settings'">Profile</button>
+    <button onclick="window.location.href='/user/settings/account'">Account</button>
+</div>
+<div id="profile" class="tab-content active">
+    <form id="settingsForm" th:action="@{/user/settings}" enctype="multipart/form-data" method="post">
+        <div class="error" th:if="${errors != null}">
+            <ul>
+                <li th:each="error : ${errors}" th:text="${error.defaultMessage}"></li>
+            </ul>
+        </div>
+        <input type="hidden" name="id" th:value="${user.id}">
+        <input type="hidden" name="role" th:value="${user.role}">
+        <input type="hidden" name="role" th:value="${user.password}">
+        <input type="hidden" name="emailVerified" th:value="${user.emailVerified}">
+        <input type="hidden" name="emailVerificationToken" th:value="${user.emailVerificationToken}">
+        <label>
+        <img th:if="${user.profilePicture}" th:src="@{'/user/images/' + ${user.id}}" alt="User image" class="user-avatar">
+        </label>
+        <br>
+        <label for="email">Email:
+            <input id="email" type="text" name="username" th:value="${user.username}" readonly>
+        </label>
+        <br>
+        <label for="firstname">Firstname:
+            <input id="firstname" type="text" name="firstname" th:value="${user.firstname}" required>
+        </label>
+        <br>
+        <label for="lastname">Lastname:
+            <input id="lastname" type="text" name="lastname" th:value="${user.lastname}" required>
+        </label>
+        <br>
+        <label for="birthDate">BirthDate:
+            <input id="birthDate" type="date" name="birthDate" th:value="${user.birthDate}">
+        </label>
+        <br>
+        <button type="button" onclick="submitForm()">Save Changes</button>
+        <div id="errorMessage" class="error" style="display: none;"></div>
+    </form>
+</div>
+<div id="history" class="tab-content">
+</div>
+<script>
+    function submitForm() {
+        if (validateForm()) {
+            document.getElementById("settingsForm").submit();
+        }
+    }
+
+    function validateForm() {
+        var form = document.getElementById("settingsForm");
+        var errorMessage = document.getElementById("errorMessage");
+        var requiredFields = form.querySelectorAll("[required]");
+        var isValid = true;
+        for (var i = 0; i < requiredFields.length; i++) {
+            if (!requiredFields[i].value) {
+                isValid = false;
+                break;
+            }
+        }
+        if (!isValid) {
+            errorMessage.innerText = "Please fill in all required fields.";
+            errorMessage.style.display = "block";
+        } else {
+            errorMessage.style.display = "none";
+        }
+        return isValid;
+    }
+</script>
+</body>
+</html>

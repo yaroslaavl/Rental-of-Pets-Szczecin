@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .tabs button:hover {
+            background-color: #0056b3;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        input[readonly] {
+            background-color: #f2f2f2;
+            color: #666;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        input[readonly] {
+            background-color: #f2f2f2;
+            color: #666;
+        }
+
+        .user-image {
+            width: 150px; /* Ширина изображения */
+            height: 150px; /* Высота изображения */
+            border-radius: 50%; /* Делаем изображение круглым */
+            object-fit: cover; /* Растягиваем изображение, чтобы оно полностью заполнило контейнер */
+            border: 2px solid #007bff; /* Добавляем обводку изображения */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+  <h1>User Settings</h1>
+<div class="tabs">
+    <button onclick="window.location.href='/user/settings'">Profile</button>
+    <button onclick="window.location.href='/user/settings/account'">Account</button>
+</div>
+<h1>Account</h1>
+<div id="account" class="tab-content active">
+    <form id="accountForm" th:action="@{/user/settings/account}" method="post" enctype="multipart/form-data">
+
+        <div class="error" th:if="${errors != null}">
+            <ul>
+                <li th:each="error : ${errors}" th:text="${error.defaultMessage}"></li>
+            </ul>
+        </div>
+        <input type="hidden" name="id" th:value="${user.id}">
+        <input type="hidden" name="username" th:value="${user.username}">
+        <input type="hidden" name="firstname" th:value="${user.firstname}">
+        <input type="hidden" name="lastname" th:value="${user.lastname}">
+        <input type="hidden" name="birthDate" th:value="${user.birthDate}">
+        <input type="hidden" name="address" th:value="${user.address}">
+        <input type="hidden" name="phone" th:value="${user.phone}">
+        <input type="hidden" name="pesel" th:value="${user.pesel}">
+        <input type="hidden" name="role" th:value="${user.role}">
+        <input type="hidden" name="emailVerified" th:value="${user.emailVerified}">
+        <input type="hidden" name="emailVerificationToken" th:value="${user.emailVerificationToken}">
+
+        <div th:if="${user.profilePicture}">
+            <img th:src="@{'/user/images/' + ${user.id}}" alt="User image">
+        </div>
+        <label for="profilePicture">Image:
+            <input id="profilePicture" type="file" name="profilePicture" accept="image/*" alt="">
+        </label>
+        <button type="button" onclick="submitForm()">Save Changes</button>
+        <div th:if="${user.emailVerified == false}">
+            <p>Your account is not yet activated.</p>
+            <button type="submit" formaction="/user/settings/account/resend-activation-code">Resend Activation Code</button>
+        </div>
+
+        <div id="errorMessage" class="error" style="display: none;"></div>
+        <br>
+        <p>You can delete your account here but first WRITE YOUR PASSWORD</p>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit" formaction="/user/settings/account/delete">Remove</button>
+    </form>
+</div>
+<div id="history" class="tab-content"></div>
+<script>
+    function submitForm() {
+        if (validateForm()) {
+            document.getElementById("accountForm").submit();
+        }
+    }
+
+    function validateForm() {
+        var fileInput = document.getElementById('profilePicture');
+        var errorMessage = document.getElementById("errorMessage");
+        var maxSize = 2 * 1024 * 1024;
+        errorMessage.innerText = '';
+        if (fileInput.files.length > 0) {
+            var file = fileInput.files[0];
+            if (file.size > maxSize) {
+                errorMessage.innerText = "File size exceeds the maximum allowed size of 2MB.";
+                errorMessage.style.display = "block";
+                return false;
+            }
+        }
+        return true;
+    }
+
+</script>
+</div>
+</body>
+</html>

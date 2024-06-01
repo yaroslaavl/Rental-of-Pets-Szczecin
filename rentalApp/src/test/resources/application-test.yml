@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:${embedded.postgresql.port}/company_repository
+    username: ${embedded.postgresql.user}
+    password: ${embedded.postgresql.password}
+

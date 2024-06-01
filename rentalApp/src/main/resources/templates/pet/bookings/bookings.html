@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Bookings</title>
+    <style>
+        .booking-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-card img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Your Bookings</h1>
+<div th:each="booking : ${bookings}" class="booking-card">
+    <h2 th:text="${booking.pet.name}">Pet Name</h2>
+    <p>
+        <strong>Start Date: </strong>
+        <span th:text="${booking.startDate}"></span>
+    </p>
+    <p>
+        <strong>End Date: </strong>
+        <span th:text="${booking.endDate}"></span>
+    </p>
+    <p>
+        <strong>Status: </strong>
+        <span th:text="${booking.status}"></span>
+    </p>
+    <p th:if="${booking.status == 'ReadyToDiscuss' || booking.status == T(org.yaroslaavl.webappstarter.database.entity.BookingStatus).ReadyToDiscuss}">
+        <strong>Message: </strong>
+        Everything is ready, call here: +48 123-456-789
+    </p>
+    <img th:src="${booking.pet.imageUrl}" alt="Pet Photo" class="pet-photo">
+</div>
+</body>
+</html>

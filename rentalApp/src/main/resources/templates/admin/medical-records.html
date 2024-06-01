@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Records of Pet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .records {
+            margin-top: 20px;
+        }
+
+        .record {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .record p {
+            margin: 5px 0;
+        }
+
+        .record span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Medical Records</h1>
+<div class="records">
+    <div th:each="record : ${medicalRecords}" class="record">
+        <p>Pet name: <span th:text="${record.pet.name}"></span></p>
+        <p>Diagnosis: <span th:text="${record.diagnosis}">D</span></p>
+        <p>Treatment: <span th:text="${record.treatment}"></span></p>
+        <p>Prescription: <span th:text="${record.prescription}"></span></p>
+        <p>Date of examination: <span th:text="${record.examinationDate}"></span></p>
+        <br>
+        <p>Veterinarian name: <span th:text="${record.veterinarian.firstname}"></span></p>
+        <p>Veterinarian lastname: <span th:text="${record.veterinarian.lastname}"></span></p>
+        <p>Veterinarian vet code: <span th:text="${record.veterinarian.vetCode}"></span></p>
+        <p>Veterinarian phone: <span th:text="${record.veterinarian.contactNumber}"></span></p>
+
+        <p>Сlinic: <span th:text="${record.veterinarian.clinic.name}"></span></p>
+    </div>
+</div>
+</body>
+</html>

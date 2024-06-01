@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Company Information and Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .info {
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .map-container {
+            width: 50%;
+            height: 500px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .loading {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 8px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-icon {
+            font-size: 30px;
+            margin-right: 15px;
+            color: #4caf50;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .card-text {
+            color: #555;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbsj2a1buuGA7eA8mTBuLQfM-p_0hZQ6U&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            const location = { lat: 53.45257, lng: 14.53814};
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: location
+            });
+            new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Szczecin, Poland, Fryderyka Chopina 55'
+            });
+
+            document.getElementById('loading').style.display = 'none';
+        }
+
+        window.onerror = function (message, source, lineno, colno, error) {
+            console.error('Global error handler:', message, source, lineno, colno, error);
+            document.getElementById('error').textContent = 'Global error: ' + message;
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('map').style.display = 'none';
+        };
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="info">
+        <h1>Company Information</h1>
+        <div class="card">
+            <div class="card-icon">📍</div>
+            <div class="card-content">
+                <div class="card-title">Lokalizacja</div>
+                <div class="card-text">Chopina 55, 71-450, Szczecin</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon">📞</div>
+            <div class="card-content">
+                <div class="card-title">Telefon Lub SMS</div>
+                <div class="card-text">+48 883 430 263</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon">🌐</div>
+            <div class="card-content">
+                <div class="card-title">Media Społecznościowe</div>
+                <div class="card-text">
+                    <a href="#">Telegram</a> |
+                    <a href="#">Faceit</a> |
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div id="error" class="error"></div>
+    </div>
+    <div id="map" class="map-container">
+        <div id="loading" class="loading">Loading map...</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .modal {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .modal label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .modal input[type="text"],
+        .modal input[type="date"],
+        .modal input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .modal input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .modal button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .modal button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+        .form-container {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+<div id="profile" class="tab-content active form-container">
+    <form id="bookingForm" th:action="@{'/pet/booking/' + ${petId}}" enctype="multipart/form-data" method="post" novalidate>
+        <div id="order-modal" class="modal">
+            <div class="error" th:if="${errorsBooking != null || errorsUser != null}">
+                <ul>
+                    <li th:each="error : ${errorsBooking}" th:text="${error.defaultMessage}"></li>
+                    <li th:each="error : ${errorsUser}" th:text="${error.defaultMessage}"></li>
+                </ul>
+            </div>
+            <input type="hidden" name="username" th:value="${userBooking.username}">
+            <input type="hidden" name="emailVerified" th:value="${userBooking.emailVerified}">
+            <input type="hidden" name="emailVerificationToken" th:value="${userBooking.emailVerificationToken}">
+            <input type="hidden" name="role" th:value="${userBooking.role}">
+            <input type="hidden" name="birthDate" th:value="${userBooking.birthDate}">
+            <input type="hidden" name="id" th:value="${userBooking.id}">
+            <input type="hidden" name="petId" th:value="${petId}">
+            <label for="firstname">Firstname:
+                <input id="firstname" type="text" name="firstname" th:value="${userBooking.firstname}" required>
+            </label>
+            <br>
+            <label for="lastname">Lastname:
+                <input id="lastname" type="text" name="lastname" th:value="${userBooking.lastname}" required>
+            </label>
+            <br>
+            <label for="pesel">Pesel:
+                <input id="pesel" type="text" name="pesel" th:value="${userBooking.pesel}" required>
+            </label>
+            <br>
+            <label for="address">Address:
+                <input id="address" type="text" name="address" th:value="${userBooking.address}" required>
+            </label>
+            <br>
+            <label for="startDate">Start Date:
+                <input id="startDate" type="date" name="startDate" th:value="${booking.startDate}" min="${#dates.format(#dates.createNow().plusDays(1), 'yyyy-MM-dd')}" max="9999-12-31" required>
+            </label>
+            <br>
+            <label for="duration">Duration (in days):</label>
+            <input id="duration" type="number" name="duration" min="1" max="7" required>
+            <br>
+            <label for="phone">Your phone number</label>
+            <input id="phone" type="text" name="phone" th:value="${userBooking.phone}" required>
+            <br>
+            <div>
+                <input type="checkbox" id="ageCheck" required>
+                <label for="ageCheck">I am 16 years old or older</label>
+            </div>
+            <div>
+                <input type="checkbox" id="humanityCheck" required>
+                <label for="humanityCheck">I will adhere to the principles of humanity</label>
+            </div>
+            <div>
+                <input type="checkbox" id="dataCheck" required>
+                <label for="dataCheck">The entered data is correct</label>
+            </div>
+            <button type="button" onclick="validateForm()" id="orderButton" disabled>Send for processing</button>
+
+            <div id="errorsMessage" class="error" style="display: none;"></div>
+        </div>
+    </form>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var inputs = document.querySelectorAll("#bookingForm input, #bookingForm textarea, #bookingForm select");
+        inputs.forEach(function(input) {
+            input.addEventListener("input", function() {
+                validateFields();
+            });
+        });
+
+        var checkboxes = document.querySelectorAll("#bookingForm input[type='checkbox']");
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener("change", function() {
+                validateFields();
+            });
+        });
+    });
+
+    function validateFields() {
+        var form = document.getElementById("bookingForm");
+        var inputs = form.querySelectorAll("input, textarea, select");
+        var isValid = true;
+        inputs.forEach(function(input) {
+            if (input.hasAttribute("required") && !input.value.trim()) {
+                isValid = false;
+            }
+        });
+
+        var checkboxes = form.querySelectorAll("input[type='checkbox']");
+        checkboxes.forEach(function(checkbox) {
+            if (!checkbox.checked) {
+                isValid = false;
+            }
+        });
+
+        var orderButton = document.getElementById("orderButton");
+        orderButton.disabled = !isValid;
+    }
+
+    function validateForm() {
+        var form = document.getElementById("bookingForm");
+        var errorMessage = document.getElementById("errorsMessage");
+        var requiredFields = form.querySelectorAll("[required]");
+        var isValid = true;
+        for (var i = 0; i < requiredFields.length; i++) {
+            if (!requiredFields[i].value.trim()) {
+                isValid = false;
+                break;
+            }
+        }
+        if (!isValid) {
+            errorMessage.innerText = "Please fill in all required fields.";
+            errorMessage.style.display = "block";
+        } else {
+            form.submit();
+        }
+    }
+</script>
+</body>
+</html>

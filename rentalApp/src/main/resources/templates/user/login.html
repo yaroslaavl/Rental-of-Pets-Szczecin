@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #c2d3c1;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0e305b;
+            padding: 30px;
+            color: #ffffff;
+        }
+
+        .center-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .language select {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 5px;
+        }
+
+        .right-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-content button,
+        .right-content a {
+            margin-left: 10px;
+            background-color: transparent;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .right-content button:hover,
+        .right-content a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .main-pages a {
+            display: block;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .main-pages a:hover {
+            text-decoration: underline;
+        }
+
+        .rights-info {
+            background-color: #010a27;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .rights-info a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .rights-info a:hover {
+            text-decoration: underline;
+        }
+
+        .connect-with-google {
+            text-align: center;
+            background-color: #4285f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .connect-with-google div {
+            font-size: 16px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .google-button {
+            display: inline-block;
+            background-color: #4661be;
+            color: #020202;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .google-button:hover {
+            background-color: #13cdd3;
+        }
+
+        .my-account-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .my-account-form h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0e0e0e;
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .my-account-form input[type="text"],
+        .my-account-form input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .my-account-form button {
+            background-color: #7bd0a7;
+            color: #f4f4f4;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .my-account-form button:hover {
+            background-color: #006666;
+        }
+
+        .my-account-form label {
+            display: block;
+            margin-bottom: 5px;
+            color:#000000;
+        }
+
+        .my-account-form .remember-me {
+            margin-top: 10px;
+        }
+
+        .my-account-form .login-with-google {
+            margin-top: 20px;
+        }
+
+        .my-account-form a {
+            color: #f4f2f2;
+            text-decoration: none;
+        }
+
+        .my-account-form a:hover {
+            text-decoration: underline;
+        }
+
+        .my-account-form .google-logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .required {
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a th:href="@{/firstPage}"><img src="/img/logo.jpg" alt=""></a>
+    </div>
+    <div class="center-content">
+        <div class="language">
+            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                <option value="en" title="English" th:selected="${#locale.language == 'en'}" th:text="#{lang.eng}"></option>
+                <option value="pl" title="Polish" th:selected="${#locale.language == 'pl'}" th:text="#{lang.pl}"></option>
+            </select>
+        </div>
+    </div>
+    <div class="right-content">
+        <a th:href="@{/blog}" th:text="#{menu.blog}"></a>
+        <a th:href="@{/pets}" th:text="#{menu.pets}"></a>
+        <a th:href="@{/company-info}" th:text="#{menu.contact}"></a>
+        <a th:href="@{/login}" th:text="#{menu.login}"></a>
+        <a th:href="@{/users/registration}" th:text="#{menu.registration}"></a>
+    </div>
+</header>
+<h1 th:text="#{my.account}">My Account</h1>
+<div class="my-account-form">
+    <h1 th:text="#{menu.login}">Login</h1>
+    <form th:action="@{/login}" method="post">
+        <div>
+            <label for="username"><span th:text="#{registration.email}"></span>:<span class="required">*</span></label>
+                <input id="username" type="text" name="username" required>
+        </div>
+        <div>
+            <label for="password"><span th:text="#{registration.password}"></span>:<span class="required">*</span></label>
+                <input id="password" type="password" name="password" required>
+        </div>
+        <button type="submit" th:text="#{menu.login}"></button>
+        <div style="color:red" th:if="${param.error}" th:text="#{bad.credentials}"></div>
+    </form>
+    <br>
+    <div class="login-with-google">
+        <div th:text="#{connect.with}"></div>
+        <a href="/oauth2/authorization/google" class="google-button">
+            <img src="/img/google_icon.jpg" alt="" class="google-logo">
+            Login with Google
+        </a>
+    </div>
+</div>
+<div class="rights-info">
+    <p th:text="#{all.rights.reserved}"></p>
+</div>
+<script>
+function changeLanguage(lang) {
+var select = document.getElementById("languageSelect");
+fetch(`/changeLanguage?lang=${lang}`)
+.then(response => {
+if (!response.ok) {
+throw new Error('Failed to change language');
+}
+return response.text();
+})
+.then(() => {
+location.reload(true);
+})
+.catch(error => {
+console.error('Error:', error);
+});
+}
+</script>
+</body>
+</html>

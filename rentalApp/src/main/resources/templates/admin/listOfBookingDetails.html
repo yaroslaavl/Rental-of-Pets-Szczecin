@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .column {
+            margin: 0 20px;
+        }
+        table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Booking Details</h1>
+<div class="container">
+    <div class="column">
+        <h2>Booking Information</h2>
+        <table>
+            <tr>
+                <th>Booking ID</th>
+                <td th:text="${booking.id}"></td>
+            </tr>
+            <tr>
+                <th>User Name</th>
+                <td th:text="${booking.user.id}"></td>
+            </tr>
+            <tr>
+                <th>Pet Name</th>
+                <td th:text="${booking.pet.id}"></td>
+            </tr>
+            <tr>
+                <th>Start Date</th>
+                <td th:text="${booking.startDate}"></td>
+            </tr>
+            <tr>
+                <th>End Date</th>
+                <td th:text="${booking.endDate}"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="column">
+        <input type="hidden" name="emailVerified" th:value="${booking.user.emailVerified}">
+        <input type="hidden" name="emailVerificationToken" th:value="${booking.user.emailVerificationToken}">
+        <h2>User Information</h2>
+        <table>
+            <tr>
+                <td colspan="2" class="user-avatar-cell">
+                    <img th:if="${booking.user.profilePicture}" th:src="@{'/user/images/' + ${booking.user.id}}" alt="User image" class="user-avatar">
+                    <span th:if="${booking.user.profilePicture == null}" class="no-avatar">No Image</span>
+                </td>
+            </tr>
+            <tr>
+                <th>User ID</th>
+                <td th:text="${booking.user.id}"></td>
+            </tr>
+            <tr>
+                <th>User Username</th>
+                <td th:text="${booking.user.username}"></td>
+            </tr>
+            <tr>
+                <th>User First Name</th>
+                <td th:text="${booking.user.firstname}"></td>
+            </tr>
+            <tr>
+                <th>User Last Name</th>
+                <td th:text="${booking.user.lastname}"></td>
+            </tr>
+            <tr>
+                <th>User Birth Date</th>
+                <td th:text="${booking.user.birthDate}"></td>
+            </tr>
+            <tr>
+                <th>User PESEL</th>
+                <td th:text="${booking.user.pesel}"></td>
+            </tr>
+            <tr>
+                <th>User Address</th>
+                <td th:text="${booking.user.address}"></td>
+            </tr>
+            <tr>
+                <th>User Phone</th>
+                <td th:text="${booking.user.phone}"></td>
+            </tr>
+            <tr>
+                <th>User Role</th>
+                <td th:text="${booking.user.role}"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="column">
+        <h2>Pet Information</h2>
+        <table>
+            <tr>
+                <th>Pet ID</th>
+                <td th:text="${booking.pet.id}"></td>
+            </tr>
+            <tr>
+                <th>Pet Name</th>
+                <td th:text="${booking.pet.name}"></td>
+            </tr>
+            <tr>
+                <th>Pet Species</th>
+                <td th:text="${booking.pet.species.name}"></td>
+            </tr>
+            <tr>
+                <th>Pet Breed</th>
+                <td th:text="${booking.pet.breed}"></td>
+            </tr>
+            <tr>
+                <th>Pet Age</th>
+                <td th:text="${booking.pet.age}"></td>
+            </tr>
+            <tr>
+                <th>Pet Gender</th>
+                <td th:text="${booking.pet.gender}"></td>
+            </tr>
+            <tr>
+                <th>Pet Availability</th>
+                <td th:text="${booking.pet.isAvailable}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="container">
+    <div class="column">
+        <h2>Update Booking Status</h2>
+        <form th:action="@{'/admin/listOfBookingDetails/' + ${booking.id}}" method="post">
+        <label for="status">Status:</label>
+            <select id="status" name="status">>
+                <option th:each="status : ${T(org.yaroslaavl.webappstarter.database.entity.BookingStatus).values()}"
+                        th:value="${status}" th:text="${status}" th:selected="${status == booking.status}"></option>
+            </select>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

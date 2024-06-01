@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{registration.title}">Registration</title>
+    <style>
+        body {
+            background-color: #c2d3c1;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0e305b;
+            padding: 30px;
+            color: #ffffff;
+        }
+
+        .center-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .language select {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 5px;
+        }
+
+        .right-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-content button,
+        .right-content a {
+            margin-left: 10px;
+            background-color: transparent;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .right-content button:hover,
+        .right-content a:hover {
+            text-decoration: underline;
+        }
+
+        .rights-info {
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            background-color: #0e305b;
+            color: #ffffff;
+        }
+
+        .rights-info a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .rights-info a:hover {
+            text-decoration: underline;
+        }
+
+        .registration-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .registration-form h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #008080;
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            margin-top: 0;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="password"],
+        .registration-form input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .registration-form button {
+            background-color: #008080;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .registration-form button:hover {
+            background-color: #006666;
+        }
+
+        .registration-form label {
+            display: inline-block;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        .registration-form .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+            width: 100%;
+        }
+
+        .required {
+            color: red;
+            margin-left: 5px;
+        }
+
+        #languageSelect option {
+            background-repeat: no-repeat;
+            background-position: center left;
+            padding-left: 30px;
+        }
+
+        #languageSelect option[value="en"] {
+            background-image: url('/img/usa_flag.png');
+            background-size: 20px;
+        }
+
+        #languageSelect option[value="pl"] {
+            background-image: url('/img/polska_flag.png');
+            background-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="content-container">
+    <header>
+        <div class="logo">
+            <a th:href="@{/firstPage}"><img src="/img/logo.jpg" alt=""></a>
+        </div>
+        <div class="center-content">
+            <div class="language">
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="en" title="English" th:selected="${#locale.language == 'en'}" th:text="#{lang.eng}"></option>
+                    <option value="pl" title="Polish" th:selected="${#locale.language == 'pl'}" th:text="#{lang.pl}"></option>
+                </select>
+            </div>
+        </div>
+        <div class="right-content">
+            <a th:href="@{/blog}" th:text="#{menu.blog}"></a>
+            <a th:href="@{/pets}" th:text="#{menu.pets}"></a>
+            <a th:href="@{/company-info}" th:text="#{menu.contact}"></a>
+            <a th:href="@{/login}" th:text="#{menu.login}"></a>
+            <a th:href="@{/users/registration}" th:text="#{menu.registration}"></a>
+        </div>
+    </header>
+    <h2 th:text="#{my.account}">My Account</h2>
+
+    <div class="registration-form">
+        <div id="errorMessages" class="error" style="display: none;" th:text="#{error.required}"></div>
+
+        <h2 th:text="#{registration.title}">Registration</h2>
+        <form id="registrationForm" th:action="@{/users/registration}" method="post" th:object="${user}" novalidate>
+            <div class="error" th:if="${errors != null}">
+                <ul>
+                    <li th:each="error : ${errors}" th:text="${error.defaultMessage}"></li>
+                </ul>
+            </div>
+            <div>
+                <label for="username"><span th:text="#{registration.email}"></span>:<span class="required">*</span></label>
+                <input type="text" id="username" th:field="*{username}" required>
+            </div>
+            <div>
+                <label for="password"><span th:text="#{registration.password}"></span>:<span class="required">*</span></label>
+                <input type="password" id="password" th:field="*{password}" required>
+            </div>
+            <div>
+                <label for="birthDate"><span th:text="#{registration.birthDate}"></span>:</label>
+                <input type="date" id="birthDate" th:field="*{birthDate}">
+            </div>
+            <div>
+                <label for="firstname"><span th:text="#{registration.firstName}"></span>:<span class="required">*</span></label>
+                <input type="text" id="firstname" th:field="*{firstname}" required>
+            </div>
+            <div>
+                <label for="lastname"><span th:text="#{registration.lastName}"></span>:<span class="required">*</span></label>
+                <input type="text" id="lastname" th:field="*{lastname}" required>
+            </div>
+            <input id="role" type="hidden" name="role" value="USER">
+            <button type="button" onclick="validateForm()" th:text="#{registration.registerButton}"></button>
+            <div id="errorMessage" class="error" style="display: none;"></div>
+        </form>
+    </div>
+    <div class="rights-info">
+        <p th:text="#{all.rights.reserved}"></p>
+    </div>
+</div>
+
+<script>
+    function changeLanguage(lang) {
+        var select = document.getElementById("languageSelect");
+        fetch(`/changeLanguage?lang=${lang}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to change language');
+                }
+                return response.text();
+            })
+            .then(() => {
+                location.reload(true);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    function validateForm() {
+        var form = document.getElementById("registrationForm");
+        var errorMessage = document.getElementById("errorMessage");
+        var requiredFields = form.querySelectorAll("[required]");
+        var isValid = true;
+        for (var i = 0; i < requiredFields.length; i++) {
+            if (!requiredFields[i].value) {
+                isValid = false;
+                break;
+            }
+        }
+        if (!isValid) {
+            errorMessage.innerText = "Please fill in all required fields.";
+            errorMessage.style.display = "block";
+        } else {
+            errorMessage.style.display = "none";
+            form.submit();
+        }
+    }
+</script>
+</body>
+</html>

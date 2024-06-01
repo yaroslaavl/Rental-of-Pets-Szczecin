@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .user-photo {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Update User</h1>
+    <div class="text-center">
+        <img th:if="${user.profilePicture}" th:src="@{'/user/images/' + ${user.id}}" alt="User image" class="user-avatar">
+    </div>
+    <p><strong>Email:</strong> <span th:text="${user.username}"></span></p>
+
+    <form th:action="@{'/admin/update-user/' + ${user.id}}" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" th:value="${user.id}">
+        <input type="hidden" name="username" th:value="${user.username}">
+        <input type="hidden" name="emailVerificationToken" th:value="${user.emailVerificationToken}">
+        <div class="form-group">
+            <label for="birthDate">Birth Date:</label>
+            <input type="date" id="birthDate" name="birthDate" class="form-control" th:value="${user.birthDate}">
+        </div>
+        <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" class="form-control" th:value="${user.firstname}" required>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" class="form-control" th:value="${user.lastname}" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" class="form-control" th:value="${user.address}">
+        </div>
+        <div class="form-group">
+            <label for="pesel">PESEL:</label>
+            <input type="text" id="pesel" name="pesel" class="form-control" th:value="${user.pesel}">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" class="form-control" th:value="${user.phone}">
+        </div>
+        <div class="form-group">
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" name="profilePicture" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="role">Role:</label>
+            <select id="role" name="role" class="form-control" required>
+                <option value="ADMIN" th:selected="${user.role.name() == 'ADMIN'}">Admin</option>
+                <option value="USER" th:selected="${user.role.name() == 'USER'}">User</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="emailVerified">Enabled:</label>
+            <select id="emailVerified" name="emailVerified" class="form-control" required>
+                <option value="true" th:selected="${user.emailVerified}">Verified</option>
+                <option value="false" th:selected="${!user.emailVerified}">Unverified</option>
+            </select>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

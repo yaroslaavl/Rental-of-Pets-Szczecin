@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Care Our Pets</title>
+    <style>
+        body {
+            background-color: #e0f8cc;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0e305b;
+            padding: 10px;
+            color: #ffffff;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .center-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .language select {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 5px;
+        }
+
+        .right-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-content button, .right-content a {
+            margin-left: 10px;
+            background-color: transparent;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .right-content button:hover, .right-content a:hover {
+            text-decoration: underline;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #00aaff;
+        }
+
+        .column {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0e305b;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .main-pages {
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .rights-info {
+            background-color: #010a27;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+        .rights-info a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .rights-info a:hover {
+            text-decoration: underline;
+        }
+        .user-avatar img {
+            height: 30px;
+            width: auto;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a th:href="@{/firstPage}"><img src="/img/logo.jpg" alt=""></a>
+    </div>
+    <<div class="center-content">
+    <div class="language">
+        <select id="languageSelect" onchange="changeLanguage(this.value)">
+            <option value="en" title="English" th:selected="${#locale.language == 'en'}" th:text="#{lang.eng}">English</option>
+            <option value="pl" title="Polish" th:selected="${#locale.language == 'pl'}" th:text="#{lang.pl}">Polish</option>
+        </select>
+    </div>
+</div>
+    <div class="right-content">
+        <div th:if="${#authorization.expression('isAuthenticated()')}">
+            <a th:href="@{/blog}">Blog</a>
+            <a th:href="@{/pets}">Pets</a>
+            <a th:href="@{/admin/listOfBookings}">List of Bookings</a>
+            <div class="user-avatar" id="userAvatar">
+                <img src="/img/user.jpg" alt="User">
+                <div class="menu" id="userMenu">
+                    <span th:text="${#authentication.principal.username}"></span>
+                    <form th:action="@{/logout}" method="post">
+                        <button type="submit">Logout</button>
+                    </form>
+                    <a th:href="@{/user/settings}">Settings</a>
+                    <a th:href="@{/pet/bookings}">Bookings</a>
+                    <a th:href="@{/user/notifications}">Notifications</a>
+                </div>
+            </div>
+        </div>
+        <div th:unless="${#authorization.expression('isAuthenticated()')}">
+            <a th:href="@{/blog}">Blog</a>
+            <a th:href="@{/pets}">Pets</a>
+            <a th:href="@{/company-info}">Contact</a>
+            <a th:href="@{/login}">Login</a>
+            <a th:href="@{/users/registration}">Registration</a>
+        </div>
+    </div>
+
+</header>
+
+<div class="main">
+    <h1>We Care Your Pets</h1>
+    <p>Leave your dear pets confidently, enjoying days out.</p>
+    <!--<div class="overlay">
+        <img src="/static/img/Charlie_Labrador_image.jpg" alt="Dog">
+        <button>Contact Us</button>
+    </div>-->
+</div>
+<div class="services">
+    <h2>Services for every pet</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+<div class="rights-info">
+    <p>© 2024 All rights reserved by Company</p>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var avatar = document.getElementById("userAvatar");
+        var menu = document.getElementById("userMenu");
+
+        avatar.addEventListener("click", function(event) {
+            event.stopPropagation();
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+
+        document.addEventListener("click", function(event) {
+            if (event.target !== avatar && !menu.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    });
+</script>
+</body>
+</html>
