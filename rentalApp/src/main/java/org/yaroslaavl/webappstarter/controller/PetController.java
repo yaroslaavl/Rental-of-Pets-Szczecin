@@ -1,5 +1,7 @@
 package org.yaroslaavl.webappstarter.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,11 +20,13 @@ import org.yaroslaavl.webappstarter.service.SpeciesService;
 @RequestMapping("/pets")
 @Transactional
 @RequiredArgsConstructor
+@Tag(name = "Pet Controller")
 public class PetController {
 
     private final PetService petService;
     private final SpeciesService speciesService;
 
+    @Operation(summary = "Find all pets")
     @GetMapping
     public String findAll(Model model, PetFilter petFilter, @PageableDefault(size = 6) Pageable pageable){
         Page<PetReadDto> page = petService.findAll(petFilter,pageable);

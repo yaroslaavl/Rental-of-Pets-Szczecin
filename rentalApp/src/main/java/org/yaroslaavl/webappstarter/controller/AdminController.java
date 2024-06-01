@@ -1,6 +1,8 @@
 package org.yaroslaavl.webappstarter.controller;
 
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -30,6 +32,7 @@ import java.util.Optional;
 @PreAuthorize("hasAuthority('ADMIN')")
 @Transactional(readOnly = true)
 @Slf4j
+@Tag(name = "Admin Controller")
 public class AdminController {
 
     private final BookingService bookingService;
@@ -38,6 +41,7 @@ public class AdminController {
     private final MedicalRecordRepository medicalRecordRepository;
     private final UserService userService;
 
+    @Operation(summary = "Find all bookings by app users")
     @GetMapping("/listOfBookings")
     public String findAllBookings(@RequestParam(name = "bookingStatus",required = false) BookingStatus bookingStatus, Model model){
         var allBookings = bookingService.findAllBookings(bookingStatus);
@@ -47,6 +51,7 @@ public class AdminController {
         return "admin/listOfBookings";
     }
 
+    @Operation(summary = "Booking details specific user")
     @GetMapping("/listOfBookingDetails/{id}")
     public String showBookingDetails(@PathVariable("id") Long id, Model model) {
         var booking = bookingService.findBookingById(id);
@@ -54,14 +59,16 @@ public class AdminController {
         return "admin/listOfBookingDetails";
     }
 
+    @Operation(summary = "Update user status of booking")
     @Transactional
     @PostMapping("/listOfBookingDetails/{id}")
-    public String updateBooking(@PathVariable("id") Long id, @ModelAttribute BookingCreateEditDto bookingCreateEditDto) {
+    public String updateBookingStatus(@PathVariable("id") Long id, @ModelAttribute BookingCreateEditDto bookingCreateEditDto) {
         bookingService.updateStatus(id, bookingCreateEditDto);
 
         return "redirect:/admin/listOfBookings";
     }
 
+    @Operation(summary = "Find all pets")
     @GetMapping("/pets-info")
     public String findAllPets(Model model, PetFilter petFilter, @PageableDefault(size = 6) Pageable pageable){
         log.info("Filtering pets with: {}", petFilter);
@@ -73,6 +80,7 @@ public class AdminController {
         return "admin/pets-info";
     }
 
+    @Operation(summary = "Pet details")
     @GetMapping("/update-pet/{id}")
     public String showPetDetails(@PathVariable("id") Long id, Model model) {
         var pet = petService.findPetById(id)
@@ -82,6 +90,7 @@ public class AdminController {
         return "admin/update-pet";
     }
 
+    @Operation(summary = "Update pet data")
     @Transactional
     @PostMapping("/update-pet/{id}")
     public String updatePet(@PathVariable Long id, PetCreateEditDto petCreateEditDto, Model model) {
@@ -95,6 +104,7 @@ public class AdminController {
         return "redirect:/admin/pets-info";
     }
 
+    @Operation(summary = "Pet medical records")
     @GetMapping("/medical-record-info/{petId}")
     public String medicalInfo(@PathVariable Long petId, Model model) {
         var pet = petService.findPetById(petId);
@@ -109,6 +119,7 @@ public class AdminController {
         }
     }
 
+    @Operation(summary = "Find all users of app")
     @GetMapping("/user-info")
     public String usersOfApp(Model model){
         model.addAttribute("users", userService.findAll());
@@ -116,6 +127,7 @@ public class AdminController {
         return "admin/user-info";
     }
 
+    @Operation(summary = "User data")
     @GetMapping("/update-user/{id}")
     public String showUserDetails(@PathVariable("id") Long id, Model model) {
         var user = userService.findUserById(id);
@@ -124,6 +136,7 @@ public class AdminController {
         return "admin/update-user";
     }
 
+    @Operation(summary = "Update user data")
     @Transactional
     @PostMapping("/update-user/{id}")
     public String updateUser(@PathVariable("id") Long id, @ModelAttribute UserCreateEditDto user, Model model){

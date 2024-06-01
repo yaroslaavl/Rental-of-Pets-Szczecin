@@ -1,5 +1,7 @@
 package org.yaroslaavl.webappstarter.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -18,15 +20,19 @@ import org.yaroslaavl.webappstarter.validation.CreateAction;
 @RequiredArgsConstructor
 @Slf4j
 @RequestMapping("/users")
+@Tag(name = "User Controller")
 public class UserController {
 
     private final UserService userService;
 
+    @Operation(summary = "User registration form", description = "Displays the user registration form")
     @GetMapping("/registration")
     public String registration(Model model, @ModelAttribute("user") UserCreateEditDto user) {
         model.addAttribute("user", user);
         return "user/registration";
     }
+
+    @Operation(summary = "Create user", description = "Creates a new user")
     @PostMapping("/registration")
     public String create(@ModelAttribute("user") @Validated({CreateAction.class}) UserCreateEditDto user,
                          BindingResult bindingResult,
@@ -39,6 +45,5 @@ public class UserController {
         }
         userService.create(user);
         return "redirect:/login";
-
     }
 }

@@ -4,6 +4,58 @@
     <meta charset="UTF-8">
     <title>User Settings</title>
     <style>
+        body {
+            background-color: #c2d3c1;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0e305b;
+            padding: 30px;
+            color: #ffffff;
+        }
+
+        .center-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .language select {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 5px;
+        }
+
+        .right-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-content button,
+        .right-content a {
+            margin-left: 10px;
+            background-color: transparent;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .right-content button:hover,
+        .right-content a:hover {
+            text-decoration: underline;
+        }
+
         .tab-content {
             display: none;
         }
@@ -14,9 +66,45 @@
             background-color: #f2f2f2;
             color: #666;
         }
+        .rights-info {
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            background-color: #0e305b;
+            color: #ffffff;
+        }
+
+        .rights-info a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .rights-info a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+<header>
+    <div class="logo">
+        <a th:href="@{/firstPage}"><img src="/img/logo.jpg" alt=""></a>
+    </div>
+    <div class="center-content">
+        <div class="language">
+            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                <option value="en" title="English" th:selected="${#locale.language == 'en'}" th:text="#{lang.eng}"></option>
+                <option value="pl" title="Polish" th:selected="${#locale.language == 'pl'}" th:text="#{lang.pl}"></option>
+            </select>
+        </div>
+    </div>
+    <div class="right-content">
+        <a th:href="@{/blog}" th:text="#{menu.blog}"></a>
+        <a th:href="@{/pets}" th:text="#{menu.pets}"></a>
+        <a th:href="@{/company-info}" th:text="#{menu.contact}"></a>
+        <a th:href="@{/login}" th:text="#{menu.login}"></a>
+        <a th:href="@{/users/registration}" th:text="#{menu.registration}"></a>
+    </div>
+</header>
 <h1>User Settings</h1>
 <div class="tabs">
     <button onclick="window.location.href='/user/settings'">Profile</button>
@@ -58,8 +146,9 @@
         <div id="errorMessage" class="error" style="display: none;"></div>
     </form>
 </div>
-<div id="history" class="tab-content">
-</div>
+    <div class="rights-info">
+        <p th:text="#{all.rights.reserved}"></p>
+    </div>
 <script>
     function submitForm() {
         if (validateForm()) {

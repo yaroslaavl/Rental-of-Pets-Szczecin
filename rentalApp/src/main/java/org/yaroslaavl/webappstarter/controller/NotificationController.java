@@ -1,5 +1,7 @@
 package org.yaroslaavl.webappstarter.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,11 +19,13 @@ import java.util.Optional;
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/user")
+@Tag(name = "Notification Controller")
 public class NotificationController {
 
     private final NotificationService notificationService;
     private final UserService userService;
 
+    @Operation(summary = "Find all user notification")
     @GetMapping("/notifications")
     public String getNotificationsForCurrentUser(Model model, Principal principal) {
         String username = principal.getName();

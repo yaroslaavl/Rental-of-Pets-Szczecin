@@ -5,184 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="01.06 close to finish the main logic">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/company_storage.uVhVLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/company_storage.uVhVLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/labs.hpAyAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/labs.hpAyAA.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/library.uyToCQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/public.abK9xQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/spring.DQKdyg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/webapp.Tf7N0A.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/zi.Lw8AAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminServer/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminServer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminServer/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminServer/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminServer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminServer/src/main/java/org/yaroslaavl/adminserver/AdminServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminServer/src/main/java/org/yaroslaavl/adminserver/config/SecurityConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/adminServer/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/images/polska_flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/images/praca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/images/usa_flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/images/user.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/spring.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/WebAppStarterApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/config/PasswordEncoderConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/ActivationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/BookingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/ContactController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/FirstPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/LocaleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/NotificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/PetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/BookingStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/Clinic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/MedicalRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/Notification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/Species.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/Veterinarian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/querydsl/QPredicate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/repository/BookingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/repository/MedicalRecordRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/repository/NotificationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/repository/PetRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/repository/SpeciesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/BookingCreateEditDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/BookingReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/ClinicReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/MedicalRecordReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/NotificationCreateEditDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/NotificationReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/PetCreateEditDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/PetFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/PetReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/SpeciesReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/UserCreateEditDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/UserReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/VeterinarianReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/BookingCreateEditMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/BookingReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/ClinicReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/MedicalRecordReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/NotificationCreateEditMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/NotificationReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/PetCreateEditMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/PetReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/SpeciesReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/UserCreateEditMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/UserReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/mapper/VeterinarianReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/BookingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/ImageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/MailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/PetService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/SpeciesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/AgeLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/AgeLimitValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/ContactNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/ContactNumberValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/CreateAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/EditAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/EditForOrderAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/ImageAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/ImageFileValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/ImageValid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/StartDateLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/validation/StartDateLimitValidator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/db-structure.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/db.changelog/db.changelog-1.0.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/db.changelog/db.changelog-master.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/messages_pl.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/Budgerigar_Talker.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/Canary_Samolion.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/Charlie_Labrador_image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/Mako_Pekingese.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/Persian_Croopka.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/Siberian_Ivanko.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/Syrian_Zeus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/Tiny_Spitz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/Whiskers_British_Shorthair_image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/chineseHamster_Elsa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/css/firstpage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/google_icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/hollandLop_Fluffy.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/polska_flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/usa_flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/user.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/activation/activation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookingDetails.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/medical-records.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/pets-info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/update-pet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/update-user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/user-info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/greetings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/notifications/notifications.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/booking.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/bookings/bookings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/pets.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/map/mapAndCompanyInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/account.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/IT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/TestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/UserControllerIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/UserRepositoryIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/mapper/UserCreateEditMapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/repository/UserRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/test/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rentalApp/src/test/resources/spring.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/FirstPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/FirstPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/PetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/greetings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/greetings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/settings.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="OpenAPI" />
       </list>
     </option>
   </component>
@@ -235,40 +74,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.UserRepositoryTest.find_user_by_username.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AdminServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WebAppStarterApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/all/Java all/projectMaven/log/web-app-starter&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.UserRepositoryTest.find_user_by_username.executor": "Run",
+    "Maven.rental-of-pets [dependency:tree].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AdminServerApplication.executor": "Run",
+    "Spring Boot.WebAppStarterApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/all/Java all/projectMaven/log/web-app-starter",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryTest.find_user_by_username">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn dependency:tree" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebAppStarterApplication">
     <configuration name="UserRepositoryTest.find_user_by_username" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rentalApp" />
       <extension name="coverage">
@@ -330,7 +175,9 @@
       <workItem from="1717229111701" duration="4347000" />
       <workItem from="1717240638953" duration="1252000" />
       <workItem from="1717254986282" duration="3758000" />
-      <workItem from="1717258788096" duration="660000" />
+      <workItem from="1717258788096" duration="1249000" />
+      <workItem from="1717266096021" duration="1876000" />
+      <workItem from="1717279147827" duration="5669000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -340,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717258701323</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="01.06 close to finish the main logic">
+      <option name="closed" value="true" />
+      <created>1717259491707</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717259491707</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

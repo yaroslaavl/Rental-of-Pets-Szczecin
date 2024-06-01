@@ -1,5 +1,7 @@
 package org.yaroslaavl.webappstarter.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ByteArrayResource;
@@ -29,11 +31,13 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Slf4j
 @RequestMapping("/user")
+@Tag(name = "Settings Controller")
 public class SettingsController {
 
     PasswordEncoder passwordEncoder;
     private final UserService userService;
 
+    @Operation(summary = "User settings form")
     @GetMapping("/settings")
     public String settingsProfile(Model model, @AuthenticationPrincipal UserDetails userDetails) {
         var username = userDetails.getUsername();
@@ -47,6 +51,7 @@ public class SettingsController {
         }
     }
 
+    @Operation(summary = "Update user")
     @PostMapping("/settings")
     public String update(@ModelAttribute @Validated({EditAction.class}) UserCreateEditDto user,
                          BindingResult bindingResult,

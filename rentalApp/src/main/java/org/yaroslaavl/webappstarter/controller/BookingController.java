@@ -1,5 +1,7 @@
 package org.yaroslaavl.webappstarter.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -35,6 +37,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @RequestMapping("/pet")
 @Slf4j
+@Tag(name = "Booking Controller")
 public class BookingController {
 
     private final BookingService bookingService;
@@ -42,6 +45,7 @@ public class BookingController {
     private final PetService petService;
     private final NotificationRepository notificationRepository;
 
+    @Operation(summary = "Booking form")
     @GetMapping("/booking/{petId}")
     public String showBookingForm(Model model, @AuthenticationPrincipal UserDetails userDetails, @PathVariable Long petId, BookingCreateEditDto bookingCreateEditDto) {
         var username = userDetails.getUsername();
@@ -61,6 +65,7 @@ public class BookingController {
         return "error/404";
     }
 
+    @Operation(summary = "Order pet")
     @PostMapping("/booking/{petId}")
     public String makeOrder(@Validated({EditForOrderAction.class}) @ModelAttribute BookingCreateEditDto booking,
                             BindingResult bookingResult,
@@ -119,6 +124,7 @@ public class BookingController {
         return "redirect:/pet/bookings";
     }
 
+    @Operation(summary = "Bookings by user")
     @GetMapping("/bookings")
     public String getBookings(Model model, @AuthenticationPrincipal UserDetails userDetails) {
         var username = userDetails.getUsername();
