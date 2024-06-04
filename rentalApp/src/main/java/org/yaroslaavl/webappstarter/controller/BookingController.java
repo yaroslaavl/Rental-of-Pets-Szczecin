@@ -98,7 +98,8 @@ public class BookingController {
         bookingOrders.setEndDate(endDate);
         bookingOrders.setStatus(BookingStatus.AwaitingApproval);
 
-        String message = "Your order status: " + bookingOrders.getStatus() + "\n" + "Wait for the new information";
+        String message = "Your order status: " + bookingOrders.getStatus();
+
 
         ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("Europe/Warsaw"));
         String formattedTime = zonedDateTime.format(

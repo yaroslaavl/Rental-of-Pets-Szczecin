@@ -70,7 +70,7 @@ public class AdminController {
 
     @Operation(summary = "Find all pets")
     @GetMapping("/pets-info")
-    public String findAllPets(Model model, PetFilter petFilter, @PageableDefault(size = 6) Pageable pageable){
+    public String findAllPets(Model model, PetFilter petFilter, @PageableDefault(size = 4) Pageable pageable){
         log.info("Filtering pets with: {}", petFilter);
         var page = petService.findAll(petFilter,pageable);
         model.addAttribute("pets",page);

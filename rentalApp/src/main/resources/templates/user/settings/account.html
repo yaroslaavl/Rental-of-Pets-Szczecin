@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Account</title>
+    <link rel="stylesheet" href="/img/css/HeadFoot.css">
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #2e323e;
+            color: rgb(112,128,144);
+            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
         }
-
-        .container {
-            width: 400px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .center-content {
+            display: flex;
+            align-items: center;
+            width: 40%;
+            justify-content: center;
+            color: #dddddd;
+            font-size: 16px;
         }
 
         .tabs {
@@ -67,7 +68,7 @@
             margin-bottom: 10px;
         }
 
-        button[type="submit"] {
+       /* button[type="submit"] {
             margin-top: 10px;
             padding: 10px 20px;
             border: none;
@@ -79,7 +80,7 @@
 
         button[type="submit"]:hover {
             background-color: #0056b3;
-        }
+        }*/
         .tab-content {
             display: none;
         }
@@ -91,16 +92,80 @@
             color: #666;
         }
 
-        .user-image {
-            width: 150px; /* Ширина изображения */
-            height: 150px; /* Высота изображения */
-            border-radius: 50%; /* Делаем изображение круглым */
-            object-fit: cover; /* Растягиваем изображение, чтобы оно полностью заполнило контейнер */
-            border: 2px solid #007bff; /* Добавляем обводку изображения */
-        }
     </style>
 </head>
 <body>
+<header>
+    <div class="logo">
+        <a th:href="@{/firstPage}"><img src="/img/dog_logo.svg" alt="logo"></a>
+    </div>
+    <div class="center-content">
+
+        <div class="center_nav">
+            <ul>
+                <li><a th:href="@{/blog}">Blog</a></li>
+                <li><a th:href="@{/company-info}" th:text="#{menu.contact}"></a></li>
+                <li>
+                    <a th:href="@{/admin/listOfBookings}">List of Bookings</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-content">
+        <div th:if="${#authorization.expression('isAuthenticated()')}">
+            <ul class="list">
+                <li><a th:href="@{/pets}">Pets</a></li>
+                <li>
+                    <div class="user-avatar" id="userAvatar">
+                        <img src="/img/user_icon.png" alt="User">
+                        <div class="menu" id="userMenu">
+                            <ul>
+                                <li>
+                                    <span class="username" th:text="${#authentication.principal.username}"></span>
+                                </li>
+                                <div class="crossed-line"></div>
+                                <li>
+                                    <a th:href="@{/user/notifications}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="15" height="15">
+                                            <path fill="#dddddd" d="M8 16a2 2 0 0 0 1.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 0 0 8 16ZM3 5a5 5 0 0 1 10 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.519 1.519 0 0 1 13.482 13H2.518a1.516 1.516 0 0 1-1.263-2.36l1.703-2.554A.255.255 0 0 0 3 7.947Zm5-3.5A3.5 3.5 0 0 0 4.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.017.017 0 0 0-.003.01l.001.006c0 .002.002.004.004.006l.006.004.007.001h10.964l.007-.001.006-.004.004-.006.001-.007a.017.017 0 0 0-.003-.01l-1.703-2.554a1.745 1.745 0 0 1-.294-.97V5A3.5 3.5 0 0 0 8 1.5Z"/>
+                                        </svg>
+                                        Notifications
+                                    </a>
+                                </li>
+                                <li><a th:href="@{/pet/bookings}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                                        <path fill="#dddddd" d="M23 5v13.883l-1 .117v-16c-3.895.119-7.505.762-10.002 2.316-2.496-1.554-6.102-2.197-9.998-2.316v16l-1-.117v-13.883h-1v15h9.057c1.479 0 1.641 1 2.941 1 1.304 0 1.461-1 2.942-1h9.06v-15h-1zm-12 13.645c-1.946-.772-4.137-1.269-7-1.484v-12.051c2.352.197 4.996.675 7 1.922v11.613zm9-1484c-2.863.215-5.054.712-7 1.484v-11.613c2.004-1.247 4.648-1.725 7-1.922v12.051z"/></svg>
+                                    Bookings
+                                </a>
+                                </li>
+                                <li><a th:href="@{/user/settings}">
+                                    <svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15">
+                                        <path fill="#dddddd" d="M5.433 2.304A4.492 4.492 0 0 0 3.5 6c0 1.598.832 3.002 2.09 3.802.518.328.929.923.902 1.64v.008l-.164 3.337a.75.75 0 1 1-1.498-.073l.163-3.33c.002-.085-.05-.216-.207-.316A5.996 5.996 0 0 1 2 6a5.993 5.993 0 0 1 2.567-4.92 1.482 1.482 0 0 1 1.673-.04c.462.296.76.827.76 1.423v2.82c0 .082.041.16.11.206l.75.51a.25.25 0 0 0 .28 0l.75-.51A.249.249 0 0 0 9 5.282V2.463c0-.596.298-1.127.76-1.423a1.482 1.482 0 0 1 1.673.04A5.993 5.993 0 0 1 14 6a5.996 5.996 0 0 1-2.786 5.068c-.157.1-.209.23-.207.315l.163 3.33a.752.752 0 0 1-1.094.714.75.75 0 0 1-.404-.64l-.164-3.345c-.027-.717.384-1.312.902-1.64A4.495 4.495 0 0 0 12.5 6a4.492 4.492 0 0 0-1.933-3.696c-.024.017-.067.067-.067.16v2.818a1.75 1.75 0 0 1-.767 1.448l-.75.51a1.75 1.75 0 0 1-1.966 0l-.75-.51A1.75 1.75 0 0 1 5.5 5.282V2.463c0-.092-.043-.142-.067-.159Z">
+                                        </path>
+                                    </svg>
+                                    Settings</a></li>
+                                <div class="crossed-line"></div>
+                                <li>
+                                    <form th:action="@{/logout}" method="post">
+                                        <svg viewBox="0 0 16 16" class="svg octicon-sign-out" aria-hidden="true" width="15" height="15" style="margin-left: 12px; margin-top: 5px;">
+                                            <path fill="#dddddd" d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 0 1 0 1.5h-2.5a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 0 1.5h-2.5A1.75 1.75 0 0 1 2 13.25Zm10.44 4.5-1.97-1.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.97-1.97H6.75a.75.75 0 0 1 0-1.5Z"></path>
+                                        </svg>
+                                        <button type="submit">Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div th:unless="${#authorization.expression('isAuthenticated()')}">
+            <a th:href="@{/pets}">Pets</a>
+            <a th:href="@{/login}">Login</a>
+            <a th:href="@{/users/registration}">Registration</a>
+        </div>
+    </div>
+</header>
 <div class="container">
   <h1>User Settings</h1>
 <div class="tabs">
@@ -148,7 +213,32 @@
         <button type="submit" formaction="/user/settings/account/delete">Remove</button>
     </form>
 </div>
-<div id="history" class="tab-content"></div>
+    <footer>
+        <div class="rights-info">
+            <div class="left">
+                <span style="margin-right: 10px;"><a href="https://www.jetbrains.com">Supported by JetBrains</a></span>
+                <span style="color: #dddddd;">Version 1.0</span>
+            </div>
+            <div class="right">
+                <div class="language" >
+                    <select id="languageSelect" onchange="changeLanguage(this.value)">
+                        <svg viewBox="0 0 16 16" class="svg octicon-globe" aria-hidden="true" width="14" height="14">
+                            <path fill="#dddddd" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z">
+                            </path>
+                        </svg>
+                        <option value="en" title="English" th:selected="${#locale.language == 'en'}" th:text="#{lang.eng}">
+                        <option value="pl" title="Polish" th:selected="${#locale.language == 'pl'}" th:text="#{lang.pl}">
+                    </select>
+                </div>
+                <div>
+                    <span style="color: #dddddd; margin: 0 5px;">|</span>
+                    <a th:href="@{/privacy-company}">License</a>
+                    <span style="color: #dddddd; margin: 0 5px;">|</span>
+                    <a th:href="@{/swagger-ui/index.html}">API</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 <script>
     function submitForm() {
         if (validateForm()) {
@@ -171,7 +261,33 @@
         }
         return true;
     }
+    document.addEventListener('DOMContentLoaded', function() {
+        var avatar = document.getElementById("userAvatar");
+        var menu = document.getElementById("userMenu");
 
+        var isPageLoaded = false;
+        window.addEventListener('load', function() {
+            isPageLoaded = true;
+        });
+        avatar.addEventListener("click", function(event) {
+            event.stopPropagation();
+            if (isPageLoaded) {
+                menu.style.display = menu.style.display === "block" ? "none" : "block";
+            }
+        });
+
+        document.addEventListener("click", function(event) {
+            if (event.target !== avatar && !menu.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+        var isMenuOpen = localStorage.getItem('isMenuOpen');
+        if (isMenuOpen !== null && isMenuOpen === 'true') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    });
 </script>
 </div>
 </body>

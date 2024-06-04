@@ -28,7 +28,7 @@ public class PetController {
 
     @Operation(summary = "Find all pets")
     @GetMapping
-    public String findAll(Model model, PetFilter petFilter, @PageableDefault(size = 6) Pageable pageable){
+    public String findAll(Model model, PetFilter petFilter, @PageableDefault(size = 4) Pageable pageable){
         Page<PetReadDto> page = petService.findAll(petFilter,pageable);
         model.addAttribute("pets",page);
         model.addAttribute("filter",petFilter);

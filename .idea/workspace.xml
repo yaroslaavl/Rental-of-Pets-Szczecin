@@ -4,22 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="01.06 close to finish the main logic">
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="02.06 added swagger">
       <change afterPath="$PROJECT_DIR$/adminServer/src/main/resources/application.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/booking.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/globe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/google_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/notification-alert.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/user_icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/FirstPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/FirstPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/NotificationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/PetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/repository/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/repository/NotificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/css/firstpage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/google_icon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/user.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/pets-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/pets-info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/greetings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/greetings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/notifications/notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/notifications/notifications.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/bookings/bookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/bookings/bookings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/pets.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/pets.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/map/mapAndCompanyInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/map/mapAndCompanyInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/settings.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +42,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="OpenAPI" />
+        <option value="Class" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -74,37 +88,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.UserRepositoryTest.find_user_by_username.executor": "Run",
-    "Maven.rental-of-pets [dependency:tree].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AdminServerApplication.executor": "Run",
-    "Spring Boot.WebAppStarterApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/all/Java all/projectMaven/log/web-app-starter",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.UserRepositoryTest.find_user_by_username.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [dependency:tree].executor&quot;: &quot;Run&quot;,
+    &quot;OpenAPI/Swagger Code Generator.app.json.yml.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AdminServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WebAppStarterApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/all/Java all/projectMaven/web-app-starter/web-app-starter/rentalApp/src/main/resources/static/img&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\static\img" />
+      <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\java\org\yaroslaavl\webappstarter\config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\templates\pet" />
+      <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\templates\user" />
+      <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\static\img" />
       <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources" />
     </key>
   </component>
@@ -177,7 +204,18 @@
       <workItem from="1717254986282" duration="3758000" />
       <workItem from="1717258788096" duration="1249000" />
       <workItem from="1717266096021" duration="1876000" />
-      <workItem from="1717279147827" duration="5669000" />
+      <workItem from="1717279147827" duration="6520000" />
+      <workItem from="1717320758418" duration="2959000" />
+      <workItem from="1717328789651" duration="101000" />
+      <workItem from="1717346311431" duration="2302000" />
+      <workItem from="1717358968533" duration="4860000" />
+      <workItem from="1717363843330" duration="124000" />
+      <workItem from="1717405853989" duration="1361000" />
+      <workItem from="1717409598158" duration="6306000" />
+      <workItem from="1717417172425" duration="10000" />
+      <workItem from="1717417983079" duration="7000" />
+      <workItem from="1717432305076" duration="12921000" />
+      <workItem from="1717455186405" duration="5693000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -195,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717259491707</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="02.06 added swagger">
+      <option name="closed" value="true" />
+      <created>1717285994794</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717285994795</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +260,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="01.06 close to finish the main logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="01.06 close to finish the main logic" />
+    <MESSAGE value="02.06 added swagger" />
+    <option name="LAST_COMMIT_MESSAGE" value="02.06 added swagger" />
   </component>
 </project>
