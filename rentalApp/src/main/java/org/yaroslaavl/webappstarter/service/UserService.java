@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
+import org.yaroslaavl.webappstarter.database.entity.Notification;
 import org.yaroslaavl.webappstarter.database.entity.Role;
 import org.yaroslaavl.webappstarter.database.entity.User;
 import org.yaroslaavl.webappstarter.database.repository.UserRepository;
@@ -59,7 +60,6 @@ public class UserService implements UserDetailsService {
             );
             mailService.send(userDto.getUsername(), "Activation code", message);
         }
-
         return userReadDto;
     }
     @Transactional
