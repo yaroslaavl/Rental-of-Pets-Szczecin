@@ -21,7 +21,35 @@
             color: #dddddd;
             font-size: 16px;
         }
-
+        .main {
+            background-image: url('/img/first_page_dog.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 0;
+            color: #ffffff;
+        }
+        .main h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .main p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+        .buttons a {
+            background-color: #ffffff;
+            color: #2e323e;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -36,7 +64,7 @@
                 <li><a th:href="@{/blog}">Blog</a></li>
                 <li><a th:href="@{/company-info}" th:text="#{menu.contact}"></a></li>
                 <li>
-                    <a th:href="@{/admin/listOfBookings}">List of Bookings</a>
+                    <a th:href="@{/admin/admin-panel}">Admin Panel</a>
                 </li>
             </ul>
         </div>
@@ -98,17 +126,10 @@
     </div>
 </header>
 <div class="main">
-    <h1>We Care Your Pets</h1>
+    <h1>We Care Our Pets</h1>
     <p>Leave your dear pets confidently, enjoying days out.</p>
-    <!--<div class="overlay">
-        <img src="/static/img/Charlie_Labrador_image.jpg" alt="Dog">
-        <button>Contact Us</button>
-    </div>-->
 </div>
-<div class="services">
-    <h2>Services for every pet</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-</div>
+
 <footer>
     <div class="rights-info">
         <div class="left">

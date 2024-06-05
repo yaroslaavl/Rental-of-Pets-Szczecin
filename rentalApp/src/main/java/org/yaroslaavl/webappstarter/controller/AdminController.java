@@ -41,6 +41,12 @@ public class AdminController {
     private final MedicalRecordRepository medicalRecordRepository;
     private final UserService userService;
 
+    @Operation(summary = "Admin panel")
+    @GetMapping("/admin-panel")
+    public String adminPanel(Model model){
+        return "admin/adminPanel";
+    }
+
     @Operation(summary = "Find all bookings by app users")
     @GetMapping("/listOfBookings")
     public String findAllBookings(@RequestParam(name = "bookingStatus",required = false) BookingStatus bookingStatus, Model model){

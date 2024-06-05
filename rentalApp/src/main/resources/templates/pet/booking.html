@@ -92,7 +92,7 @@
                 <li><a th:href="@{/blog}">Blog</a></li>
                 <li><a th:href="@{/company-info}" th:text="#{menu.contact}"></a></li>
                 <li>
-                    <a th:href="@{/admin/listOfBookings}">List of Bookings</a>
+                    <a th:href="@{/admin/admin-panel}">Admin Panel</a>
                 </li>
             </ul>
         </div>
@@ -207,6 +207,15 @@
                 <input type="checkbox" id="dataCheck" required>
                 <label for="dataCheck">The entered data is correct</label>
             </div>
+            <h4 class="verific">Verification</h4>
+            <div class="verific">
+                <div th:if="${userBooking.emailVerified}">
+                    <p>Enabled: <span style="color: green;">&#10004;</span></p>
+                </div>
+                <div th:unless="${userBooking.emailVerified}">
+                    <p>Disabled: Activate your account here: <a th:href="@{/user/settings/account}">Settings</a></p>
+                </div>
+            </div>
             <button type="button" onclick="validateForm()" id="orderButton" disabled>Send for processing</button>
 
             <div id="errorsMessage" class="error" style="display: none;"></div>
@@ -273,9 +282,31 @@
             }
         });
 
+        // Проверка активации аккаунта
+        var isAccountActivated = document.querySelector("#bookingForm [name='emailVerified']").value === "true";
+        if (!isAccountActivated) {
+            isValid = false;
+        }
+
         var orderButton = document.getElementById("orderButton");
         orderButton.disabled = !isValid;
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var inputs = document.querySelectorAll("#bookingForm input, #bookingForm textarea, #bookingForm select");
+        inputs.forEach(function(input) {
+            input.addEventListener("input", function() {
+                validateFields();
+            });
+        });
+
+        var checkboxes = document.querySelectorAll("#bookingForm input[type='checkbox']");
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener("change", function() {
+                validateFields();
+            });
+        });
+    });
 
     function validateForm() {
         var form = document.getElementById("bookingForm");
@@ -322,6 +353,22 @@
             menu.style.display = 'none';
         }
     });
+    function changeLanguage(lang) {
+        var select = document.getElementById("languageSelect");
+        fetch(`/changeLanguage?lang=${lang}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to change language');
+                }
+                return response.text();
+            })
+            .then(() => {
+                location.reload(true);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
 </script>
 </body>
 </html>

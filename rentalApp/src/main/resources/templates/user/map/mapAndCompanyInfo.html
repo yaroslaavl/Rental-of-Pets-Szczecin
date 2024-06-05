@@ -141,7 +141,7 @@
                 <li><a th:href="@{/blog}">Blog</a></li>
                 <li><a th:href="@{/company-info}" th:text="#{menu.contact}"></a></li>
                 <li>
-                    <a th:href="@{/admin/listOfBookings}">List of Bookings</a>
+                    <a th:href="@{/admin/admin-panel}">Admin Panel</a>
                 </li>
             </ul>
         </div>
@@ -275,7 +275,22 @@
             }
         });
     });
-
+    function changeLanguage(lang) {
+        var select = document.getElementById("languageSelect");
+        fetch(`/changeLanguage?lang=${lang}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to change language');
+                }
+                return response.text();
+            })
+            .then(() => {
+                location.reload(true);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
 </script>
 </body>
 </html>

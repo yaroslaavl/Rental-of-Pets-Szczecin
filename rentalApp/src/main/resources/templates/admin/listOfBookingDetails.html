@@ -25,6 +25,25 @@
         th {
             background-color: #f2f2f2;
         }
+        .user-image {
+            display: inline-block;
+            position: relative;
+            width: 160px;
+            height: 130px;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 2px solid #87ab63;
+            box-shadow: 0px 0px 10px 2px rgba(135, 171, 99, 0.5);
+            margin-left: 15px;
+            margin-top: 7px;
+        }
+
+        .user-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -61,7 +80,7 @@
         <h2>User Information</h2>
         <table>
             <tr>
-                <td colspan="2" class="user-avatar-cell">
+                <td colspan="2" class="user-image">
                     <img th:if="${booking.user.profilePicture}" th:src="@{'/user/images/' + ${booking.user.id}}" alt="User image" class="user-avatar">
                     <span th:if="${booking.user.profilePicture == null}" class="no-avatar">No Image</span>
                 </td>

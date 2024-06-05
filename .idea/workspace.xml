@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="05.06 Frontend before Internationalization">
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="05.06 15:35 Frontend">
       <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/ActivationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/ActivationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookingDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookingDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/pets-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/pets-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/user-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/user-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/greetings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/greetings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/notifications/notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/notifications/notifications.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/booking.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/bookings/bookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/bookings/bookings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/pets.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/pets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/map/mapAndCompanyInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/map/mapAndCompanyInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/settings.html" afterDir="false" />
     </list>
@@ -24,8 +35,8 @@
       <list>
         <option value="OpenAPI" />
         <option value="Class" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -109,11 +120,11 @@
       <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\java\org\yaroslaavl\webappstarter\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\templates\user\map" />
+      <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\static\img" />
       <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\templates" />
       <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\templates\pet" />
       <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\templates\user" />
-      <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\static\img" />
-      <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -202,7 +213,8 @@
       <workItem from="1717512446444" duration="427000" />
       <workItem from="1717517302925" duration="10964000" />
       <workItem from="1717534957969" duration="6940000" />
-      <workItem from="1717587836915" duration="6596000" />
+      <workItem from="1717587836915" duration="6722000" />
+      <workItem from="1717616248432" duration="12218000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -252,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717541982779</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="05.06 15:35 Frontend">
+      <option name="closed" value="true" />
+      <created>1717594548163</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717594548163</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +294,7 @@
     <MESSAGE value="02.06 added swagger" />
     <MESSAGE value="04.06 Frontend before Internationalization" />
     <MESSAGE value="05.06 Frontend before Internationalization" />
-    <option name="LAST_COMMIT_MESSAGE" value="05.06 Frontend before Internationalization" />
+    <MESSAGE value="05.06 15:35 Frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="05.06 15:35 Frontend" />
   </component>
 </project>

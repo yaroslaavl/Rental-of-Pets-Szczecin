@@ -40,7 +40,6 @@
             color:#dddddd;
 
         }
-
         .user_set ul {
             border-bottom: 1px solid #727272;
         }
@@ -108,6 +107,21 @@
         .update-button:hover {
             background-color: red;
         }
+        .update-button2 {
+            width: 12%;
+            background-color: #87ab63;
+            color: white;
+            padding: 5px 5px 5px 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            margin-left: 15px;
+        }
+        .update-button2:hover {
+            background-color: #87ab63;
+        }
         .error {
             color: red;
             margin: 10px 0;
@@ -167,6 +181,7 @@
         }
         .required.field{
             color: #dddddd;
+            margin-left: 15px;
         }
         .main_settings {
             display: flex;
@@ -183,6 +198,46 @@
         .resend:hover{
             color: #87ab63;
         }
+        .user-image {
+            display: inline-block;
+            position: relative;
+            width: 170px;
+            height: 128px;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 2px solid #87ab63;
+            box-shadow: 0px 0px 10px 2px rgba(135, 171, 99, 0.5);
+            margin-left: 15px;
+            margin-top: 7px;
+        }
+
+        .user-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .verific{
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: -7px;
+            color: #dddddd;
+        }
+
+        .image_text{
+            margin-left: 15px;
+            color: #dddddd;
+        }
+        .field{
+            margin-left: 10px;
+        }
+        .field_password{
+            background: none;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            color: #dddddd;
+        }
     </style>
 </head>
 <body>
@@ -197,7 +252,7 @@
                 <li><a th:href="@{/blog}">Blog</a></li>
                 <li><a th:href="@{/company-info}" th:text="#{menu.contact}"></a></li>
                 <li>
-                    <a th:href="@{/admin/listOfBookings}">List of Bookings</a>
+                    <a th:href="@{/admin/admin-panel}">Admin Panel</a>
                 </li>
             </ul>
         </div>
@@ -276,7 +331,7 @@
                         <p>Users cannot update their password through the web interface.</p>
                     </div>
                 </div>
-            <div class="section_gap"></div>
+                <div class="top-bar"></div>
                 <h1 class="user_set">Account</h1>
               <div>
                 <form id="accountForm" th:action="@{/user/settings/account}" method="post" enctype="multipart/form-data">
@@ -296,16 +351,17 @@
                     <input type="hidden" name="role" th:value="${user.role}">
                     <input type="hidden" name="emailVerified" th:value="${user.emailVerified}">
                     <input type="hidden" name="emailVerificationToken" th:value="${user.emailVerificationToken}">
-                    <div th:if="${user.profilePicture}">
+                    <div class="user-image" th:if="${user.profilePicture}">
                         <img th:src="@{'/user/images/' + ${user.id}}" alt="User image">
                     </div>
-                    <label for="profilePicture">Image:
-                        <input id="profilePicture" type="file" name="profilePicture" accept="image/*" alt="">
-                    </label>
-                    <button type="button" onclick="submitForm()">Save Changes</button>
+                    <div class="image_text">
+                        <label for="profilePicture">Image:</label>
+                        <input id="profilePicture" type="file" name="profilePicture" accept="image/*">
+                    </div>
+                    <button class="update-button2" type="button" onclick="submitForm()">Update</button>
                     <div class="top-bar"></div>
-                    <h4>Verification</h4>
-                    <div>
+                    <h4 class="verific">Verification</h4>
+                    <div class="verific">
                         <div th:if="${user.emailVerified}">
                             <p>Enabled: <span style="color: green;">&#10004;</span></p>
                         </div>
@@ -317,6 +373,7 @@
                     <br>
                 </form>
               </div>
+            <div class="top-bar"></div>
                 <h4 class="user_set">Delete Your Account</h4>
               <div class="ui attached error segment">
                 <div class="ui red message">
@@ -327,9 +384,10 @@
                     </p>
                 </div>
                 <form class="ui form ignore-dirty" id="delete-form" method="post">
+                    <input type="hidden" name="id" th:value="${user.id}">
                     <div class="required field">
                         <label for="password">Password:</label>
-                        <input type="password" id="password" name="password">
+                        <input class="field_password" type="password" id="password" name="password">
                     </div>
                     <div class="field">
                         <button class="update-button" type="submit" formaction="/user/settings/account/delete">Confirm Deletion</button>
@@ -367,30 +425,26 @@
 </footer>
 <script>
     function submitForm() {
-        if (validateForm()) {
-            document.getElementById("settingsForm").submit();
+        if (validateForm2()) {
+            document.getElementById("accountForm").submit();
         }
     }
-
-    function validateForm() {
-        var form = document.getElementById("settingsForm");
+    function validateForm2() {
+        var fileInput = document.getElementById('profilePicture');
         var errorMessage = document.getElementById("errorMessage");
-        var requiredFields = form.querySelectorAll("[required]");
-        var isValid = true;
-        for (var i = 0; i < requiredFields.length; i++) {
-            if (!requiredFields[i].value) {
-                isValid = false;
-                break;
+        var maxSize = 2 * 1024 * 1024;
+        errorMessage.innerText = '';
+        if (fileInput.files.length > 0) {
+            var file = fileInput.files[0];
+            if (file.size > maxSize) {
+                errorMessage.innerText = "File size exceeds the maximum allowed size of 2MB.";
+                errorMessage.style.display = "block";
+                return false;
             }
         }
-        if (!isValid) {
-            errorMessage.innerText = "Please fill in all required fields.";
-            errorMessage.style.display = "block";
-        } else {
-            errorMessage.style.display = "none";
-        }
-        return isValid;
+        return true;
     }
+
     document.addEventListener('DOMContentLoaded', function() {
         var avatar = document.getElementById("userAvatar");
         var menu = document.getElementById("userMenu");
@@ -418,6 +472,22 @@
             menu.style.display = 'none';
         }
     });
+    function changeLanguage(lang) {
+        var select = document.getElementById("languageSelect");
+        fetch(`/changeLanguage?lang=${lang}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to change language');
+                }
+                return response.text();
+            })
+            .then(() => {
+                location.reload(true);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
 </script>
 </body>
 </html>
