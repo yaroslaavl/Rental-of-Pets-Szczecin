@@ -1,0 +1,257 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*, *:before, *:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    font-style: normal;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input, button, textarea{font-family: inherit;}
+
+input::-ms-clear{display:none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style-type: none;}
+img{vertical-align: top;}
+
+h1,h2, h3, h4, h5, h6{font-style: inherit; font-weight: 400;}
+
+.button{
+    color:#dddddd;
+}
+
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header, .rights-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #232834;
+    padding: 10px;
+    color: #a7a2a2;;
+    width: 100%;
+    height: auto;
+
+}
+header{
+    border-bottom: 0.5px solid #dddddd;
+    justify-content: center;
+}
+
+.rights-info{
+    border-top: 0.5px solid #dddddd;
+}
+
+.logo{
+    width: 30%;
+}
+.logo img {
+    height: 30px;
+    width: auto;
+}
+.right-content {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content:flex-end;
+}
+.right-content li{
+    float: left;
+    gap: 40px;
+}
+.right-content button, .right-content a, #userMenu,.center_nav ul li a{
+    margin-left: 10px;
+    background-color: transparent;
+    color: #dddddd;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+}
+.right-content ul{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.right-content ul ul{
+    display:block;
+    gap:10px;
+}
+.right-content div{
+    gap: 40px;
+}
+header, footer {
+    padding: 10px 20px;
+}
+#userMenu {
+    position:absolute;
+    align-items: flex-start;
+    background-color:  #2e323e;
+    padding: 10px;
+    margin-top:2px;
+    border-radius: 4px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 1.5;
+    right: 10px;
+}
+
+.menu {
+    display: none;
+}
+
+#userMenu ul li{
+    float: none;
+    width: 100%;
+}
+#submit_logout{
+    padding-left: -10px;
+    float:left;
+}
+.center_nav li{
+    float:left;
+    gap:20px;
+}
+.center_nav ul {
+    width: 100%;
+    display: flex;
+    gap:40px;
+}
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color:  #dddddd;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.rights-info {
+    background-color: #232834;
+    font-size: 12px;
+    padding: 7px;
+    text-align: center;
+    color: #87ab63;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+.rights-info .left {
+    width: auto;
+}
+
+.rights-info .left p {
+    color: #dddddd;
+    float: left;
+    margin-right: 10px;
+}
+
+.rights-info .right {
+    width: auto;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.language {
+    margin-right: 5px;
+    text-align: right;
+}
+
+#languageSelect {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 5px;
+}
+
+
+
+#languageSelect option {
+    color: #000000;
+}
+
+
+.rights-info .right a {
+    color: #87ab63;
+    text-decoration: none;
+}
+
+
+.rights-info a {
+    color: #87ab63;
+    text-decoration: none;
+}
+
+.rights-info a:hover {
+    text-decoration: underline;
+}
+.user-avatar img {
+    height: 25px;
+    width: auto;
+}
+
+.crossed-line {
+    border-bottom: 1px solid #dddddd;
+    margin: 2px 0;
+}
+.right-content ul ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.username {
+    color: #d1cdcd;
+}
+.username:focus {
+    outline: none;
+}
+.username::selection {
+    background: #2c2c2e;
+    color: #ffffff;
+}
+.user-section a {
+    outline: none;
+}
+.container{
+    max-width: 1920px;
+
+    margin: 0 auto;
+    padding: 10px;
+}
