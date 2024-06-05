@@ -20,17 +20,35 @@
             font-size: 16px;
         }
         .booking-card {
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            background-color: #374151;
+            color: #ddd;
             padding: 10px;
             margin-bottom: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        .booking h1 {
+            margin-top: 0;
+            font-size: 20px;
+        }
         .booking-card img {
             max-width: 100px;
             max-height: 100px;
             margin-right: 10px;
+        }
+        .center_nav {
+            text-align: center;
+        }
+
+        .contact-link {
+            font-size: 15px;
+            color: #b2b2f4;
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -124,11 +142,7 @@
         <span th:text="${booking.status}"></span>
     </p>
     <p th:if="${booking.status == 'ReadyToDiscuss' || booking.status == T(org.yaroslaavl.webappstarter.database.entity.BookingStatus).ReadyToDiscuss}">
-        <div class="center_nav">
-    <ul>
-        <li><a th:href="@{/company-info}" th:text="#{menu.contact}"></a></li>
-    </ul>
-       </div>
+        <a class="contact-link" th:href="@{/company-info}" th:text="#{menu.contact}"></a>
     </p>
     <img th:src="${booking.pet.imageUrl}" alt="Pet Photo" class="pet-photo">
 </div>

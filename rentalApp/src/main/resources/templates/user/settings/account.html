@@ -113,9 +113,9 @@
             margin: 10px 0;
         }
         .top-bar {
-            height: 1px; /* Высота полоски */
-            background-color: #727272; /* Цвет полоски */
-            width: 100%; /* Ширина полоски */
+            height: 1px;
+            background-color: #727272;
+            width: 100%;
         }
         .main_settings{
             display: flex;
@@ -131,6 +131,7 @@
             width: 80%;
             padding-top: -10px ;
         }
+
         .ui.attached.header{
             font-size: 18px; /* Регулируйте размер шрифта по необходимости */
             padding: 7px; /* Отступы вокруг заголовка */
@@ -166,6 +167,21 @@
         }
         .required.field{
             color: #dddddd;
+        }
+        .main_settings {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 20%;
+        }
+        .resend{
+            background: none;
+            color: #dddddd;
+
+        }
+        .resend:hover{
+            color: #87ab63;
         }
     </style>
 </head>
@@ -254,78 +270,72 @@
             </ul>
         </div>
         <div class="content">
-            <div class="password_section">
-                <h4 class="ui top attached header">
-                    Password
-                </h4>
+                <h4 class="user_set">Password</h4>
                 <div class="ui attached segment">
                     <div class="ui info message">
                         <p>Users cannot update their password through the web interface.</p>
                     </div>
                 </div>
-            </div>
             <div class="section_gap"></div>
-            <div class="account_section">
-              <h1 class="user_set">Account</h1>
-              <form id="accountForm" th:action="@{/user/settings/account}" method="post" enctype="multipart/form-data">
-
-                <div class="error" th:if="${errors != null}">
-                    <ul>
-                        <li th:each="error : ${errors}" th:text="${error.defaultMessage}"></li>
-                    </ul>
+                <h1 class="user_set">Account</h1>
+              <div>
+                <form id="accountForm" th:action="@{/user/settings/account}" method="post" enctype="multipart/form-data">
+                    <div class="error" th:if="${errors != null}">
+                        <ul>
+                            <li th:each="error : ${errors}" th:text="${error.defaultMessage}"></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="id" th:value="${user.id}">
+                    <input type="hidden" name="username" th:value="${user.username}">
+                    <input type="hidden" name="firstname" th:value="${user.firstname}">
+                    <input type="hidden" name="lastname" th:value="${user.lastname}">
+                    <input type="hidden" name="birthDate" th:value="${user.birthDate}">
+                    <input type="hidden" name="address" th:value="${user.address}">
+                    <input type="hidden" name="phone" th:value="${user.phone}">
+                    <input type="hidden" name="pesel" th:value="${user.pesel}">
+                    <input type="hidden" name="role" th:value="${user.role}">
+                    <input type="hidden" name="emailVerified" th:value="${user.emailVerified}">
+                    <input type="hidden" name="emailVerificationToken" th:value="${user.emailVerificationToken}">
+                    <div th:if="${user.profilePicture}">
+                        <img th:src="@{'/user/images/' + ${user.id}}" alt="User image">
+                    </div>
+                    <label for="profilePicture">Image:
+                        <input id="profilePicture" type="file" name="profilePicture" accept="image/*" alt="">
+                    </label>
+                    <button type="button" onclick="submitForm()">Save Changes</button>
+                    <div class="top-bar"></div>
+                    <h4>Verification</h4>
+                    <div>
+                        <div th:if="${user.emailVerified}">
+                            <p>Enabled: <span style="color: green;">&#10004;</span></p>
+                        </div>
+                        <div th:unless="${user.emailVerified}">
+                            <p>Disabled: <button class="resend" type="submit" formaction="/user/settings/account/resend-activation-code">Resend Activation Code</button></p>
+                        </div>
+                    </div>
+                    <div id="errorMessage" class="error" style="display: none;"></div>
+                    <br>
+                </form>
+              </div>
+                <h4 class="user_set">Delete Your Account</h4>
+              <div class="ui attached error segment">
+                <div class="ui red message">
+                    <p class="text left">
+                        <svg viewBox="0 0 16 16" class="svg octicon-alert" aria-hidden="true" width="16" height="16">
+                            <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+                        </svg> This operation will permanently delete your user account. It <strong>CANNOT</strong> be undone.
+                    </p>
                 </div>
-                <input type="hidden" name="id" th:value="${user.id}">
-                <input type="hidden" name="username" th:value="${user.username}">
-                <input type="hidden" name="firstname" th:value="${user.firstname}">
-                <input type="hidden" name="lastname" th:value="${user.lastname}">
-                <input type="hidden" name="birthDate" th:value="${user.birthDate}">
-                <input type="hidden" name="address" th:value="${user.address}">
-                <input type="hidden" name="phone" th:value="${user.phone}">
-                <input type="hidden" name="pesel" th:value="${user.pesel}">
-                <input type="hidden" name="role" th:value="${user.role}">
-                <input type="hidden" name="emailVerified" th:value="${user.emailVerified}">
-                <input type="hidden" name="emailVerificationToken" th:value="${user.emailVerificationToken}">
-
-                <div th:if="${user.profilePicture}">
-                    <img th:src="@{'/user/images/' + ${user.id}}" alt="User image">
-                </div>
-                <label for="profilePicture">Image:
-                    <input id="profilePicture" type="file" name="profilePicture" accept="image/*" alt="">
-                </label>
-                <button type="button" onclick="submitForm()">Save Changes</button>
-                <div th:if="${user.emailVerified == false}">
-                    <p>Your account is not yet activated.</p>
-                    <button type="submit" formaction="/user/settings/account/resend-activation-code">Resend Activation Code</button>
-                </div>
-                <div id="errorMessage" class="error" style="display: none;"></div>
-                <br>
-                  <div>
-                      <h4 class="ui top attached error header">
-                          Delete Your Account
-                      </h4>
-                  </div>
-                  <div class="ui attached error segment">
-                      <div class="ui red message">
-                          <p class="text left"><svg viewBox="0 0 16 16" class="svg octicon-alert" aria-hidden="true" width="16" height="16">
-                              <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
-                          </svg> This operation will permanently delete your user account. It <strong>CANNOT</strong> be undone.</p>
-
-                      </div>
-                      <form class="ui form ignore-dirty" id="delete-form" method="post">
-
-                          <div class="required field ">
-                              <label for="password">Password:</label>
-                              <input type="password" id="password" name="password">
-                          </div>
-                          <div class="field">
-                              <button class="update-button" type="submit" formaction="/user/settings/account/delete">
-                                  Confirm Deletion
-                              </button>
-                          </div>
-                      </form>
-                  </div>
-              </form>
-            </div>
+                <form class="ui form ignore-dirty" id="delete-form" method="post">
+                    <div class="required field">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div class="field">
+                        <button class="update-button" type="submit" formaction="/user/settings/account/delete">Confirm Deletion</button>
+                    </div>
+                </form>
+             </div>
         </div>
     </div>
 </div>

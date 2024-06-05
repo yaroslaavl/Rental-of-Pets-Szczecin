@@ -30,6 +30,7 @@
             width: 200px;
             margin-right: 20px;
             text-align: center; /* Center the filters */
+            color: #dddddd;
         }
 
         .filters h2 {
@@ -49,25 +50,30 @@
         }
 
         .pet-card {
-            background-color: #d1cdcd;
+            background-color:  #232834;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 250px;
+            width: 300px;
             margin: 20px;
-            text-align: center;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            color: #dddddd;
         }
 
-        .pet-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+        .pet-photo {
+            width: 100%;
+            border-radius: 8px;
             margin-bottom: 10px;
         }
 
-        .pet-details {
-            font-size: 16px;
-            color: #333333;
+        .pet-name {
+            margin-top: 0;
+        }
+
+        .pet-info {
+            margin: 5px 0;
         }
         body {
             background-color: #2e323e;
@@ -88,6 +94,10 @@
         .center_nav{
             color: #dddddd;
         }
+        .pets-list h1 {
+            margin-left: 105px;
+            color: #87ab63;
+        }
 
         .pagination {
             display: inline-block;
@@ -96,7 +106,8 @@
             border-radius: 4px;
             overflow: hidden;
             border: 1px solid #d1cdcd;
-            margin-top: 20px;
+            margin-top: 10px;
+            margin-left: 25px;
         }
 
         .pagination a, .pagination span {
@@ -120,6 +131,27 @@
             pointer-events: none;
             opacity: 0.5;
         }
+        .order-button {
+            background-color: #87ab63;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .order-button:hover {
+            background-color: #5e7d47;
+        }
+
+        .disabled-btn {
+            background-color: #dddddd;
+            color: #999999;
+            cursor: not-allowed;
+        }
+
     </style>
 </head>
 <body>
@@ -161,7 +193,7 @@
                                     </a>
                                 </li>
                                  <li><a th:href="@{/pet/bookings}">
-                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16">
                                          <path fill="#dddddd" d="M23 5v13.883l-1 .117v-16c-3.895.119-7.505.762-10.002 2.316-2.496-1.554-6.102-2.197-9.998-2.316v16l-1-.117v-13.883h-1v15h9.057c1.479 0 1.641 1 2.941 1 1.304 0 1.461-1 2.942-1h9.06v-15h-1zm-12 13.645c-1.946-.772-4.137-1.269-7-1.484v-12.051c2.352.197 4.996.675 7 1.922v11.613zm9-1484c-2.863.215-5.054.712-7 1.484v-11.613c2.004-1.247 4.648-1.725 7-1.922v12.051z"/></svg>
                                      Bookings
                                    </a>
@@ -235,18 +267,27 @@
     <div class="pets-list">
         <h1>All Pets</h1>
         <div th:if="${not #lists.isEmpty(pets)}">
-            <div th:each="pet : ${pets}" class="pet-card">
+            <div th:each="pet : ${pets}">
+                <div class="pet-card">
+                <img th:src="${pet.imageUrl}" alt="Pet Photo" class="pet-photo">
                 <div class="pet-details">
-                    <img th:src="${pet.imageUrl}" alt="Pet Photo" class="pet-photo">
-                    <p>Species: <span th:text="${pet.species.name}"></span></p>
-                    <p>Breed: <span th:text="${pet.breed}"></span></p>
-                    <p>Name: <span th:text="${pet.name}"></span></p>
-                    <p>Age: <span th:text="${pet.age}"></span></p>
-                    <p>Gender: <span th:text="${pet.gender}"></span></p>
-                    <p>Description: <span th:text="${pet.description}"></span></p>
-                    <p>Available: <span th:text="${pet.isAvailable ? 'Yes' : 'No'}"></span></p>
-                    <button type="button" th:onclick="'redirectToBooking(' + ${pet.id} + ')'" th:classappend="${pet.isAvailable == false} ? 'disabled-btn' : ''">Order</button>
+                    <h3 class="pet-name" th:text="${pet.name}"></h3>
+                    <p class="pet-info">Species: <span th:text="${pet.species.name}"></span></p>
+                    <p class="pet-info">Breed: <span th:text="${pet.breed}"></span></p>
+                    <p class="pet-info">Age: <span th:text="${pet.age}"></span></p>
+                    <p class="pet-info">Gender: <span th:text="${pet.gender}"></span></p>
+                    <p class="pet-info">Description: <span th:text="${pet.description}"></span></p>
+                    <p class="pet-info">Available: <span th:text="${pet.isAvailable ? 'Yes' : 'No'}"></span></p>
+                    <button type="button" th:onclick="'redirectToBooking(' + ${pet.id} + ')'" th:classappend="${pet.isAvailable == false} ? 'disabled-btn' : ''" class="order-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#ffffff" >
+                            <path d="M23 5v13.883l-1 .117v-16c-3.895.119-7.505.762-10.002 2.316-2.496-1.554-6.102-2.197-9.998-2.316v16l-1-.117v-13.883h-1v15h9.057c1.479 0 1.641 1 2.941 1 1.304 0 1.461-1 2.942-1h9.06v-15h-1zm-12 13.645c-1.946-.772-4.137-1.269-7-1.484v-12.051c2.352.197 4.996.675 7 1.922v11.613zm9-1484c-2.863.215-5.054.712-7 1.484v-11.613c2.004-1.247 4.648-1.725 7-1.922v12.051z"/>
+                        </svg>
+                        Order Now
+                    </button>
+
                 </div>
+            </div>
+
             </div>
         </div>
         <div th:if="${#lists.isEmpty(pets.content)}">
