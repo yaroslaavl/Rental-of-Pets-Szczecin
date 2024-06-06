@@ -66,7 +66,4 @@ public class UserCreateEditDto {
         String defaultPassword = RandomStringUtils.randomAlphanumeric(passwordLength);
         return new UserCreateEditDto(null, username, defaultPassword, birthDate, firstname, lastname, address, pesel, phone, profilePicture, role, false, emailVerificationToken);
     }
-
-
-
 }

@@ -19,14 +19,17 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 import org.yaroslaavl.webappstarter.database.entity.User;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.dto.UserReadDto;
+import org.yaroslaavl.webappstarter.service.ImageService;
 import org.yaroslaavl.webappstarter.service.UserService;
 import org.yaroslaavl.webappstarter.validation.EditAction;
 import org.yaroslaavl.webappstarter.validation.ImageAction;
 
+import java.io.IOException;
 import java.util.Optional;
 
 @Controller
@@ -39,6 +42,7 @@ public class SettingsController {
     @Autowired
     PasswordEncoder passwordEncoder;
     private final UserService userService;
+    private final ImageService imageService;
 
     @Operation(summary = "User settings form")
     @GetMapping("/settings")
@@ -86,15 +90,18 @@ public class SettingsController {
     @PostMapping("/settings/account")
     public String updateImage(@ModelAttribute @Validated({ImageAction.class}) UserCreateEditDto user,
                               BindingResult bindingResult,
+                              @RequestParam("profilePicture") MultipartFile profilePicture,
                               Model model) {
         if (bindingResult.hasErrors()) {
             model.addAttribute("user", user);
             model.addAttribute("errors", bindingResult.getAllErrors());
             return "user/settings/account";
         }
+
         userService.update(user.getId(),user);
         return "redirect:/user/settings/account";
     }
+
 
     @PostMapping("/settings/account/resend-activation-code")
     public String resendActivationCode(@AuthenticationPrincipal UserDetails userDetails) {

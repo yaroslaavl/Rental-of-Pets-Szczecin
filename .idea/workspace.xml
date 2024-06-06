@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="05.06 15:35 Frontend">
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="06.06 Finished the frontend. Keep doing Internationalization">
       <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/ActivationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/ActivationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/images/polska_flag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/images/praca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/images/usa_flag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/images/user.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookingDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookingDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/listOfBookings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/pets-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/pets-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/user-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/admin/user-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/UserCreateEditDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/dto/UserCreateEditDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/messages_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/messages_pl.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/css/HeadFoot.css" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/css/HeadFoot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/globe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/polska_flag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/static/img/usa_flag.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/greetings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/greetings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/notifications/notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/notifications/notifications.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/pet/booking.html" afterDir="false" />
@@ -79,41 +84,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.UserRepositoryTest.find_user_by_username.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [dependency:tree].executor&quot;: &quot;Run&quot;,
-    &quot;OpenAPI/Swagger Code Generator.app.json.yml.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AdminServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WebAppStarterApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/all/Java all/projectMaven/web-app-starter/web-app-starter/rentalApp/src/main/resources/static/img&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.UserRepositoryTest.find_user_by_username.executor": "Run",
+    "Maven.rental-of-pets [dependency:tree].executor": "Run",
+    "OpenAPI/Swagger Code Generator.app.json.yml.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AdminServerApplication.executor": "Run",
+    "Spring Boot.WebAppStarterApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/all/Java all/projectMaven/web-app-starter/web-app-starter/rentalApp/src/main/resources/static/img",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\static\img" />
@@ -214,7 +219,8 @@
       <workItem from="1717517302925" duration="10964000" />
       <workItem from="1717534957969" duration="6940000" />
       <workItem from="1717587836915" duration="6722000" />
-      <workItem from="1717616248432" duration="12218000" />
+      <workItem from="1717616248432" duration="12811000" />
+      <workItem from="1717689650962" duration="14474000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -272,7 +278,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717594548163</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="06.06 Finished the frontend. Keep doing Internationalization">
+      <option name="closed" value="true" />
+      <created>1717630918052</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717630918052</updated>
+    </task>
+    <task id="LOCAL-00009" summary="06.06 Finished the frontend. Keep doing Internationalization">
+      <option name="closed" value="true" />
+      <created>1717630972924</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717630972924</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +317,7 @@
     <MESSAGE value="04.06 Frontend before Internationalization" />
     <MESSAGE value="05.06 Frontend before Internationalization" />
     <MESSAGE value="05.06 15:35 Frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="05.06 15:35 Frontend" />
+    <MESSAGE value="06.06 Finished the frontend. Keep doing Internationalization" />
+    <option name="LAST_COMMIT_MESSAGE" value="06.06 Finished the frontend. Keep doing Internationalization" />
   </component>
 </project>

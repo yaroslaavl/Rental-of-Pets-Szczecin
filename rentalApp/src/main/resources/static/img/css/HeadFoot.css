@@ -189,6 +189,8 @@ header, footer {
 .language {
     margin-right: 5px;
     text-align: right;
+    float:right;
+
 }
 
 #languageSelect {
@@ -201,6 +203,15 @@ header, footer {
     -webkit-appearance: none;
     -moz-appearance: none;
     padding: 5px;
+    width: 52px;
+    margin:0;
+    text-align: right;
+}
+#languageSelect option{
+    text-align: center;
+}
+.footer-license{
+    width: 55px;
 }
 
 
@@ -214,7 +225,9 @@ header, footer {
     color: #87ab63;
     text-decoration: none;
 }
-
+.license-api{
+    width: 107px;
+}
 
 .rights-info a {
     color: #87ab63;
