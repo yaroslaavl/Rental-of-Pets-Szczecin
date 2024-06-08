@@ -30,6 +30,7 @@ import org.yaroslaavl.webappstarter.validation.EditAction;
 import org.yaroslaavl.webappstarter.validation.ImageAction;
 
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.Optional;
 
 @Controller
@@ -104,7 +105,7 @@ public class SettingsController {
 
 
     @PostMapping("/settings/account/resend-activation-code")
-    public String resendActivationCode(@AuthenticationPrincipal UserDetails userDetails) {
+    public String resendActivationCode(@AuthenticationPrincipal UserDetails userDetails) throws UnknownHostException {
         String username = userDetails.getUsername();
         boolean activationCodeResent = userService.resendActivationCode(username);
         if (activationCodeResent) {

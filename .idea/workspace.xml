@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="06.06 22:44 Finished the MVP(in my opinion). Version of project 1.0">
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="Fixing the bags">
       <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/templates/user/settings/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/db.changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/db.changelog/db.changelog-master.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,6 +204,10 @@
       <workItem from="1717616248432" duration="12811000" />
       <workItem from="1717689650962" duration="15041000" />
       <workItem from="1717759657625" duration="471000" />
+      <workItem from="1717760413661" duration="79000" />
+      <workItem from="1717766998781" duration="159000" />
+      <workItem from="1717856824270" duration="192000" />
+      <workItem from="1717870069550" duration="2572000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -284,7 +289,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717706728968</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixing the bags">
+      <option name="closed" value="true" />
+      <created>1717760442578</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717760442578</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixing the bags">
+      <option name="closed" value="true" />
+      <created>1717871146910</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717871146910</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +330,7 @@
     <MESSAGE value="05.06 15:35 Frontend" />
     <MESSAGE value="06.06 Finished the frontend. Keep doing Internationalization" />
     <MESSAGE value="06.06 22:44 Finished the MVP(in my opinion). Version of project 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="06.06 22:44 Finished the MVP(in my opinion). Version of project 1.0" />
+    <MESSAGE value="Fixing the bags" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing the bags" />
   </component>
 </project>

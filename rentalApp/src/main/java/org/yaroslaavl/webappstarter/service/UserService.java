@@ -21,6 +21,8 @@ import org.yaroslaavl.webappstarter.dto.UserReadDto;
 import org.yaroslaavl.webappstarter.mapper.UserCreateEditMapper;
 import org.yaroslaavl.webappstarter.mapper.UserReadMapper;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.*;
 
 @Service
@@ -63,7 +65,11 @@ public class UserService implements UserDetailsService {
         return userReadDto;
     }
     @Transactional
-    public boolean resendActivationCode(String username) {
+    public boolean resendActivationCode(String username) throws UnknownHostException {
+        InetAddress localhost;
+        localhost = InetAddress.getLocalHost();
+        String ip = localhost.getHostAddress();
+
         Optional<User> optionalUser = userRepository.findByUsername(username);
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();
@@ -75,7 +81,7 @@ public class UserService implements UserDetailsService {
             if (!StringUtils.isEmpty(user.getUsername())) {
                 String message = String.format(
                         "Hello, %s! \n" +
-                                "Welcome to our family. Please, visit the following link to activate your account: http://localhost:8080/activate?token=%s",
+                                "Welcome to our family. Please, visit the following link to activate your account: http://" + ip + ":8080/activate?token=%s",
                         user.getUsername(),
                         activationToken
                 );
