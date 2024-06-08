@@ -207,10 +207,11 @@
             <h4 class="verific" th:text="#{verification}"></h4>
             <div class="verific">
                 <div th:if="${userBooking.emailVerified}">
-                    <p th:text="#{verification.enable}"><span style="color: green;">&#10004;</span></p>
+                    <p th:text="#{verification.enable}" style="display: inline;"></p>
+                    <span style="color: green; display: inline;">&#10004;</span>
                 </div>
                 <div th:unless="${userBooking.emailVerified}">
-                    <p th:text="#{disabled}"> <a th:href="@{/user/settings/account}" th:text="#{user.panel.settings}"></a></p>
+                    <p style="display: inline;" th:text="#{verification.disable}"></p>
                 </div>
             </div>
             <button type="button" onclick="validateForm()" id="orderButton" th:text="#{send.for.processing}" disabled></button>
