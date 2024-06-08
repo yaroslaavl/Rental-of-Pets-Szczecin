@@ -22,6 +22,7 @@ import org.yaroslaavl.webappstarter.mapper.UserCreateEditMapper;
 import org.yaroslaavl.webappstarter.mapper.UserReadMapper;
 
 import java.net.InetAddress;
+import java.net.NetworkInterface;
 import java.net.UnknownHostException;
 import java.util.*;
 
@@ -37,10 +38,14 @@ public class UserService implements UserDetailsService {
     private final ImageService imageService;
     private final MailService mailService;
 
+    @SneakyThrows
     @Transactional
     public UserReadDto create(UserCreateEditDto userDto) {
-        String activationToken = UUID.randomUUID().toString();
+        InetAddress localhost;
+        localhost = InetAddress.getLocalHost();
+        String ip = localhost.getHostAddress();
 
+        String activationToken = UUID.randomUUID().toString();
         UserReadDto userReadDto = Optional.of(userDto)
                 .map(dto -> {
                     uploadImage(dto.getProfilePicture());
@@ -56,7 +61,7 @@ public class UserService implements UserDetailsService {
         if (!StringUtils.isEmpty(userDto.getUsername())) {
             String message = String.format(
                     "Hello, %s! \n" +
-                            "Welcome to our family. Please, visit the following link to activate your account: http://localhost:8080/activate?token=%s",
+                            "Welcome to our family. Please, visit the following link to activate your account:  http://" + ip + ":8080/activate?token=%s",
                     userDto.getUsername(),
                     activationToken
             );
@@ -64,8 +69,9 @@ public class UserService implements UserDetailsService {
         }
         return userReadDto;
     }
+    @SneakyThrows
     @Transactional
-    public boolean resendActivationCode(String username) throws UnknownHostException {
+    public boolean resendActivationCode(String username){
         InetAddress localhost;
         localhost = InetAddress.getLocalHost();
         String ip = localhost.getHostAddress();
