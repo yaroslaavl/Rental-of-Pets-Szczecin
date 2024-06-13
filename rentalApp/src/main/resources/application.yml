@@ -1,0 +1,92 @@
+db:
+  username: yours
+  password: yours
+  driver: org.postgresql.Driver
+  url: yours
+  hosts: localhost,127.0.0.1
+logging:
+  file:
+    name: spring.log
+    path: /
+  level:
+    root:
+    org.springframework: WARN
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8085
+        instance:
+          name: Rental of pets
+          management-url: http://localhost:8080/actuator
+  datasource:
+    url: yours
+    username: yours
+    password: yours
+  liquibase:
+    change-log: db.changelog/db.changelog-master.yaml
+    default-schema: webapp
+  mail:
+    host: yours
+    port: yours
+    username: yours
+    password: yours
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 3000
+          writetimeout: 3000
+          connectiontimeout: 3000
+          socketFactory:
+            port: 465
+          socketFactory.class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+  jpa:
+    properties.hibernate:
+      batch_size: 50
+      fetch_size: 50
+      show_sql: true
+      format_sql: true
+      hbm2ddl.auto: validate
+      default_schema: webapp
+    open-in-view: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: yours
+            client-secret: yours
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            scope: openid,email,profile
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 8MB
+  messages:
+    basename: messages
+    encoding: UTF-8
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"
+  api-docs:
+    path: "/v3/api-docs"
+  packages-to-scan: "org.yaroslaavl.webappstarter.controller"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    enabled: true
+    endpoint:
+      metrics:
+        enabled: true
+
