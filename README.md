@@ -34,4 +34,4 @@
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/rental-of-pets.git
+   git clone https://github.com/yaroslaavl/Rental-of-Pets-Szczecin.git
