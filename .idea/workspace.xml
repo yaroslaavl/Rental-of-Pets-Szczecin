@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="Fixing the bags">
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail">
+      <change afterPath="$PROJECT_DIR$/.idea/web-app-starter.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/company_storage.uVhVLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/company_storage.uVhVLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/labs.hpAyAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/labs.hpAyAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/library.uyToCQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/library.uyToCQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/spring.DQKdyg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/spring.DQKdyg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/webapp.Tf7N0A.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/webapp.Tf7N0A.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/zi.Lw8AAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/zi.Lw8AAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/resources/db.changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/db.changelog/db.changelog-master.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,41 +74,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.UserRepositoryTest.find_user_by_username.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [dependency:tree].executor&quot;: &quot;Run&quot;,
-    &quot;OpenAPI/Swagger Code Generator.app.json.yml.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AdminServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WebAppStarterApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/all/Java all/projectMaven/web-app-starter/web-app-starter/rentalApp/src/main/resources/static/img&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.UserRepositoryTest.find_user_by_username.executor": "Run",
+    "Maven.rental-of-pets [dependency:tree].executor": "Run",
+    "OpenAPI/Swagger Code Generator.app.json.yml.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AdminServerApplication.executor": "Run",
+    "Spring Boot.WebAppStarterApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/all/Java all/projectMaven/web-app-starter/web-app-starter",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2632184",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\static\img" />
@@ -159,6 +168,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-16.0.2-corretto-16.0.2-3183f394aec4-fe0432aa" />
         <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
       </set>
     </attachedChunks>
@@ -207,7 +217,19 @@
       <workItem from="1717760413661" duration="79000" />
       <workItem from="1717766998781" duration="159000" />
       <workItem from="1717856824270" duration="192000" />
-      <workItem from="1717870069550" duration="2572000" />
+      <workItem from="1717870069550" duration="2674000" />
+      <workItem from="1717878054810" duration="2119000" />
+      <workItem from="1717931168841" duration="323000" />
+      <workItem from="1717931512600" duration="134000" />
+      <workItem from="1718001189757" duration="101000" />
+      <workItem from="1718039260261" duration="47000" />
+      <workItem from="1718039397416" duration="1062000" />
+      <workItem from="1718062593764" duration="14000" />
+      <workItem from="1718119847837" duration="5008000" />
+      <workItem from="1718266964636" duration="2380000" />
+      <workItem from="1718278250399" duration="2235000" />
+      <workItem from="1718288465825" duration="4657000" />
+      <workItem from="1718317533267" duration="44000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -305,7 +327,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717871146910</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail">
+      <option name="closed" value="true" />
+      <created>1717872698880</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717872698880</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail">
+      <option name="closed" value="true" />
+      <created>1717872710155</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717872710155</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail">
+      <option name="closed" value="true" />
+      <created>1717880150764</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717880150764</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,6 +377,8 @@
     <MESSAGE value="06.06 Finished the frontend. Keep doing Internationalization" />
     <MESSAGE value="06.06 22:44 Finished the MVP(in my opinion). Version of project 1.0" />
     <MESSAGE value="Fixing the bags" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing the bags" />
+    <MESSAGE value="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the post office" />
+    <MESSAGE value="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail" />
   </component>
 </project>
