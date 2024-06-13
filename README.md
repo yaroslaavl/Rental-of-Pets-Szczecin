@@ -29,9 +29,11 @@
 - JDK 17 or later
 - Maven
 - PostgreSQL
+- 
+### DataBase
+![db-structure](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/88be752c-4db4-410e-96d2-2c010f00cf97)
 
 ### Installation
-
 1. **Clone the repository:**
    ```sh
    git clone https://github.com/yaroslaavl/Rental-of-Pets-Szczecin.git
