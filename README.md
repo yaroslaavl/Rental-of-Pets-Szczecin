@@ -16,14 +16,14 @@
 ## Technologies Used
 - Java 17
 - Spring
-- Thymeleaf
-- Hibernate (JPA)
 - PostgreSQL
+- Hibernate (JPA)
 - Lombok
-- Postgres
+- Thymeleaf
 - Postman
 - Swagger
 - QueryDSL
+- CSS
 - Spring Boot Admin
 - Liquibase
 
