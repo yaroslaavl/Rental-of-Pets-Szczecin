@@ -9,6 +9,7 @@
 - User Notifications
 - Uset settings
 - Company information with Google Maps
+- Language internationalization
 - Admin Panel for Managing Pets and Users
 - Admin Server 
 
