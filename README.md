@@ -8,6 +8,7 @@
 - Making and Managing Bookings
 - User Notifications
 - Uset settings
+- Company information with Google Maps
 - Admin Panel for Managing Pets and Users
 - Admin Server 
 
