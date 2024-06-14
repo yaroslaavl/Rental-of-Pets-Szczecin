@@ -1,6 +1,5 @@
 # Rental of Pets
 
-## Overview
 "Rental of Pets" is a web application designed to facilitate the rental of pets. Users can view available pets, make reservations, and manage their bookings. The application is built using Java with Spring Boot on the backend and Thymeleaf for server-side rendering.
 
 ## Features
@@ -25,19 +24,24 @@
 
 ## Getting Started
 
-### Prerequisites
+## Prerequisites
 - JDK 17 or later
 - Maven
 - PostgreSQL
+  
+## Install Maven dependencies
+```sh
+mvn install
+```
 
-### DataBase
+## DataBase
 ![db-structure](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/88be752c-4db4-410e-96d2-2c010f00cf97)
 
-### Setup PostgreSQL
+## Setup PostgreSQL
 ![image](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/7ee16c15-4dd7-4429-b16f-647814da2cbb)
 
 
-### Configuring Email Settings
+## Configuring Email Settings
 To properly configure email settings in your application:
 
 Host: Set host to the SMTP server hostname. Example: smtp.example.com.
@@ -64,7 +68,9 @@ Ensure these settings are correctly configured in application.yml file to enable
 
 ![image](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/7777e2a4-0728-4300-8501-0a8f91830624)
 
-### Configuring OAuth2 for Google Authentication
+## Setting up authentication via OAuth2 for Google
+![image](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/b31fafa8-9df2-4e5e-b7f9-ee838476eee3)
+
 To configure OAuth2 for Google authentication:
 
 Client ID: Set client-id to your Google OAuth2 client ID obtained from the Google Developer Console.
@@ -77,7 +83,21 @@ Scope: Define scope to determine the level of access granted to your application
 
 These settings are essential for enabling Google OAuth2 authentication in your application. Ensure they are correctly configured to facilitate seamless user authentication with Google services.
 
-### Installation
+## Installation
 1. **Clone the repository:**
    ```sh
    git clone https://github.com/yaroslaavl/Rental-of-Pets-Szczecin.git
+   ```
+## Application startup
+   ```sh
+   mvn spring-boot:run
+   ```
+   
+## Admin application startup
+   ```sh
+   mvn -pl adminServer spring-boot:run
+   ```
+Once successfully launched, you will be able to access Spring Boot Admin in your web browser at http://localhost:8085/.   
+   
+## Contact
+Yaroslav Lopatkin - ylopatkin@gmail.com
