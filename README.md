@@ -1,6 +1,12 @@
 # Rental of Pets
 
-"Rental of Pets" is a web application that allows users to rent pets for a specified duration to see if they can live with animals. Users can view available pets, make reservations, and manage their bookings. The application is built using Java with Spring Boot on the backend and Thymeleaf for server-side rendering.
+Project version 1.0 
+
+"Rental of Pets" is a web application. Users can view available pets, make reservations, and manage their bookings or account settings. The application is built using Java with Spring Boot on the backend and Thymeleaf for server-side rendering.
+This project is made for localization of Szczecin city. It solves the problem of people who do not know yet whether they can live with animals. All payments are made by meeting in our store.
+You can see how to find us on the page of our web application.
+In order to fulfill your order you will first need to register or log in via Google. After that you will be sent an account confirmation to your e-mail. You can choose not to confirm it, but you will not be able to place an order. 
+
 
 ## Features
 - User Registration and Authentication
@@ -52,7 +58,7 @@ mvn clean install
 ![image](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/7ee16c15-4dd7-4429-b16f-647814da2cbb)
 
 After connecting your DataBase, you need to create a "webapp" SCHEMA in the folder PROVIDED here:
-![image](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/e4e52c5b-78c7-4bd7-a38e-e1c9030a28d1)
+![image](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/610585d0-909b-4670-a293-3e5677319257)
 
 
 ## Configuring Email Settings
