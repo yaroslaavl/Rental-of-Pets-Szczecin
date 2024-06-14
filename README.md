@@ -36,7 +36,7 @@
   
 ## Install Maven dependencies
 ```sh
-mvn install
+mvn clean install
 ```
 
 ## DataBase
