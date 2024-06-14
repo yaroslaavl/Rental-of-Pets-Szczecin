@@ -102,7 +102,7 @@ These settings are essential for enabling Google OAuth2 authentication in your a
    ```sh
    mvn -pl adminServer spring-boot:run
    ```
-Once successfully launched, you will be able to access Spring Boot Admin in your web browser at http://localhost:8085/.   
+Once successfully launched, you will be able to access Spring Boot Admin in your web browser at http://localhost:8085/   
    
 ## Contact
 Yaroslav Lopatkin - ylopatkin@gmail.com
