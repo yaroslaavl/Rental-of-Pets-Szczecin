@@ -21,7 +21,10 @@
 - PostgreSQL
 - Lombok
 - Postgres
+- Postman
+- Swagger
 - QueryDSL
+- Spring Boot Admin
 - Liquibase
 
 ## Getting Started
