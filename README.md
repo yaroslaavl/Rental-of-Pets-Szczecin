@@ -33,7 +33,13 @@
 - JDK 17 or later
 - Maven
 - PostgreSQL
-  
+
+## Installation
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yaroslaavl/Rental-of-Pets-Szczecin.git
+   ```
+     
 ## Install Maven dependencies
 ```sh
 mvn clean install
@@ -45,6 +51,7 @@ mvn clean install
 ## Setup PostgreSQL
 ![image](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/7ee16c15-4dd7-4429-b16f-647814da2cbb)
 
+After connecting your DataBase, you need to create a webapp schema
 
 ## Configuring Email Settings
 To properly configure email settings in your application:
@@ -88,20 +95,15 @@ Scope: Define scope to determine the level of access granted to your application
 
 These settings are essential for enabling Google OAuth2 authentication in your application. Ensure they are correctly configured to facilitate seamless user authentication with Google services.
 
-## Installation
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/yaroslaavl/Rental-of-Pets-Szczecin.git
-   ```
-## Application startup
-   ```sh
-   mvn spring-boot:run
-   ```
-   
 ## Admin application startup
    ```sh
    mvn -pl adminServer spring-boot:run
    ```
+
+## Application startup
+   ```sh
+   mvn spring-boot:run
+   ```   
 Once successfully launched, you will be able to access Spring Boot Admin in your web browser at http://localhost:8085/   
    
 ## Contact
