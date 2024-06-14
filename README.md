@@ -51,7 +51,9 @@ mvn clean install
 ## Setup PostgreSQL
 ![image](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/7ee16c15-4dd7-4429-b16f-647814da2cbb)
 
-After connecting your DataBase, you need to create a webapp schema
+After connecting your DataBase, you need to create a "webapp" SCHEMA in the folder PROVIDED here:
+![image](https://github.com/yaroslaavl/Rental-of-Pets-Szczecin/assets/149341488/e4e52c5b-78c7-4bd7-a38e-e1c9030a28d1)
+
 
 ## Configuring Email Settings
 To properly configure email settings in your application:
