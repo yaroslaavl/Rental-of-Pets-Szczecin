@@ -4,20 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail">
-      <change afterPath="$PROJECT_DIR$/.idea/web-app-starter.iml" afterDir="false" />
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="Fixing the bags. Started writing tests for my web application">
       <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/company_storage.uVhVLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/company_storage.uVhVLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/labs.hpAyAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/labs.hpAyAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/library.uyToCQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/library.uyToCQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/spring.DQKdyg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/spring.DQKdyg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/webapp.Tf7N0A.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/webapp.Tf7N0A.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/zi.Lw8AAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/zi.Lw8AAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/spring.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/SpeciesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/SpeciesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/IT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/TestConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/UserControllerIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/UserRepositoryIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/mapper/UserCreateEditMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/repository/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/repository/UserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/test/resources/application-test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,9 +30,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="OpenAPI" />
-        <option value="Class" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,8 +78,23 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.BookingRepositoryTest.findByStatus_WhenNonExistingStatus_ReturnEmptyList.executor": "Run",
+    "JUnit.BookingRepositoryTest.find_booking_by_user.executor": "Run",
+    "JUnit.BookingRepositoryTest.find_by_id.executor": "Run",
+    "JUnit.BookingRepositoryTest.find_by_status.executor": "Run",
+    "JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic.executor": "Run",
+    "JUnit.UserRepositoryTest.executor": "Run",
+    "JUnit.UserRepositoryTest.findUserByUsername.executor": "Run",
+    "JUnit.UserRepositoryTest.find_by_email_verification_code.executor": "Coverage",
+    "JUnit.UserRepositoryTest.find_by_username.executor": "Run",
     "JUnit.UserRepositoryTest.find_user_by_username.executor": "Run",
+    "JUnit.UserRepositoryTest.save.executor": "Run",
+    "Maven.rental-of-pets [-pl,admin-server...].executor": "Run",
+    "Maven.rental-of-pets [-pl,admin...].executor": "Run",
+    "Maven.rental-of-pets [-pl,adminServer...].executor": "Run",
+    "Maven.rental-of-pets [admin,spring-boot:run].executor": "Run",
     "Maven.rental-of-pets [dependency:tree].executor": "Run",
+    "Maven.rental-of-pets [spring-boot:run].executor": "Run",
     "OpenAPI/Swagger Code Generator.app.json.yml.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -110,6 +126,9 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\src\main\resources\static\img" />
@@ -126,10 +145,15 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn dependency:tree" />
+      <command value="mvn spring-boot:run" />
+      <command value="mvn -pl admin spring-boot:run " />
+      <command value="mvn admin spring-boot:run " />
+      <command value="mvn -pl admin-server spring-boot:run " />
+      <command value="mvn -pl adminServer spring-boot:run " />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebAppStarterApplication">
-    <configuration name="UserRepositoryTest.find_user_by_username" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic">
+    <configuration name="BookingRepositoryTest.findByStatus_WhenNonExistingStatus_ReturnEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rentalApp" />
       <extension name="coverage">
         <pattern>
@@ -138,8 +162,72 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.UserRepositoryTest" />
-      <option name="METHOD_NAME" value="find_user_by_username" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.BookingRepositoryTest" />
+      <option name="METHOD_NAME" value="findByStatus_WhenNonExistingStatus_ReturnEmptyList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingRepositoryTest.find_booking_by_user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rentalApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.BookingRepositoryTest" />
+      <option name="METHOD_NAME" value="find_booking_by_user" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingRepositoryTest.find_by_id" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rentalApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.BookingRepositoryTest" />
+      <option name="METHOD_NAME" value="find_by_id" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingRepositoryTest.find_by_status" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rentalApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.BookingRepositoryTest" />
+      <option name="METHOD_NAME" value="find_by_status" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rentalApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.MedicalRecordRepositoryTest" />
+      <option name="METHOD_NAME" value="find_by_id_with_pet_and_veterinarian_and_clinic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,7 +249,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserRepositoryTest.find_user_by_username" />
+        <item itemvalue="JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic" />
+        <item itemvalue="JUnit.BookingRepositoryTest.find_by_id" />
+        <item itemvalue="JUnit.BookingRepositoryTest.find_booking_by_user" />
+        <item itemvalue="JUnit.BookingRepositoryTest.findByStatus_WhenNonExistingStatus_ReturnEmptyList" />
+        <item itemvalue="JUnit.BookingRepositoryTest.find_by_status" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +321,17 @@
       <workItem from="1718266964636" duration="2380000" />
       <workItem from="1718278250399" duration="2235000" />
       <workItem from="1718288465825" duration="4657000" />
-      <workItem from="1718317533267" duration="44000" />
+      <workItem from="1718317533267" duration="5276000" />
+      <workItem from="1718370588971" duration="2330000" />
+      <workItem from="1718382585885" duration="17000" />
+      <workItem from="1718383683331" duration="621000" />
+      <workItem from="1718400696032" duration="12000" />
+      <workItem from="1720029516615" duration="584000" />
+      <workItem from="1720094289649" duration="273000" />
+      <workItem from="1720108065928" duration="18000" />
+      <workItem from="1720193709890" duration="11117000" />
+      <workItem from="1720281612397" duration="1541000" />
+      <workItem from="1720298377911" duration="1779000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -351,7 +453,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717880150764</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixing the bags.">
+      <option name="closed" value="true" />
+      <created>1718319442025</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718319442025</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +489,17 @@
     <MESSAGE value="Fixing the bags" />
     <MESSAGE value="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the post office" />
     <MESSAGE value="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail" />
+    <MESSAGE value="Fixing the bags." />
+    <MESSAGE value="Fixing the bags. Started writing tests for my web application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing the bags. Started writing tests for my web application" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1720201128972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.yaroslaavl.webappstarter.unit.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/web_app_starter$WebAppStarterApplication.ic" NAME="WebAppStarterApplication Coverage Results" MODIFIED="1720201165831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest_find_by_email_verification_code.ic" NAME="UserRepositoryTest.find_by_email_verification_code Coverage Results" MODIFIED="1720202181990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.yaroslaavl.webappstarter.unit.repository.*</FILTER>
+    </SUITE>
   </component>
 </project>

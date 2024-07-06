@@ -1,6 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:${embedded.postgresql.port}/company_repository
-    username: ${embedded.postgresql.user}
-    password: ${embedded.postgresql.password}
-
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true  #

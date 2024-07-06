@@ -115,11 +115,6 @@ public class UserService implements UserDetailsService {
         return userRepository.findByUsername(username);
     }
 
-    public Optional<UserReadDto> findById(Long id){
-        return userRepository.findById(id)
-                .map(userReadMapper::map);
-    }
-
     public User findUserById(Long id){
         Optional<User> optionalUser = userRepository.findById(id);
         return optionalUser.orElse(null);

@@ -117,16 +117,13 @@ public class SettingsController {
 
     @PostMapping("/settings/account/delete")
     public String delete(@ModelAttribute UserCreateEditDto userCreateEditDto) {
-        Optional<UserReadDto> optionalUser = userService.findById(userCreateEditDto.getId());
+        User optionalUser = userService.findUserById(userCreateEditDto.getId());
 
-        if (optionalUser.isPresent()) {
-            UserReadDto userReadDto = optionalUser.get();
-
-            if (passwordEncoder.matches(userCreateEditDto.getPassword(), userReadDto.getPassword())) {
+            if (passwordEncoder.matches(userCreateEditDto.getPassword(), optionalUser.getPassword())) {
                 userService.delete(userCreateEditDto.getId());
                 return "redirect:/login";
             }
-       }
+
         return "redirect:/user/settings/account";
     }
 

@@ -15,7 +15,7 @@ public class SpeciesService {
     private final SpeciesRepository speciesRepository;
     private final SpeciesReadMapper speciesReadMapper;
 
-    public List<SpeciesReadDto> findAll(){
+    public List<SpeciesReadDto> findAll() {
         return speciesRepository.findAll().stream()
                 .map(speciesReadMapper::map)
                 .toList();
