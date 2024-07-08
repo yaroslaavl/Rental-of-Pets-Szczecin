@@ -1,5 +1,6 @@
 package org.yaroslaavl.webappstarter.unit.repository;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -19,25 +20,35 @@ public class UserRepositoryTest {
     @Mock
     private UserRepository userRepository;
 
-    @Test
-    public void save() {
-        User user = User.builder()
-                .username("ylopatkin1@gmail.com")
+    private User user, user2;
+
+    @BeforeEach
+    public void setUp() {
+
+        user = User.builder()
+                .username("ylopatkin@gmail.com")
                 .password("123passwordA")
                 .firstname("User")
                 .lastname("User")
                 .role(Role.USER)
                 .emailVerified(Boolean.FALSE)
+                .emailVerificationToken("132131241SADAdsffg")
                 .build();
 
-        User user2 = User.builder()
+        user2 = User.builder()
                 .username("ylopatkin2@gmail.com")
                 .password("123passwordA")
                 .firstname("User")
                 .lastname("User")
                 .role(Role.USER)
                 .emailVerified(Boolean.FALSE)
+                .emailVerificationToken("132131241SADAdsffg")
                 .build();
+    }
+
+    @Test
+    public void save() {
+
 
         when(userRepository.findAll()).thenReturn(Arrays.asList(user,user2));
 
@@ -52,15 +63,6 @@ public class UserRepositoryTest {
     public void find_by_username(){
         String name = "ylopatkin@gmail.com";
 
-        User user = User.builder()
-                .username(name)
-                .password("123passwordA")
-                .firstname("User")
-                .lastname("User")
-                .role(Role.USER)
-                .emailVerified(Boolean.FALSE)
-                .build();
-
         when(userRepository.findByUsername(user.getUsername())).thenReturn(Optional.of(user));
 
         Optional<User> byUsername = userRepository.findByUsername(user.getUsername());
@@ -72,16 +74,6 @@ public class UserRepositoryTest {
     @Test
     public void find_by_email_verification_code() {
         String code = "132131241SADAdsffg";
-
-        User user = User.builder()
-                .username("ylopatkin@gmail.com")
-                .password("123passwordA")
-                .firstname("User")
-                .lastname("User")
-                .role(Role.USER)
-                .emailVerified(Boolean.FALSE)
-                .emailVerificationToken("132131241SADAdsffg")
-                .build();
 
         when(userRepository.findByEmailVerificationToken(code)).thenReturn(user);
 

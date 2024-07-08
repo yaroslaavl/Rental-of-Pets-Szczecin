@@ -1,200 +1,62 @@
-2024-07-05 17:48:34.322  INFO 14436 --- [main] o.y.w.WebAppStarterApplication           : Starting WebAppStarterApplication using Java 21.0.1 on DESKTOP-F7VCT8R with PID 14436 (C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\target\classes started by ylopa in C:\all\Java all\projectMaven\web-app-starter\web-app-starter)
-2024-07-05 17:48:34.327  INFO 14436 --- [main] o.y.w.WebAppStarterApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-07-05 17:48:35.716  INFO 14436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-07-05 17:48:35.716  INFO 14436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2024-07-05 17:48:35.937  INFO 14436 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2024-07-05 17:48:35.942  INFO 14436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-07-05 17:48:36.236  INFO 14436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-07-05 17:48:36.390  INFO 14436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-07-05 17:48:36.516  WARN 14436 --- [main] liquibase.util                           : Failed to perform a method call for SnakeYaml because the version of SnakeYaml being used is too old. Consider upgrading to a SnakeYaml version equal to or newer than 1.32, by downloading and installing a newer version of Liquibase (which includes a newer version of SnakeYaml). Loading particularly large JSON and YAML documents (like snapshots) in Liquibase may fail if SnakeYaml is not upgraded.
-2024-07-05 17:48:36.648  INFO 14436 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
-2024-07-05 17:48:36.678  INFO 14436 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
-2024-07-05 17:48:36.695  INFO 14436 --- [main] liquibase.util                           : UPDATE SUMMARY
-2024-07-05 17:48:36.695  INFO 14436 --- [main] liquibase.util                           : Run:                          0
-2024-07-05 17:48:36.695  INFO 14436 --- [main] liquibase.util                           : Previously run:              17
-2024-07-05 17:48:36.695  INFO 14436 --- [main] liquibase.util                           : Filtered out:                 0
-2024-07-05 17:48:36.695  INFO 14436 --- [main] liquibase.util                           : -------------------------------
-2024-07-05 17:48:36.695  INFO 14436 --- [main] liquibase.util                           : Total change sets:           17
-2024-07-05 17:48:36.696  INFO 14436 --- [main] liquibase.util                           : Update summary generated
-2024-07-05 17:48:36.711  INFO 14436 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2024-07-05 17:48:36.712  INFO 14436 --- [main] liquibase.command                        : Command execution complete
-2024-07-05 17:48:36.786  INFO 14436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-05 17:48:36.836  INFO 14436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2024-07-05 17:48:36.969  INFO 14436 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-07-05 17:48:37.074  INFO 14436 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2024-07-05 17:48:37.648  INFO 14436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-07-05 17:48:39.951  INFO 14436 --- [main] o.y.w.WebAppStarterApplication           : Started WebAppStarterApplication in 5.96 seconds (JVM running for 6.541)
-2024-07-05 17:48:40.231  INFO 14436 --- [RMI TCP Connection(2)-26.55.112.38] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-05 17:48:44.948  WARN 14436 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=Rental of pets, managementUrl=http://localhost:8080/actuator, healthUrl=http://DESKTOP-F7VCT8R:8080/actuator/health, serviceUrl=http://DESKTOP-F7VCT8R:8080/) at spring-boot-admin ([http://localhost:8085/instances]): I/O error on POST request for "http://localhost:8085/instances": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information. Further attempts are logged on DEBUG level
-2024-07-05 17:48:49.767  WARN 14436 --- [RMI TCP Connection(3)-26.55.112.38] o.s.b.actuate.mail.MailHealthIndicator   : Mail health check failed
-
-javax.mail.AuthenticationFailedException: 
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:942) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.26.jar:5.3.26]
-	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:398) ~[spring-context-support-5.3.26.jar:5.3.26]
-	at org.springframework.boot.actuate.mail.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:42) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.3.26.jar:5.3.26]
-	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-2.7.10.jar:2.7.10]
-	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803) ~[na:na]
-	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
-	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
-	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
-	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714) ~[na:na]
-	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721) ~[na:na]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[na:na]
-	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-Caused by: javax.mail.MessagingException: Exception reading response
-	at com.sun.mail.smtp.SMTPTransport.readServerResponse(SMTPTransport.java:2476) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	at com.sun.mail.smtp.SMTPTransport.simpleCommand(SMTPTransport.java:2406) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	at com.sun.mail.smtp.SMTPTransport$LoginAuthenticator.doAuth(SMTPTransport.java:983) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:924) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	... 46 common frames omitted
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
-	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
-	at com.sun.mail.util.TraceInputStream.read(TraceInputStream.java:102) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291) ~[na:na]
-	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:325) ~[na:na]
-	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:312) ~[na:na]
-	at com.sun.mail.util.LineInputStream.readLine(LineInputStream.java:100) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	at com.sun.mail.smtp.SMTPTransport.readServerResponse(SMTPTransport.java:2456) ~[jakarta.mail-1.6.7.jar:1.6.7]
-	... 49 common frames omitted
-
-2024-07-05 17:50:20.704  INFO 14436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-07-05 17:50:20.714  INFO 14436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-07-05 17:50:24.342  INFO 22692 --- [main] o.y.w.WebAppStarterApplication           : Starting WebAppStarterApplication using Java 21.0.1 on DESKTOP-F7VCT8R with PID 22692 (C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\target\classes started by ylopa in C:\all\Java all\projectMaven\web-app-starter\web-app-starter)
-2024-07-05 17:50:24.344  INFO 22692 --- [main] o.y.w.WebAppStarterApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-07-05 17:50:25.621  INFO 22692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-07-05 17:50:25.622  INFO 22692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2024-07-05 17:50:25.815  INFO 22692 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2024-07-05 17:50:25.819  INFO 22692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-07-05 17:50:26.112  INFO 22692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-07-05 17:50:26.230  INFO 22692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-07-05 17:50:26.344  WARN 22692 --- [main] liquibase.util                           : Failed to perform a method call for SnakeYaml because the version of SnakeYaml being used is too old. Consider upgrading to a SnakeYaml version equal to or newer than 1.32, by downloading and installing a newer version of Liquibase (which includes a newer version of SnakeYaml). Loading particularly large JSON and YAML documents (like snapshots) in Liquibase may fail if SnakeYaml is not upgraded.
-2024-07-05 17:50:26.465  INFO 22692 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
-2024-07-05 17:50:26.494  INFO 22692 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
-2024-07-05 17:50:26.509  INFO 22692 --- [main] liquibase.util                           : UPDATE SUMMARY
-2024-07-05 17:50:26.509  INFO 22692 --- [main] liquibase.util                           : Run:                          0
-2024-07-05 17:50:26.510  INFO 22692 --- [main] liquibase.util                           : Previously run:              17
-2024-07-05 17:50:26.510  INFO 22692 --- [main] liquibase.util                           : Filtered out:                 0
-2024-07-05 17:50:26.510  INFO 22692 --- [main] liquibase.util                           : -------------------------------
-2024-07-05 17:50:26.510  INFO 22692 --- [main] liquibase.util                           : Total change sets:           17
-2024-07-05 17:50:26.510  INFO 22692 --- [main] liquibase.util                           : Update summary generated
-2024-07-05 17:50:26.524  INFO 22692 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2024-07-05 17:50:26.525  INFO 22692 --- [main] liquibase.command                        : Command execution complete
-2024-07-05 17:50:26.587  INFO 22692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-05 17:50:26.629  INFO 22692 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2024-07-05 17:50:26.751  INFO 22692 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-07-05 17:50:26.841  INFO 22692 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2024-07-05 17:50:27.372  INFO 22692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-07-05 17:50:29.532  INFO 22692 --- [main] o.y.w.WebAppStarterApplication           : Started WebAppStarterApplication in 5.515 seconds (JVM running for 6.017)
-2024-07-05 17:50:29.673  INFO 22692 --- [RMI TCP Connection(3)-26.55.112.38] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-05 17:50:34.538  WARN 22692 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=Rental of pets, managementUrl=http://localhost:8080/actuator, healthUrl=http://DESKTOP-F7VCT8R:8080/actuator/health, serviceUrl=http://DESKTOP-F7VCT8R:8080/) at spring-boot-admin ([http://localhost:8085/instances]): I/O error on POST request for "http://localhost:8085/instances": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information. Further attempts are logged on DEBUG level
-2024-07-05 17:52:52.776  INFO 22692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-07-05 17:52:52.778  INFO 22692 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-07-05 19:39:27.181  INFO 26200 --- [main] o.y.w.WebAppStarterApplication           : Starting WebAppStarterApplication using Java 21.0.1 on DESKTOP-F7VCT8R with PID 26200 (C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\target\classes started by ylopa in C:\all\Java all\projectMaven\web-app-starter\web-app-starter)
-2024-07-05 19:39:27.183  INFO 26200 --- [main] o.y.w.WebAppStarterApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-07-05 19:39:29.171  INFO 26200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-07-05 19:39:29.171  INFO 26200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2024-07-05 19:39:29.429  INFO 26200 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2024-07-05 19:39:29.434  INFO 26200 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-07-05 19:39:29.824  INFO 26200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-07-05 19:39:30.007  INFO 26200 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-07-05 19:39:30.202  WARN 26200 --- [main] liquibase.util                           : Failed to perform a method call for SnakeYaml because the version of SnakeYaml being used is too old. Consider upgrading to a SnakeYaml version equal to or newer than 1.32, by downloading and installing a newer version of Liquibase (which includes a newer version of SnakeYaml). Loading particularly large JSON and YAML documents (like snapshots) in Liquibase may fail if SnakeYaml is not upgraded.
-2024-07-05 19:39:30.412  INFO 26200 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
-2024-07-05 19:39:30.449  INFO 26200 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
-2024-07-05 19:39:30.470  INFO 26200 --- [main] liquibase.util                           : UPDATE SUMMARY
-2024-07-05 19:39:30.470  INFO 26200 --- [main] liquibase.util                           : Run:                          0
-2024-07-05 19:39:30.470  INFO 26200 --- [main] liquibase.util                           : Previously run:              17
-2024-07-05 19:39:30.471  INFO 26200 --- [main] liquibase.util                           : Filtered out:                 0
-2024-07-05 19:39:30.471  INFO 26200 --- [main] liquibase.util                           : -------------------------------
-2024-07-05 19:39:30.471  INFO 26200 --- [main] liquibase.util                           : Total change sets:           17
-2024-07-05 19:39:30.471  INFO 26200 --- [main] liquibase.util                           : Update summary generated
-2024-07-05 19:39:30.495  INFO 26200 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2024-07-05 19:39:30.497  INFO 26200 --- [main] liquibase.command                        : Command execution complete
-2024-07-05 19:39:30.618  INFO 26200 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-05 19:39:30.688  INFO 26200 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2024-07-05 19:39:30.867  INFO 26200 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-07-05 19:39:31.030  INFO 26200 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2024-07-05 19:39:31.952  INFO 26200 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-07-05 19:39:35.130  INFO 26200 --- [main] o.y.w.WebAppStarterApplication           : Started WebAppStarterApplication in 8.479 seconds (JVM running for 9.143)
-2024-07-05 19:39:35.177  INFO 26200 --- [RMI TCP Connection(2)-26.55.112.38] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-05 19:39:40.160  WARN 26200 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=Rental of pets, managementUrl=http://localhost:8080/actuator, healthUrl=http://DESKTOP-F7VCT8R:8080/actuator/health, serviceUrl=http://DESKTOP-F7VCT8R:8080/) at spring-boot-admin ([http://localhost:8085/instances]): I/O error on POST request for "http://localhost:8085/instances": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information. Further attempts are logged on DEBUG level
-2024-07-05 19:39:43.874  INFO 26200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-07-05 19:39:43.877  INFO 26200 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-07-05 21:04:17.914  INFO 25156 --- [main] o.y.w.WebAppStarterApplication           : Starting WebAppStarterApplication using Java 21.0.1 on DESKTOP-F7VCT8R with PID 25156 (C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\target\classes started by ylopa in C:\all\Java all\projectMaven\web-app-starter\web-app-starter)
-2024-07-05 21:04:17.917  INFO 25156 --- [main] o.y.w.WebAppStarterApplication           : No active profile set, falling back to 1 default profile: "default"
-2024-07-05 21:04:19.655  INFO 25156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-07-05 21:04:19.656  INFO 25156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
-2024-07-05 21:04:19.870  INFO 25156 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2024-07-05 21:04:19.875  INFO 25156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-07-05 21:04:20.200  INFO 25156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-07-05 21:04:20.343  INFO 25156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-07-05 21:04:20.489  WARN 25156 --- [main] liquibase.util                           : Failed to perform a method call for SnakeYaml because the version of SnakeYaml being used is too old. Consider upgrading to a SnakeYaml version equal to or newer than 1.32, by downloading and installing a newer version of Liquibase (which includes a newer version of SnakeYaml). Loading particularly large JSON and YAML documents (like snapshots) in Liquibase may fail if SnakeYaml is not upgraded.
-2024-07-05 21:04:20.635  INFO 25156 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
-2024-07-05 21:04:20.668  INFO 25156 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
-2024-07-05 21:04:20.686  INFO 25156 --- [main] liquibase.util                           : UPDATE SUMMARY
-2024-07-05 21:04:20.686  INFO 25156 --- [main] liquibase.util                           : Run:                          0
-2024-07-05 21:04:20.686  INFO 25156 --- [main] liquibase.util                           : Previously run:              17
-2024-07-05 21:04:20.686  INFO 25156 --- [main] liquibase.util                           : Filtered out:                 0
-2024-07-05 21:04:20.686  INFO 25156 --- [main] liquibase.util                           : -------------------------------
-2024-07-05 21:04:20.686  INFO 25156 --- [main] liquibase.util                           : Total change sets:           17
-2024-07-05 21:04:20.686  INFO 25156 --- [main] liquibase.util                           : Update summary generated
-2024-07-05 21:04:20.704  INFO 25156 --- [main] liquibase.lockservice                    : Successfully released change log lock
-2024-07-05 21:04:20.705  INFO 25156 --- [main] liquibase.command                        : Command execution complete
-2024-07-05 21:04:20.789  INFO 25156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-05 21:04:20.839  INFO 25156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2024-07-05 21:04:20.970  INFO 25156 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2024-07-05 21:04:21.078  INFO 25156 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2024-07-05 21:04:21.697  INFO 25156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-07-05 21:04:24.227  INFO 25156 --- [main] o.y.w.WebAppStarterApplication           : Started WebAppStarterApplication in 6.686 seconds (JVM running for 7.297)
-2024-07-05 21:04:24.581  INFO 25156 --- [RMI TCP Connection(1)-26.55.112.38] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-07-05 21:04:25.057  INFO 25156 --- [http-nio-8080-exec-1] o.y.webappstarter.service.PetService     : Filters: PetFilter[species=null, age=null, gender=null, isAvailable=null] 
-2024-07-05 21:04:29.220  WARN 25156 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=Rental of pets, managementUrl=http://localhost:8080/actuator, healthUrl=http://DESKTOP-F7VCT8R:8080/actuator/health, serviceUrl=http://DESKTOP-F7VCT8R:8080/) at spring-boot-admin ([http://localhost:8085/instances]): I/O error on POST request for "http://localhost:8085/instances": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information. Further attempts are logged on DEBUG level
-2024-07-05 21:05:41.001  INFO 25156 --- [http-nio-8080-exec-3] o.y.webappstarter.service.PetService     : Filters: PetFilter[species=null, age=null, gender=null, isAvailable=null] 
-2024-07-05 21:05:44.598  INFO 25156 --- [http-nio-8080-exec-5] o.y.w.controller.AdminController         : Filtering pets with: PetFilter[species=null, age=null, gender=null, isAvailable=null]
-2024-07-05 21:05:44.598  INFO 25156 --- [http-nio-8080-exec-5] o.y.webappstarter.service.PetService     : Filters: PetFilter[species=null, age=null, gender=null, isAvailable=null] 
-2024-07-05 21:06:34.729  INFO 25156 --- [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 376 ms
-2024-07-05 21:06:56.576  INFO 25156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-07-05 21:06:56.579  INFO 25156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-07 00:19:15.906  INFO 19224 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-07 00:19:15.910  INFO 19224 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-07 19:51:48.292  INFO 4412 --- [main] o.y.w.WebAppStarterApplication           : Starting WebAppStarterApplication using Java 21.0.1 on DESKTOP-F7VCT8R with PID 4412 (C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\target\classes started by ylopa in C:\all\Java all\projectMaven\web-app-starter\web-app-starter)
+2024-07-07 19:51:48.295  INFO 4412 --- [main] o.y.w.WebAppStarterApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-07-07 19:51:50.891  INFO 4412 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-07 19:51:50.892  INFO 4412 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-07-07 19:51:51.153  INFO 4412 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-07-07 19:51:51.158  INFO 4412 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-07 19:51:51.565  INFO 4412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07 19:51:51.778  INFO 4412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07 19:51:51.975  WARN 4412 --- [main] liquibase.util                           : Failed to perform a method call for SnakeYaml because the version of SnakeYaml being used is too old. Consider upgrading to a SnakeYaml version equal to or newer than 1.32, by downloading and installing a newer version of Liquibase (which includes a newer version of SnakeYaml). Loading particularly large JSON and YAML documents (like snapshots) in Liquibase may fail if SnakeYaml is not upgraded.
+2024-07-07 19:51:52.225  INFO 4412 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
+2024-07-07 19:51:52.263  INFO 4412 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
+2024-07-07 19:51:52.287  INFO 4412 --- [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-07 19:51:52.288  INFO 4412 --- [main] liquibase.util                           : Run:                          0
+2024-07-07 19:51:52.288  INFO 4412 --- [main] liquibase.util                           : Previously run:              17
+2024-07-07 19:51:52.288  INFO 4412 --- [main] liquibase.util                           : Filtered out:                 0
+2024-07-07 19:51:52.288  INFO 4412 --- [main] liquibase.util                           : -------------------------------
+2024-07-07 19:51:52.288  INFO 4412 --- [main] liquibase.util                           : Total change sets:           17
+2024-07-07 19:51:52.288  INFO 4412 --- [main] liquibase.util                           : Update summary generated
+2024-07-07 19:51:52.313  INFO 4412 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-07 19:51:52.314  INFO 4412 --- [main] liquibase.command                        : Command execution complete
+2024-07-07 19:51:52.403  INFO 4412 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-07 19:51:52.489  INFO 4412 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-07-07 19:51:52.674  INFO 4412 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-07 19:51:52.856  INFO 4412 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-07 19:51:53.810  INFO 4412 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-07 19:51:57.036  INFO 4412 --- [main] o.y.w.WebAppStarterApplication           : Started WebAppStarterApplication in 9.323 seconds (JVM running for 10.095)
+2024-07-07 19:51:57.265  INFO 4412 --- [RMI TCP Connection(3)-26.55.112.38] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-07 19:52:02.050  WARN 4412 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=Rental of pets, managementUrl=http://localhost:8080/actuator, healthUrl=http://DESKTOP-F7VCT8R:8080/actuator/health, serviceUrl=http://DESKTOP-F7VCT8R:8080/) at spring-boot-admin ([http://localhost:8085/instances]): I/O error on POST request for "http://localhost:8085/instances": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information. Further attempts are logged on DEBUG level
+2024-07-07 19:52:14.298  INFO 4412 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-07 19:52:14.302  INFO 4412 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-07 23:10:12.787  INFO 6248 --- [main] o.y.w.WebAppStarterApplication           : Starting WebAppStarterApplication using Java 21.0.1 on DESKTOP-F7VCT8R with PID 6248 (C:\all\Java all\projectMaven\web-app-starter\web-app-starter\rentalApp\target\classes started by ylopa in C:\all\Java all\projectMaven\web-app-starter\web-app-starter)
+2024-07-07 23:10:12.790  INFO 6248 --- [main] o.y.w.WebAppStarterApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-07-07 23:10:15.306  INFO 6248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-07 23:10:15.307  INFO 6248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-07-07 23:10:15.581  INFO 6248 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-07-07 23:10:15.586  INFO 6248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-07 23:10:16.047  INFO 6248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07 23:10:16.275  INFO 6248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07 23:10:16.521  WARN 6248 --- [main] liquibase.util                           : Failed to perform a method call for SnakeYaml because the version of SnakeYaml being used is too old. Consider upgrading to a SnakeYaml version equal to or newer than 1.32, by downloading and installing a newer version of Liquibase (which includes a newer version of SnakeYaml). Loading particularly large JSON and YAML documents (like snapshots) in Liquibase may fail if SnakeYaml is not upgraded.
+2024-07-07 23:10:16.771  INFO 6248 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
+2024-07-07 23:10:16.821  INFO 6248 --- [main] liquibase.changelog                      : Reading from webapp.databasechangelog
+2024-07-07 23:10:16.847  INFO 6248 --- [main] liquibase.util                           : UPDATE SUMMARY
+2024-07-07 23:10:16.847  INFO 6248 --- [main] liquibase.util                           : Run:                          0
+2024-07-07 23:10:16.847  INFO 6248 --- [main] liquibase.util                           : Previously run:              17
+2024-07-07 23:10:16.847  INFO 6248 --- [main] liquibase.util                           : Filtered out:                 0
+2024-07-07 23:10:16.847  INFO 6248 --- [main] liquibase.util                           : -------------------------------
+2024-07-07 23:10:16.847  INFO 6248 --- [main] liquibase.util                           : Total change sets:           17
+2024-07-07 23:10:16.847  INFO 6248 --- [main] liquibase.util                           : Update summary generated
+2024-07-07 23:10:16.875  INFO 6248 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2024-07-07 23:10:16.876  INFO 6248 --- [main] liquibase.command                        : Command execution complete
+2024-07-07 23:10:16.985  INFO 6248 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-07 23:10:17.077  INFO 6248 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-07-07 23:10:17.268  INFO 6248 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-07-07 23:10:17.496  INFO 6248 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-07-07 23:10:18.484  INFO 6248 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-07-07 23:10:22.019  INFO 6248 --- [main] o.y.w.WebAppStarterApplication           : Started WebAppStarterApplication in 9.854 seconds (JVM running for 10.639)
+2024-07-07 23:10:22.309  INFO 6248 --- [RMI TCP Connection(3)-26.55.112.38] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-07 23:10:27.028  WARN 6248 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=Rental of pets, managementUrl=http://localhost:8080/actuator, healthUrl=http://DESKTOP-F7VCT8R:8080/actuator/health, serviceUrl=http://DESKTOP-F7VCT8R:8080/) at spring-boot-admin ([http://localhost:8085/instances]): I/O error on POST request for "http://localhost:8085/instances": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information. Further attempts are logged on DEBUG level
+2024-07-07 23:15:07.930  INFO 6248 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-07 23:15:07.935  INFO 6248 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

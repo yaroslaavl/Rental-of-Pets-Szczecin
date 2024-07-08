@@ -7,18 +7,12 @@
     <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="Fixing the bags. Started writing tests for my web application">
       <change afterPath="$PROJECT_DIR$/rentalApp/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/controller/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/SpeciesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/SpeciesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/spring.log.2024-06-14.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/database/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/IT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/TestConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/UserControllerIT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/integration/UserRepositoryIT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/mapper/UserCreateEditMapperTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/repository/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/repository/UserRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/test/resources/application-test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rentalApp/src/test/java/org/yaroslaavl/webappstarter/unit/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,16 +77,25 @@
     "JUnit.BookingRepositoryTest.find_by_id.executor": "Run",
     "JUnit.BookingRepositoryTest.find_by_status.executor": "Run",
     "JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic.executor": "Run",
+    "JUnit.PetServiceTest.find_all_pets_using_filters.executor": "Run",
+    "JUnit.PetServiceTest.testFindAll.executor": "Run",
     "JUnit.UserRepositoryTest.executor": "Run",
     "JUnit.UserRepositoryTest.findUserByUsername.executor": "Run",
-    "JUnit.UserRepositoryTest.find_by_email_verification_code.executor": "Coverage",
+    "JUnit.UserRepositoryTest.find_by_email_verification_code.executor": "Run",
     "JUnit.UserRepositoryTest.find_by_username.executor": "Run",
     "JUnit.UserRepositoryTest.find_user_by_username.executor": "Run",
     "JUnit.UserRepositoryTest.save.executor": "Run",
+    "JUnit.UserServiceTest.activation_user_account.executor": "Run",
+    "JUnit.UserServiceTest.create_user.executor": "Run",
+    "JUnit.UserServiceTest.delete_user.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "JUnit.UserServiceTest.resend_activation_code.executor": "Run",
+    "JUnit.UserServiceTest.update_user_details.executor": "Run",
     "Maven.rental-of-pets [-pl,admin-server...].executor": "Run",
     "Maven.rental-of-pets [-pl,admin...].executor": "Run",
     "Maven.rental-of-pets [-pl,adminServer...].executor": "Run",
     "Maven.rental-of-pets [admin,spring-boot:run].executor": "Run",
+    "Maven.rental-of-pets [adminServer...].executor": "Run",
     "Maven.rental-of-pets [dependency:tree].executor": "Run",
     "Maven.rental-of-pets [spring-boot:run].executor": "Run",
     "OpenAPI/Swagger Code Generator.app.json.yml.executor": "Run",
@@ -104,7 +107,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.AdminServerApplication.executor": "Run",
-    "Spring Boot.WebAppStarterApplication.executor": "Run",
+    "Spring Boot.WebAppStarterApplication.executor": "Coverage",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/all/Java all/projectMaven/web-app-starter/web-app-starter",
@@ -145,89 +148,89 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn dependency:tree" />
-      <command value="mvn spring-boot:run" />
       <command value="mvn -pl admin spring-boot:run " />
       <command value="mvn admin spring-boot:run " />
       <command value="mvn -pl admin-server spring-boot:run " />
+      <command value="mvn adminServer spring-boot:run " />
       <command value="mvn -pl adminServer spring-boot:run " />
+      <command value="mvn spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic">
-    <configuration name="BookingRepositoryTest.findByStatus_WhenNonExistingStatus_ReturnEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PetServiceTest.find_all_pets_using_filters">
+    <configuration name="PetServiceTest.find_all_pets_using_filters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rentalApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.repository.*" />
+          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.BookingRepositoryTest" />
-      <option name="METHOD_NAME" value="findByStatus_WhenNonExistingStatus_ReturnEmptyList" />
+      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.service" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.service.PetServiceTest" />
+      <option name="METHOD_NAME" value="find_all_pets_using_filters" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookingRepositoryTest.find_booking_by_user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PetServiceTest.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rentalApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.repository.*" />
+          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.BookingRepositoryTest" />
-      <option name="METHOD_NAME" value="find_booking_by_user" />
+      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.service" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.service.PetServiceTest" />
+      <option name="METHOD_NAME" value="testFindAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookingRepositoryTest.find_by_id" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rentalApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.repository.*" />
+          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.BookingRepositoryTest" />
-      <option name="METHOD_NAME" value="find_by_id" />
+      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.service" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.service.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.delete_user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rentalApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.service" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="delete_user" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookingRepositoryTest.find_by_status" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.update_user_details" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rentalApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.repository.*" />
+          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.BookingRepositoryTest" />
-      <option name="METHOD_NAME" value="find_by_status" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rentalApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.yaroslaavl.webappstarter.unit.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.repository" />
-      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.repository.MedicalRecordRepositoryTest" />
-      <option name="METHOD_NAME" value="find_by_id_with_pet_and_veterinarian_and_clinic" />
+      <option name="PACKAGE_NAME" value="org.yaroslaavl.webappstarter.unit.service" />
+      <option name="MAIN_CLASS_NAME" value="org.yaroslaavl.webappstarter.unit.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="update_user_details" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -249,11 +252,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic" />
-        <item itemvalue="JUnit.BookingRepositoryTest.find_by_id" />
-        <item itemvalue="JUnit.BookingRepositoryTest.find_booking_by_user" />
-        <item itemvalue="JUnit.BookingRepositoryTest.findByStatus_WhenNonExistingStatus_ReturnEmptyList" />
-        <item itemvalue="JUnit.BookingRepositoryTest.find_by_status" />
+        <item itemvalue="JUnit.PetServiceTest.find_all_pets_using_filters" />
+        <item itemvalue="JUnit.PetServiceTest.testFindAll" />
+        <item itemvalue="JUnit.UserServiceTest.delete_user" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.update_user_details" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +334,11 @@
       <workItem from="1720108065928" duration="18000" />
       <workItem from="1720193709890" duration="11117000" />
       <workItem from="1720281612397" duration="1541000" />
-      <workItem from="1720298377911" duration="1779000" />
+      <workItem from="1720298377911" duration="5482000" />
+      <workItem from="1720371602489" duration="3040000" />
+      <workItem from="1720385437281" duration="1535000" />
+      <workItem from="1720388652898" duration="2904000" />
+      <workItem from="1720431137875" duration="9486000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -461,7 +468,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718319442025</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fixing the bags. Started writing tests for my web application">
+      <option name="closed" value="true" />
+      <created>1720301034068</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1720301034068</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixing the bags. Started writing tests for my web application">
+      <option name="closed" value="true" />
+      <created>1720301187552</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720301187552</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,9 +520,15 @@
     <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1720201128972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.yaroslaavl.webappstarter.unit.repository.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/web_app_starter$WebAppStarterApplication.ic" NAME="WebAppStarterApplication Coverage Results" MODIFIED="1720201165831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/web_app_starter$WebAppStarterApplication.ic" NAME="WebAppStarterApplication Coverage Results" MODIFIED="1720386611220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest_find_by_email_verification_code.ic" NAME="UserRepositoryTest.find_by_email_verification_code Coverage Results" MODIFIED="1720202181990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.yaroslaavl.webappstarter.unit.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/web_app_starter$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1720374673002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.yaroslaavl.webappstarter.unit.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/web_app_starter$UserServiceTest_create_user.ic" NAME="UserServiceTest.create_user Coverage Results" MODIFIED="1720374889571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.yaroslaavl.webappstarter.unit.service.*</FILTER>
     </SUITE>
   </component>
 </project>
