@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 public class NotificationReadDto {
 
     Long id;
-    User user;
-    Booking booking;
+    Long userId;
+    Long bookingId;
     String message;
     LocalDateTime time;
     String formattedTime;

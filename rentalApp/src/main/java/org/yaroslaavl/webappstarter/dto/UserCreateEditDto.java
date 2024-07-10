@@ -60,6 +60,7 @@ public class UserCreateEditDto {
     Boolean emailVerified;
 
     String emailVerificationToken;
+
     public static UserCreateEditDto createNewUser(String username, LocalDate birthDate, String firstname, String lastname, String address, String pesel, String phone, MultipartFile profilePicture,Role role,boolean emailVerified,String emailVerificationToken) {
         Random random = new Random();
         int passwordLength = random.nextInt(12) + 5;

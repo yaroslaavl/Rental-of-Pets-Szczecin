@@ -1,4 +1,4 @@
-package org.yaroslaavl.webappstarter.controller;
+package org.yaroslaavl.webappstarter.http.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

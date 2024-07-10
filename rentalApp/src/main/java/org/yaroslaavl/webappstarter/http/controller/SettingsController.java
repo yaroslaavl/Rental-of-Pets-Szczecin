@@ -1,4 +1,4 @@
-package org.yaroslaavl.webappstarter.controller;
+package org.yaroslaavl.webappstarter.http.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -43,7 +43,6 @@ public class SettingsController {
     @Autowired
     PasswordEncoder passwordEncoder;
     private final UserService userService;
-    private final ImageService imageService;
 
     @Operation(summary = "User settings form")
     @GetMapping("/settings")
@@ -142,6 +141,5 @@ public class SettingsController {
             return ResponseEntity.notFound().build();
         }
     }
-
 
 }

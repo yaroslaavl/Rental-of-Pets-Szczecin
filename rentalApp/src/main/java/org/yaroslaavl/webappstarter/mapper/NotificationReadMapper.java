@@ -13,8 +13,8 @@ public class NotificationReadMapper implements Mapper<Notification, Notification
     public NotificationReadDto map(Notification object) {
         return new NotificationReadDto(
             object.getId(),
-            object.getUser(),
-            object.getBooking(),
+            object.getUser().getId(),
+            object.getBooking().getId(),
             object.getMessage(),
             object.getTime(),
             object.getFormattedTime(),

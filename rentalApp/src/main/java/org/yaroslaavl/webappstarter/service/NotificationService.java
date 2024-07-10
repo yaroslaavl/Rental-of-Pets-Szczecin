@@ -7,10 +7,13 @@ import org.springframework.transaction.annotation.Transactional;
 import org.yaroslaavl.webappstarter.database.entity.Notification;
 import org.yaroslaavl.webappstarter.database.entity.User;
 import org.yaroslaavl.webappstarter.database.repository.NotificationRepository;
+import org.yaroslaavl.webappstarter.dto.NotificationCreateEditDto;
+import org.yaroslaavl.webappstarter.mapper.NotificationCreateEditMapper;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -19,12 +22,9 @@ public class NotificationService {
 
     private final NotificationRepository notificationRepository;
 
-    public List<Notification> notificationsForUser(Optional<User> user) {
-        if (user.isPresent()) {
-            return notificationRepository.findAllByUser(user.get());
-        } else {
-            return Collections.emptyList();
-        }
+    public List<Notification> notificationsForUser(Optional<User> userOptional) {
+        User user = userOptional.orElseThrow(() -> new RuntimeException("User not found"));
+        return notificationRepository.findAllByUser(user);
     }
 
     @Transactional

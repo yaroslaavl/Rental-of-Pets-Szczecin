@@ -1,4 +1,4 @@
-package org.yaroslaavl.webappstarter.controller;
+package org.yaroslaavl.webappstarter.http.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
