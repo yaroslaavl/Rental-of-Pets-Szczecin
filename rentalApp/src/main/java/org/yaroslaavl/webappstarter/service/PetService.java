@@ -40,7 +40,7 @@ public class PetService {
                 .add(petFilter.isAvailable(),pet.isAvailable::eq)
                 .buildAnd();
         log.info("Filters: {} ",petFilter);
-        return petRepository.findAll((Predicate)predicate,pageable)
+        return petRepository.findAll(predicate,pageable)
                 .map(petReadMapper::map);
     }
 

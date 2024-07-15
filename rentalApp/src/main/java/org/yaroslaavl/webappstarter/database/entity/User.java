@@ -49,7 +49,7 @@ public class User implements BaseEntity<Long>{
     @Column(name = "email_verified", nullable = false)
     private Boolean emailVerified;
 
-    @Column(name = "email_verification_token")
+    @Column(name = "email_verification_token",nullable = false)
     private String emailVerificationToken;
 
 }

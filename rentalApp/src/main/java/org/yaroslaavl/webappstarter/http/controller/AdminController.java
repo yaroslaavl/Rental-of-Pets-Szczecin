@@ -43,7 +43,7 @@ public class AdminController {
 
     @Operation(summary = "Admin panel")
     @GetMapping("/admin-panel")
-    public String adminPanel(Model model){
+    public String adminPanel(){
         return "admin/adminPanel";
     }
 

@@ -97,14 +97,12 @@ public class SettingsController {
             model.addAttribute("errors", bindingResult.getAllErrors());
             return "user/settings/account";
         }
-
         userService.update(user.getId(),user);
         return "redirect:/user/settings/account";
     }
 
-
     @PostMapping("/settings/account/resend-activation-code")
-    public String resendActivationCode(@AuthenticationPrincipal UserDetails userDetails) throws UnknownHostException {
+    public String resendActivationCode(@AuthenticationPrincipal UserDetails userDetails){
         String username = userDetails.getUsername();
         boolean activationCodeResent = userService.resendActivationCode(username);
         if (activationCodeResent) {

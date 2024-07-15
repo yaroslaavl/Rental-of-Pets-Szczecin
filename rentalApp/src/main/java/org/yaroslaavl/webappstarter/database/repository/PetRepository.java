@@ -21,4 +21,5 @@ public interface PetRepository extends JpaRepository<Pet,Long>, QuerydslPredicat
 
     Page<Pet> findAll(Predicate predicate, Pageable pageable);
 
+
 }

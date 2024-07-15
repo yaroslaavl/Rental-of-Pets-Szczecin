@@ -22,7 +22,7 @@ public class Pet implements BaseEntity<Long>{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "species_id")
     private Species species;
 
@@ -36,7 +36,7 @@ public class Pet implements BaseEntity<Long>{
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<MedicalRecord> medicalRecords = new ArrayList<>();
 
     private String description;

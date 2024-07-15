@@ -9,10 +9,7 @@ import org.testcontainers.shaded.org.apache.commons.lang3.RandomStringUtils;
 import org.yaroslaavl.webappstarter.database.entity.Role;
 import org.yaroslaavl.webappstarter.validation.*;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.util.Random;
 
@@ -57,6 +54,7 @@ public class UserCreateEditDto {
 
     Role role;
 
+    @NotNull
     Boolean emailVerified;
 
     String emailVerificationToken;

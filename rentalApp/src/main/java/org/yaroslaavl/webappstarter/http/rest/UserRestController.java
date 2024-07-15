@@ -1,22 +1,22 @@
 package org.yaroslaavl.webappstarter.http.rest;
 
-
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
+import org.yaroslaavl.webappstarter.dto.UserReadDto;
 import org.yaroslaavl.webappstarter.service.UserService;
 import org.yaroslaavl.webappstarter.validation.CreateAction;
+
+import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -36,12 +36,18 @@ public class UserRestController {
     @Operation(summary = "Create user", description = "Creates a new user")
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<?> create(@Validated({CreateAction.class}) @RequestBody UserCreateEditDto user,
-                         BindingResult bindingResult) {
+    public ResponseEntity<UserReadDto> create(@Validated({CreateAction.class}) @RequestBody UserCreateEditDto user,
+                                              BindingResult bindingResult, UriComponentsBuilder uriComponentsBuilder) {
         if (bindingResult.hasErrors()) {
-            return ResponseEntity.badRequest().body(bindingResult.getAllErrors());
+            bindingResult
+                    .getFieldErrors()
+                    .forEach(f -> System.out.println(f.getField() + ": " + f.getDefaultMessage()));
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else{
+            var userReadDto = userService.create(user);
+            return ResponseEntity.created(uriComponentsBuilder.replacePath("/api/users/create/{userId}")
+                            .build(Map.of("userId",userReadDto.getId())))
+                            .body(userReadDto);
         }
-        userService.create(user);
-        return ResponseEntity.ok("User created successfully");
     }
 }
