@@ -54,7 +54,6 @@ public class UserCreateEditDto {
 
     Role role;
 
-    @NotNull
     Boolean emailVerified;
 
     String emailVerificationToken;
