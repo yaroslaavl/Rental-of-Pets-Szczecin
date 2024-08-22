@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>org.yaroslaavl</groupId>
-    <artifactId>rentalApp</artifactId>
+    <artifactId>rental-pets-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>rentalApp</name>
-    <description>rentalApp</description>
+    <name>rental-pets-service</name>
+    <description>rental-pets-service</description>
     <properties>
         <java.version>17</java.version>
     </properties>

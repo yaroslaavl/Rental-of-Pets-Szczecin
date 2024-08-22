@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>admin-server</artifactId>
+    <artifactId>admin-server-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>admin-server</name>
+    <name>admin-server-service</name>
     <description>Spring Boot Admin Server</description>
 
     <parent>
