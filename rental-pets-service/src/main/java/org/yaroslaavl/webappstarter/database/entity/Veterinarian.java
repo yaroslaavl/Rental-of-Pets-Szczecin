@@ -13,11 +13,7 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(schema = "webapp",name = "veterinarians")
-public class Veterinarian implements BaseEntity<Long> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Veterinarian extends BaseEntity<Long> {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "clinic_id")

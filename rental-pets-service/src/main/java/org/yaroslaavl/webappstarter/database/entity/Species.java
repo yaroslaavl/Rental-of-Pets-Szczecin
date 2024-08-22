@@ -13,11 +13,7 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(schema = "webapp",name = "species")
-public class Species implements BaseEntity<Long>{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Species extends BaseEntity<Long> {
 
     @Column(unique = true,nullable = false)
     private String name;

@@ -15,11 +15,7 @@ import java.util.List;
 @Builder
 @Table(schema = "webapp",name = "pets")
 @Entity
-public class Pet implements BaseEntity<Long>{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Pet extends BaseEntity<Long> {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "species_id")

@@ -15,11 +15,7 @@ import java.util.List;
 @Builder
 @Entity
 @Table(schema = "webapp",name = "clinics")
-public class Clinic implements BaseEntity<Long>{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Clinic extends BaseEntity<Long> {
 
     private String name;
 

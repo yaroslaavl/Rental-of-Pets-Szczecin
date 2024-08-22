@@ -14,11 +14,7 @@ import java.time.LocalDateTime;
 @Builder
 @Entity
 @Table(schema = "webapp", name = "notifications")
-public class Notification implements BaseEntity<Long> {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Notification extends BaseEntity<Long> {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", referencedColumnName = "id")

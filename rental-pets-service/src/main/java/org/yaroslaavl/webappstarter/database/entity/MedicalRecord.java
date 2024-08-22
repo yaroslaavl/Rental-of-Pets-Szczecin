@@ -14,11 +14,7 @@ import java.time.LocalDate;
 @Builder
 @Entity
 @Table(schema = "webapp", name = "medical_records")
-public class MedicalRecord implements BaseEntity<Long>{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class MedicalRecord extends BaseEntity<Long> {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pet_id", referencedColumnName = "id", nullable = false)

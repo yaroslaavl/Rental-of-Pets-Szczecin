@@ -4,41 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="corrected the method">
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="22.08 - working">
       <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/Budgerigar_Talker.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/Budgerigar_Talker.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/Canary_Samolion.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/Canary_Samolion.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/Charlie_Labrador_image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/Charlie_Labrador_image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/Mako_Pekingese.png" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/Mako_Pekingese.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/Persian_Croopka.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/Persian_Croopka.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/Siberian_Ivanko.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/Siberian_Ivanko.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/Syrian_Zeus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/Syrian_Zeus.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/Tiny_Spitz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/Tiny_Spitz.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/Whiskers_British_Shorthair_image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/Whiskers_British_Shorthair_image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/booking.svg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/booking.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/chineseHamster_Elsa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/chineseHamster_Elsa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/dog_logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/dog_logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/first_page_dog.png" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/first_page_dog.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/google_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/google_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/hollandLop_Fluffy.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/hollandLop_Fluffy.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/notification-alert.svg" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/notification-alert.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/user_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/static/img/workImages/user_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/adminPanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/adminPanel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/listOfBookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/listOfBookings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/pets-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/pets-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/user-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/user-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/greetings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/greetings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/notifications/notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/notifications/notifications.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/bookings/bookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/bookings/bookings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/pets.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/pets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/map/mapAndCompanyInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/map/mapAndCompanyInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/updatedUser.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/updatedUser.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -390,7 +358,7 @@
       <workItem from="1723727693730" duration="3864000" />
       <workItem from="1723747698625" duration="13000" />
       <workItem from="1724324261479" duration="994000" />
-      <workItem from="1724325266419" duration="14173000" />
+      <workItem from="1724325266419" duration="16350000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -592,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724347030164</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="22.08 - working">
+      <option name="closed" value="true" />
+      <created>1724347278887</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724347278887</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,7 +602,8 @@
     <MESSAGE value="made a method to save users who have made updates to their data" />
     <MESSAGE value="Made a method to save users who have made updates to their data. Also&#10;renamed modules and updated project structure" />
     <MESSAGE value="corrected the method" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrected the method" />
+    <MESSAGE value="22.08 - working" />
+    <option name="LAST_COMMIT_MESSAGE" value="22.08 - working" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1720201128972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

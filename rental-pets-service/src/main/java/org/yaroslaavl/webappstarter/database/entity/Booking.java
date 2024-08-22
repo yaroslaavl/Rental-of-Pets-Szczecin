@@ -14,11 +14,7 @@ import java.time.LocalDate;
 @Builder
 @Entity
 @Table(schema = "webapp",name = "bookings")
-public class Booking implements BaseEntity<Long>{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Booking extends BaseEntity<Long> {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")

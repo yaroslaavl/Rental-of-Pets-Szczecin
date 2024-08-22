@@ -11,11 +11,7 @@ import java.time.LocalDate;
 @Builder(toBuilder = true)
 @Entity
 @Table(schema = "webapp", name = "users")
-public class User implements BaseEntity<Long>{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class User extends BaseEntity<Long> {
 
     @Column(unique = true, nullable = false,name = "username")
     private String username;
