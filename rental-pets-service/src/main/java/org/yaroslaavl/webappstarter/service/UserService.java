@@ -20,7 +20,14 @@ import org.yaroslaavl.webappstarter.dto.UserReadDto;
 import org.yaroslaavl.webappstarter.mapper.UserCreateEditMapper;
 import org.yaroslaavl.webappstarter.mapper.UserReadMapper;
 
+import java.io.*;
 import java.net.InetAddress;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.*;
 
 @Service
@@ -64,6 +71,20 @@ public class UserService implements UserDetailsService {
             mailService.send(userDto.getUsername(), "Activation code", message);
         }
         return userReadDto;
+    }
+    @SneakyThrows
+    public void userInfo(UserCreateEditDto userCreateEditDto){
+        ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("Europe/Warsaw"));
+        String formattedTime = zonedDateTime.format(
+                DateTimeFormatter.ofLocalizedDateTime(
+                                FormatStyle.SHORT)
+                        .withLocale(new Locale("pl", "PL")));
+        try(FileWriter fileWriter = new FileWriter("rentalApp/src/main/resources/updatedUser.txt",true)){
+            fileWriter.write(userCreateEditDto.getUsername() + "   |   ");
+            fileWriter.write(formattedTime);
+            fileWriter.flush();
+
+        }     
     }
     @SneakyThrows
     @Transactional
@@ -135,6 +156,7 @@ public class UserService implements UserDetailsService {
         return userRepository.findById(id)
                 .map(user -> {
                     uploadImage(userCreateEditDto.getProfilePicture());
+                    userInfo(userCreateEditDto);
                     return userCreateEditMapper.map(userCreateEditDto,user);
                 })
                 .map(userRepository::saveAndFlush)
