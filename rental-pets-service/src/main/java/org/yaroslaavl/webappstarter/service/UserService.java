@@ -79,7 +79,7 @@ public class UserService implements UserDetailsService {
                 DateTimeFormatter.ofLocalizedDateTime(
                                 FormatStyle.SHORT)
                         .withLocale(new Locale("pl", "PL")));
-        try(FileWriter fileWriter = new FileWriter("rentalApp/src/main/resources/updatedUser.txt",true)){
+        try(FileWriter fileWriter = new FileWriter("rental-pets-service/src/main/resources/updatedUser.txt",true)){
             fileWriter.write(userCreateEditDto.getUsername() + "   |   ");
             fileWriter.write(formattedTime);
             fileWriter.flush();

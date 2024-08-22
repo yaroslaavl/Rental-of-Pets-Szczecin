@@ -15,7 +15,6 @@ import java.util.List;
 @Builder
 @Table(schema = "webapp",name = "pets")
 @Entity
-@NamedEntityGraph(name = "Pet.species", attributeNodes = @NamedAttributeNode("species"))
 public class Pet implements BaseEntity<Long>{
 
     @Id
