@@ -30,6 +30,7 @@ public class User extends BaseEntity<Long> {
 
     private String address;
 
+    @Column(unique = true)
     private String pesel;
 
     @Column(unique = true)
