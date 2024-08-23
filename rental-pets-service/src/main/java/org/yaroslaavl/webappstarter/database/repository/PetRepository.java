@@ -3,6 +3,7 @@ package org.yaroslaavl.webappstarter.database.repository;
 import com.querydsl.core.types.Predicate;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
@@ -19,7 +20,7 @@ public interface PetRepository extends JpaRepository<Pet,Long>, QuerydslPredicat
             "JOIN FETCH p.species WHERE p.id = :id")
     Optional<Pet> findById(@Param("id") Long id);
 
+    @EntityGraph(attributePaths = {"species", "medicalRecords"})
     Page<Pet> findAll(Predicate predicate, Pageable pageable);
-
 
 }

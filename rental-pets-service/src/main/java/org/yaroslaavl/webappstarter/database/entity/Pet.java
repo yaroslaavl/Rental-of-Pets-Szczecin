@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.List;
 @Entity
 public class Pet extends BaseEntity<Long> {
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "species_id")
     private Species species;
 
@@ -31,7 +32,7 @@ public class Pet extends BaseEntity<Long> {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL)
     private List<MedicalRecord> medicalRecords = new ArrayList<>();
 
     private String description;
