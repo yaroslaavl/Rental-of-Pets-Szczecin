@@ -18,7 +18,7 @@ import java.util.List;
 @Entity
 public class Pet extends BaseEntity<Long> {
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "species_id")
     private Species species;
 
