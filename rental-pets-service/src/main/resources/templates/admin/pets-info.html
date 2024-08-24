@@ -217,8 +217,12 @@
             <select id="age" name="age">
                 <option value="">All</option>
                 <script>
+                    var ageSelect = document.getElementById('age');
                     for (var i = 0; i <= 20; i++) {
-                        document.write('<option value="' + i + '">' + i + '</option>');
+                        var option = document.createElement('option');
+                        option.value = i;
+                        option.text = i;
+                        ageSelect.add(option);
                     }
                 </script>
             </select>
