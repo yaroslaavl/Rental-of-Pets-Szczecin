@@ -56,6 +56,7 @@ public class UserService implements UserDetailsService {
                     user.setRole(Role.USER);
                     user.setEmailVerificationToken(activationToken);
                     user.setEmailVerified(false);
+                    usersOfApp(userDto);
                     return userRepository.saveAndFlush(user);
                 })
                 .map(userReadMapper::map)
@@ -73,18 +74,19 @@ public class UserService implements UserDetailsService {
         return userReadDto;
     }
     @SneakyThrows
-    public void userInfo(UserCreateEditDto userCreateEditDto){
+    public void usersOfApp(UserCreateEditDto userCreateEditDto) {
         ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("Europe/Warsaw"));
         String formattedTime = zonedDateTime.format(
-                DateTimeFormatter.ofLocalizedDateTime(
-                                FormatStyle.SHORT)
+                DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT)
                         .withLocale(new Locale("pl", "PL")));
-        try(FileWriter fileWriter = new FileWriter("rental-pets-service/src/main/resources/updatedUser.txt",true)){
-            fileWriter.write(userCreateEditDto.getUsername() + "   |   ");
-            fileWriter.write(formattedTime);
-            fileWriter.flush();
 
-        }     
+        try (BufferedWriter bufferedWriter = new BufferedWriter(
+                new FileWriter("rental-pets-service/src/main/resources/newUsersOfApp.txt", true))) {
+            String record = String.format("%s   |   %s%n", userCreateEditDto.getUsername(), formattedTime);
+            bufferedWriter.write(record);
+        } catch (IOException e) {
+            log.error("Exception: " + e);
+        }
     }
     @SneakyThrows
     @Transactional
@@ -156,13 +158,11 @@ public class UserService implements UserDetailsService {
         return userRepository.findById(id)
                 .map(user -> {
                     uploadImage(userCreateEditDto.getProfilePicture());
-                    userInfo(userCreateEditDto);
                     return userCreateEditMapper.map(userCreateEditDto,user);
                 })
                 .map(userRepository::saveAndFlush)
                 .map(userReadMapper::map);
     }
-
     @Transactional
     public boolean delete(Long id){
         return userRepository.findById(id)
