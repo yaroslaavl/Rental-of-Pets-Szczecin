@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="23.08 - application performance improvement">
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="24.08 - fixed a bug">
       <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/entity/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/entity/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/messages_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/messages_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/greetings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/greetings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/pets.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/pets.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/updatedUser.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/updatedUser.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
@@ -164,7 +163,7 @@
       <command value="mvn spring-boot:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebAppStarterApplication (1)">
+  <component name="RunManager" selected="Spring Boot.WebAppStarterApplication">
     <configuration name="PetServiceTest.find_all_pets_using_filters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rentalApp" />
       <extension name="coverage">
@@ -235,7 +234,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebAppStarterApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="WebAppStarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="rental-pets-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.yaroslaavl.webappstarter.WebAppStarterApplication" />
       <extension name="coverage">
@@ -248,16 +247,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebAppStarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="rentalApp" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.yaroslaavl.webappstarter.WebAppStarterApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="JUnit.PetServiceTest.find_all_pets_using_filters" />
+      <item itemvalue="JUnit.PetServiceTest.testFindAll" />
+      <item itemvalue="JUnit.UserServiceTest" />
+      <item itemvalue="JUnit.UserServiceTest.delete_user" />
+      <item itemvalue="Spring Boot.AdminServerApplication" />
+      <item itemvalue="Spring Boot.WebAppStarterApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.WebAppStarterApplication (1)" />
+        <item itemvalue="Spring Boot.WebAppStarterApplication" />
         <item itemvalue="JUnit.PetServiceTest.find_all_pets_using_filters" />
         <item itemvalue="JUnit.PetServiceTest.testFindAll" />
         <item itemvalue="JUnit.UserServiceTest.delete_user" />
@@ -365,7 +365,8 @@
       <workItem from="1724324261479" duration="994000" />
       <workItem from="1724325266419" duration="16350000" />
       <workItem from="1724366075172" duration="3794000" />
-      <workItem from="1724420048168" duration="6535000" />
+      <workItem from="1724420048168" duration="8612000" />
+      <workItem from="1724495823641" duration="3230000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -599,7 +600,47 @@
       <option name="project" value="LOCAL" />
       <updated>1724443016153</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="23.08 - found an internalization mistake">
+      <option name="closed" value="true" />
+      <created>1724444390968</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1724444390968</updated>
+    </task>
+    <task id="LOCAL-00031" summary="23.08 - fixed a bug">
+      <option name="closed" value="true" />
+      <created>1724445526474</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1724445526474</updated>
+    </task>
+    <task id="LOCAL-00032" summary="23.08 - fixed a bug">
+      <option name="closed" value="true" />
+      <created>1724445708206</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1724445708206</updated>
+    </task>
+    <task id="LOCAL-00033" summary="24.08 - fixed a bug">
+      <option name="closed" value="true" />
+      <created>1724508343213</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1724508343213</updated>
+    </task>
+    <task id="LOCAL-00034" summary="24.08 - fixed a bug">
+      <option name="closed" value="true" />
+      <created>1724509463218</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1724509463218</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -636,7 +677,10 @@
     <MESSAGE value="22.08 - working" />
     <MESSAGE value="23.08 - working" />
     <MESSAGE value="23.08 - application performance improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="23.08 - application performance improvement" />
+    <MESSAGE value="23.08 - found an internalization mistake" />
+    <MESSAGE value="23.08 - fixed a bug" />
+    <MESSAGE value="24.08 - fixed a bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.08 - fixed a bug" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1720201128972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
