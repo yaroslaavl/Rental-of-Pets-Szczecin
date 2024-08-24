@@ -36,18 +36,17 @@ import java.util.Optional;
 @Tag(name = "Settings Rest Controller")
 public class SettingsRestController {
 
-    @Autowired
     PasswordEncoder passwordEncoder;
 
     private final UserService userService;
 
     @Operation(summary = "User settings next page")
     @GetMapping("/settings")
-    public ResponseEntity<User> settingsProfile(@AuthenticationPrincipal UserDetails userDetails) {
+    public User settingsProfile(@AuthenticationPrincipal UserDetails userDetails) {
         String username = userDetails.getUsername();
         User user = userService.findByUsername(username)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-        return ResponseEntity.ok(user);
+        return user;
     }
 
     @Operation(summary = "Update user first last name and birth date ")

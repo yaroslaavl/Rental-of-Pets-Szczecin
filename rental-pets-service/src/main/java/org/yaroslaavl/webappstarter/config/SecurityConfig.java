@@ -27,7 +27,6 @@ import static org.yaroslaavl.webappstarter.database.entity.Role.USER;
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final PasswordEncoder passwordEncoder;
     private final UserService userService;
 
     @SneakyThrows
@@ -35,8 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) {
         http
                 .csrf()
-                .ignoringAntMatchers("/api/**")
-                .and()
+                .disable()
                 .authorizeHttpRequests(urlConfig -> urlConfig
                                 .antMatchers("/login", "/users/registration","/v3/api-docs/**", "/swagger-ui/**","/firstPage","/pets","/company-info").permitAll()
                                 .antMatchers("/user/settings/**","/pet/booking/**","/pet/bookings/**","/user/notifications").authenticated()
@@ -61,7 +59,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             String email = userRequest.getIdToken().getClaim("email");
 
             if (userService.findByUsername(email).isEmpty()) {
-                userService.create(UserCreateEditDto.createNewUser(email, null, "User", "User", null, null, null, null, USER,false,null));
+                userService.create(UserCreateEditDto.createNewUser(email, null, "User", "User", null, null, null, null, null,false,null));
             }
             UserDetails userDetails = userService.loadUserByUsername(email);
             DefaultOidcUser defaultOidcUser = new DefaultOidcUser(userDetails.getAuthorities(), userRequest.getIdToken());

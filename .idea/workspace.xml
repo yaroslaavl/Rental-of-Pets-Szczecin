@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="24.08 - fixed a bug">
       <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/greetings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/greetings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/pets.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/pets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/NotificationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/NotificationRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/PetRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/PetRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/SettingsRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/SettingsRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/updatedUser.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/updatedUser.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
@@ -366,7 +369,7 @@
       <workItem from="1724325266419" duration="16350000" />
       <workItem from="1724366075172" duration="3794000" />
       <workItem from="1724420048168" duration="8612000" />
-      <workItem from="1724495823641" duration="3230000" />
+      <workItem from="1724495823641" duration="10168000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -640,7 +643,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724509463218</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="24.08 - fixed a bug">
+      <option name="closed" value="true" />
+      <created>1724510004910</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1724510004910</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

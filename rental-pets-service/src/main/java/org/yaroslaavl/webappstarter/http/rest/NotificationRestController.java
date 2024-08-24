@@ -33,7 +33,7 @@ public class NotificationRestController {
 
     @Operation(summary = "Find all user notification")
     @GetMapping("/notifications")
-    public ResponseEntity<List<NotificationReadDto>> getNotificationsForCurrentUser(@AuthenticationPrincipal UserDetails userDetails) {
+    public List<NotificationReadDto> getNotificationsForCurrentUser(@AuthenticationPrincipal UserDetails userDetails) throws Exception {
         String username = userDetails.getUsername();
         Optional<User> userOptional = userService.findByUsername(username);
         if (userOptional.isPresent()) {
@@ -46,9 +46,9 @@ public class NotificationRestController {
                     .map(notificationReadMapper::map)
                     .collect(Collectors.toList());
 
-            return ResponseEntity.ok(notificationDtos);
+            return notificationDtos;
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+            throw new Exception("User not found");
         }
     }
 

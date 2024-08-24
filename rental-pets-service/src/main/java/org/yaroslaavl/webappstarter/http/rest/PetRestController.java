@@ -26,8 +26,7 @@ public class PetRestController {
 
     @Operation(summary = "Find all pets")
     @GetMapping
-    public ResponseEntity<Page<PetReadDto>> findAllPets(PetFilter petFilter, @PageableDefault(size = 4) Pageable pageable) {
-        Page<PetReadDto> page = petService.findAll(petFilter, pageable);
-        return ResponseEntity.ok(page);
+    public Page<PetReadDto> findAllPets(PetFilter petFilter, @PageableDefault(size = 4) Pageable pageable) {
+        return petService.findAll(petFilter, pageable);
     }
 }
