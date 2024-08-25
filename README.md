@@ -10,7 +10,7 @@
 - User Notifications
 - Uset settings
 - Admin Panel for Managing Pets and Users
-- Admin Server 
+- Admin Server
 
 ## Technologies Used
 - Java
@@ -87,9 +87,9 @@ These settings are essential for enabling Google OAuth2 authentication in your a
 
 ### Installation
 1. Clone the repository:
- 
 
-   git clone https://github.com/yaroslaavl/Rental-of-Pets-Szczecin.git
+
+git clone https://github.com/yaroslaavl/Rental-of-Pets-Szczecin.git
 
 ### Running Spring Boot Admin Server
   ```
@@ -105,5 +105,5 @@ mvn spring-boot:run
 
 ```
 
-### Contact 
+### Contact
 Email - ylopatkin@gmail.com
