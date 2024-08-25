@@ -177,7 +177,7 @@ public class UserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         if (username == null || username.isEmpty()) {
-            throw new IllegalArgumentException("Email cannot be empty");
+            throw new UsernameNotFoundException("User not found");
         }
         return userRepository.findByUsername(username)
                 .map(user -> {
