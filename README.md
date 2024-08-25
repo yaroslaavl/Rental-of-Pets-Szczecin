@@ -8,7 +8,7 @@
 - Viewing Available Pets
 - Making and Managing Bookings
 - User Notifications
-- Uset settings
+- User settings
 - Admin Panel for Managing Pets, Bookings, Users
 - Admin Server
 - Google Map
