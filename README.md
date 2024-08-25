@@ -8,9 +8,10 @@
 - Viewing Available Pets
 - Making and Managing Bookings
 - User Notifications
-- Uset settings
-- Admin Panel for Managing Pets and Users
+- User settings
+- Admin Panel for Managing Pets, Bookings, Users
 - Admin Server
+- Google Map
 
 ## Technologies Used
 - Java
