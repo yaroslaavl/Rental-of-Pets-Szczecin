@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="25.08">
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/forbidden/ForbiddenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/errorAuthentication/Forbidden.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/validation/AgeLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/validation/AgeLimit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/error/503.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/updatedUser.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +110,7 @@
     "Spring Boot.AdminServerApplication.executor": "Run",
     "Spring Boot.WebAppStarterApplication (1).executor": "Run",
     "Spring Boot.WebAppStarterApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/all/Java all/projectMaven/web-app-starter/web-app-starter",
     "list.type.of.created.stylesheet": "CSS",
