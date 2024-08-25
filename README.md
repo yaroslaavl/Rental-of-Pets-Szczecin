@@ -19,7 +19,7 @@
 - Hibernate
 - PostgreSQL
 - Lombok
-- Postgres
+- Maven
 - QueryDSL
 - Liquibase
 - Swagger
