@@ -3,6 +3,7 @@ package org.yaroslaavl.webappstarter.config;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -12,6 +13,7 @@ import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
+import org.yaroslaavl.webappstarter.database.entity.Role;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.service.UserService;
 
@@ -47,6 +49,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")
                         .defaultSuccessUrl("/firstPage"))
+                .exceptionHandling()
+                .accessDeniedHandler(((request, response, accessDeniedException) -> {
+                    accessDeniedException.printStackTrace();
+                    response.sendRedirect("http://localhost:8080/forbidden-error");
+                }))
+                .authenticationEntryPoint(((request, response, authException) -> {
+                    authException.printStackTrace();
+                    response.sendRedirect("http://localhost:8080/forbidden-error");
+                }))
+                .and()
                 .oauth2Login(oauth2Login -> oauth2Login
                         .loginPage("/login")
                         .defaultSuccessUrl("/firstPage")

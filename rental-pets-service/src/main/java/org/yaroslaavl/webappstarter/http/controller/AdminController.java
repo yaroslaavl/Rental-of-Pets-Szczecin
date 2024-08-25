@@ -5,7 +5,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
@@ -24,7 +23,6 @@ import org.yaroslaavl.webappstarter.service.SpeciesService;
 import org.yaroslaavl.webappstarter.service.UserService;
 
 import javax.persistence.EntityNotFoundException;
-import java.util.Optional;
 
 @Controller
 @RequiredArgsConstructor
@@ -121,7 +119,7 @@ public class AdminController {
             model.addAttribute("medicalRecords", medicalRecords);
             return "admin/medical-records";
         } else {
-            return "error/404";
+            return "error/503";
         }
     }
 
