@@ -62,7 +62,7 @@ public class BookingController {
             model.addAttribute("booking", bookingCreateEditDto);
             return "pet/booking";
         }
-        return "error/503";
+        return "error/404";
     }
 
     @Operation(summary = "Order pet")
@@ -136,7 +136,7 @@ public class BookingController {
             model.addAttribute("bookings", bookings);
             return "pet/bookings/bookings";
         } else {
-            return "error/503";
+            return "error/404";
         }
     }
 

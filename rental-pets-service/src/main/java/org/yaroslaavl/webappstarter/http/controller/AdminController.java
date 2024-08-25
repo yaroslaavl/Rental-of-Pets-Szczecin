@@ -119,7 +119,7 @@ public class AdminController {
             model.addAttribute("medicalRecords", medicalRecords);
             return "admin/medical-records";
         } else {
-            return "error/503";
+            return "error/404";
         }
     }
 

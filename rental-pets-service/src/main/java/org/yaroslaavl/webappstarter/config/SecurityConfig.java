@@ -38,7 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests(urlConfig -> urlConfig
-                                .antMatchers("/login", "/users/registration","/v3/api-docs/**", "/swagger-ui/**","/firstPage","/pets","/company-info").permitAll()
+                                .antMatchers("/login", "/users/registration","/v3/api-docs/**", "/swagger-ui/**","/firstPage","/pets","/company-info","/blog").permitAll()
                                 .antMatchers("/user/settings/**","/pet/booking/**","/pet/bookings/**","/user/notifications").authenticated()
                                 .antMatchers("/admin/**").hasAuthority(ADMIN.name())
                 )
@@ -52,10 +52,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling()
                 .accessDeniedHandler(((request, response, accessDeniedException) -> {
                     accessDeniedException.printStackTrace();
-                    response.sendRedirect("http://localhost:8080/forbidden-error");
-                }))
-                .authenticationEntryPoint(((request, response, authException) -> {
-                    authException.printStackTrace();
                     response.sendRedirect("http://localhost:8080/forbidden-error");
                 }))
                 .and()
