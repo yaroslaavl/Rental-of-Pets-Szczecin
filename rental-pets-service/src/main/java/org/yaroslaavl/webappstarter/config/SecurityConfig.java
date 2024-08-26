@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
@@ -17,6 +18,7 @@ import org.yaroslaavl.webappstarter.database.entity.Role;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.service.UserService;
 
+import javax.annotation.Resource;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Set;
@@ -31,6 +33,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserService userService;
 
+    @Resource
+    UserDetailsService userDetailsService;
+
     @SneakyThrows
     @Override
     protected void configure(HttpSecurity http) {
@@ -38,8 +43,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests(urlConfig -> urlConfig
-                                .antMatchers("/login", "/users/registration","/v3/api-docs/**", "/swagger-ui/**","/firstPage","/pets","/company-info","/blog").permitAll()
-                                .antMatchers("/user/settings/**","/pet/booking/**","/pet/bookings/**","/user/notifications").authenticated()
+                                .antMatchers("/login", "/users/registration","/v3/api-docs/**", "/swagger-ui/**","/firstPage","/pets","/company-info","/blog","api/pets","api/users/**").permitAll()
+                                .antMatchers("/user/settings/**","/pet/booking/**","/pet/bookings/**","/user/notifications","api/user/**").authenticated()
                                 .antMatchers("/admin/**").hasAuthority(ADMIN.name())
                 )
                 .logout(logout -> logout
@@ -54,6 +59,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     accessDeniedException.printStackTrace();
                     response.sendRedirect("http://localhost:8080/forbidden-error");
                 }))
+                .and()
+                .rememberMe()
+                .userDetailsService(userDetailsService)
+                .key("remember-user-info")
+                .tokenValiditySeconds(86400)
                 .and()
                 .oauth2Login(oauth2Login -> oauth2Login
                         .loginPage("/login")

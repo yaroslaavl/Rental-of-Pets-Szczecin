@@ -122,6 +122,20 @@
             color: red;
             margin-left: 5px;
         }
+        .form-row{
+            display: flex;
+            align-items: center;
+        }
+        .form-row label {
+            margin-right: 10px;
+        }
+        .form-row input[type="checkbox"] {
+            margin-right: 5px;
+            margin-top: -3px;
+        }
+        .form-row span {
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
@@ -209,6 +223,10 @@
         <div>
             <label for="password"><span th:text="#{registration.password}"></span>:<span class="required">*</span></label>
                 <input id="password" type="password" name="password" required>
+        </div>
+        <div class="form-row">
+            <input id="remember-me" type="checkbox" name="remember-me">
+            <label for="remember-me"><span th:text="#{menu.rememberMe}"></span></label>
         </div>
         <button type="submit" th:text="#{menu.login}"></button>
         <div style="color:red" th:if="${param.error}" th:text="#{bad.credentials}"></div>
