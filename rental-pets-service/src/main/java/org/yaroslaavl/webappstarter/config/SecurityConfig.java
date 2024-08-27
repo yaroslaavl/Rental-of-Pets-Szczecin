@@ -26,7 +26,7 @@ import java.util.Set;
 import static org.yaroslaavl.webappstarter.database.entity.Role.ADMIN;
 import static org.yaroslaavl.webappstarter.database.entity.Role.USER;
 
-@EnableWebSecurity
+@EnableWebSecurity(debug = true)
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -40,12 +40,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) {
         http
-                .csrf()
-                .disable()
+                .apply(new CsrfConfig())
+                .and()
                 .authorizeHttpRequests(urlConfig -> urlConfig
-                                .antMatchers("/login", "/users/registration","/v3/api-docs/**", "/swagger-ui/**","/firstPage","/pets","/company-info","/blog","api/pets","api/users/**").permitAll()
-                                .antMatchers("/user/settings/**","/pet/booking/**","/pet/bookings/**","/user/notifications","api/user/**").authenticated()
-                                .antMatchers("/admin/**").hasAuthority(ADMIN.name())
+                                .antMatchers("/login", "/users/registration","/v3/api-docs/**", "/swagger-ui/**","/firstPage","/pets","/company-info","/blog","/api/pets","/api/users/**").permitAll()
+                                .antMatchers("/user/settings/**","/pet/booking/**","/pet/bookings/**","/user/notifications","/api/user/**").authenticated()
+                                .antMatchers("/admin/**").hasAuthority(ADMIN.getAuthority())
                 )
                 .logout(logout -> logout
                         .logoutUrl("/logout")
