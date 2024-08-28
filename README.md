@@ -1,7 +1,7 @@
 # Rental of Pets
 
 ## Overview
-"Rental of Pets" is a web application designed to facilitate the rental of pets. It allows users to rent pets for a specified duration to see if they can live with animals. Users can view available pets, make reservations, and manage their bookings. The application is built using Java with Spring Boot on the backend and Thymeleaf for server-side rendering.
+"Rental of Pets" is a web application designed to facilitate the rental of pets. It allows users to rent pets for a specified duration to see if they can live with animals. Users can view available pets, make reservations, and manage their bookings. The application is built using Java with Spring Boot on the backend and Thymeleaf for server-side rendering. The site is made for people living in Szczecin and all payments are made directly in person 
 
 ## Features
 - User Authorization and Authentication
