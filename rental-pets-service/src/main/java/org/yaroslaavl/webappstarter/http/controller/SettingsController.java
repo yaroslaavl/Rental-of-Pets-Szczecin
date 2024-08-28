@@ -14,7 +14,7 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
+
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -23,14 +23,10 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 import org.yaroslaavl.webappstarter.database.entity.User;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
-import org.yaroslaavl.webappstarter.dto.UserReadDto;
-import org.yaroslaavl.webappstarter.service.ImageService;
 import org.yaroslaavl.webappstarter.service.UserService;
 import org.yaroslaavl.webappstarter.validation.EditAction;
 import org.yaroslaavl.webappstarter.validation.ImageAction;
 
-import java.io.IOException;
-import java.net.UnknownHostException;
 import java.util.Optional;
 
 @Controller

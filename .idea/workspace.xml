@@ -4,18 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="26.08 - added &quot;remember-me&quot;">
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/CsrfConfig.java" afterDir="false" />
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="27.08 - csrf(in progress)">
+      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/CustomAuthenticationSuccessHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/CsrfConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/CsrfConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/listOfBookingDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/listOfBookingDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/update-pet.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/update-pet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/update-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/update-user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/entity/MedicalRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/entity/MedicalRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/entity/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/entity/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/repository/BookingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/dto/NotificationReadDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/dto/NotificationReadDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/dto/PetReadDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/dto/PetReadDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/ActivationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/ActivationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/controller/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/NotificationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/NotificationRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/PetRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/PetRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/SettingsRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/http/rest/SettingsRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/mapper/PetCreateEditMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/mapper/PetCreateEditMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/PetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/newUsersOfApp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/newUsersOfApp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,75 +83,75 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.BookingRepositoryTest.findByStatus_WhenNonExistingStatus_ReturnEmptyList.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookingRepositoryTest.find_booking_by_user.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookingRepositoryTest.find_by_id.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookingRepositoryTest.find_by_status.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PetServiceTest.find_all_pets_using_filters.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PetServiceTest.testFindAll.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.findUserByUsername.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.find_by_email_verification_code.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.find_by_username.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.find_user_by_username.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.save.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.activation_user_account.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.create_user.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.delete_user.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.resend_activation_code.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.update_user_details.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.admin-server-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.admin-server-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [-pl,admin-server...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [-pl,admin...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [-pl,adminServer...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [admin,spring-boot:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [adminServer...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [dependency:tree].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-of-pets [spring-boot:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-pets-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rental-pets-service [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rentalApp [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.rentalApp [install].executor&quot;: &quot;Run&quot;,
-    &quot;OpenAPI/Swagger Code Generator.app.json.yml.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AdminServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WebAppStarterApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WebAppStarterApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/all/Java all/projectMaven/web-app-starter/web-app-starter&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2632184&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.BookingRepositoryTest.findByStatus_WhenNonExistingStatus_ReturnEmptyList.executor": "Run",
+    "JUnit.BookingRepositoryTest.find_booking_by_user.executor": "Run",
+    "JUnit.BookingRepositoryTest.find_by_id.executor": "Run",
+    "JUnit.BookingRepositoryTest.find_by_status.executor": "Run",
+    "JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic.executor": "Run",
+    "JUnit.PetServiceTest.find_all_pets_using_filters.executor": "Run",
+    "JUnit.PetServiceTest.testFindAll.executor": "Run",
+    "JUnit.UserRepositoryTest.executor": "Run",
+    "JUnit.UserRepositoryTest.findUserByUsername.executor": "Run",
+    "JUnit.UserRepositoryTest.find_by_email_verification_code.executor": "Run",
+    "JUnit.UserRepositoryTest.find_by_username.executor": "Run",
+    "JUnit.UserRepositoryTest.find_user_by_username.executor": "Run",
+    "JUnit.UserRepositoryTest.save.executor": "Run",
+    "JUnit.UserServiceTest.activation_user_account.executor": "Run",
+    "JUnit.UserServiceTest.create_user.executor": "Run",
+    "JUnit.UserServiceTest.delete_user.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "JUnit.UserServiceTest.resend_activation_code.executor": "Run",
+    "JUnit.UserServiceTest.update_user_details.executor": "Run",
+    "Maven.admin-server-service [clean].executor": "Run",
+    "Maven.admin-server-service [install].executor": "Run",
+    "Maven.rental-of-pets [-pl,admin-server...].executor": "Run",
+    "Maven.rental-of-pets [-pl,admin...].executor": "Run",
+    "Maven.rental-of-pets [-pl,adminServer...].executor": "Run",
+    "Maven.rental-of-pets [admin,spring-boot:run].executor": "Run",
+    "Maven.rental-of-pets [adminServer...].executor": "Run",
+    "Maven.rental-of-pets [clean].executor": "Run",
+    "Maven.rental-of-pets [dependency:tree].executor": "Run",
+    "Maven.rental-of-pets [install].executor": "Run",
+    "Maven.rental-of-pets [spring-boot:run].executor": "Run",
+    "Maven.rental-pets-service [clean].executor": "Run",
+    "Maven.rental-pets-service [install].executor": "Run",
+    "Maven.rentalApp [clean].executor": "Run",
+    "Maven.rentalApp [install].executor": "Run",
+    "OpenAPI/Swagger Code Generator.app.json.yml.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AdminServerApplication.executor": "Run",
+    "Spring Boot.WebAppStarterApplication (1).executor": "Run",
+    "Spring Boot.WebAppStarterApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/all/Java all/projectMaven/web-app-starter/web-app-starter",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2632184",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -383,7 +394,11 @@
       <workItem from="1724704421760" duration="2750000" />
       <workItem from="1724707793967" duration="124000" />
       <workItem from="1724708586408" duration="1083000" />
-      <workItem from="1724718135466" duration="1850000" />
+      <workItem from="1724718135466" duration="2531000" />
+      <workItem from="1724766863508" duration="1655000" />
+      <workItem from="1724774498193" duration="5081000" />
+      <workItem from="1724799111661" duration="3082000" />
+      <workItem from="1724848318356" duration="8239000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -721,7 +736,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724674692517</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="27.08 - csrf(in progress)">
+      <option name="closed" value="true" />
+      <created>1724720236234</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1724720236234</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,7 +762,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="02.06 added swagger" />
     <MESSAGE value="04.06 Frontend before Internationalization" />
     <MESSAGE value="05.06 Frontend before Internationalization" />
     <MESSAGE value="05.06 15:35 Frontend" />
@@ -764,7 +786,8 @@
     <MESSAGE value="25.08" />
     <MESSAGE value="26.08 - upgrading my web-site" />
     <MESSAGE value="26.08 - added &quot;remember-me&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="26.08 - added &quot;remember-me&quot;" />
+    <MESSAGE value="27.08 - csrf(in progress)" />
+    <option name="LAST_COMMIT_MESSAGE" value="27.08 - csrf(in progress)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1720201128972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

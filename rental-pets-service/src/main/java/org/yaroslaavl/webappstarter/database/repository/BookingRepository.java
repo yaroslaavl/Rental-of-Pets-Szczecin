@@ -1,7 +1,6 @@
 package org.yaroslaavl.webappstarter.database.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -9,7 +8,6 @@ import org.yaroslaavl.webappstarter.database.entity.Booking;
 import org.yaroslaavl.webappstarter.database.entity.BookingStatus;
 import org.yaroslaavl.webappstarter.database.entity.User;
 
-import javax.persistence.LockModeType;
 import java.util.List;
 import java.util.Optional;
 

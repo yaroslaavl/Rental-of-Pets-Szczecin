@@ -3,8 +3,6 @@ package org.yaroslaavl.webappstarter.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.annotations.OptimisticLock;
-import org.springframework.data.jpa.repository.Lock;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +15,6 @@ import org.yaroslaavl.webappstarter.dto.BookingReadDto;
 import org.yaroslaavl.webappstarter.mapper.BookingReadMapper;
 
 import javax.persistence.EntityNotFoundException;
-import javax.persistence.LockModeType;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;

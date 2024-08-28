@@ -1,7 +1,5 @@
 package org.yaroslaavl.webappstarter.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Value;
 import org.yaroslaavl.webappstarter.database.entity.Gender;
 import org.yaroslaavl.webappstarter.database.entity.Species;

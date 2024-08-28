@@ -7,13 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.yaroslaavl.webappstarter.database.entity.Notification;
 import org.yaroslaavl.webappstarter.database.entity.User;
 import org.yaroslaavl.webappstarter.database.repository.NotificationRepository;
-import org.yaroslaavl.webappstarter.dto.NotificationCreateEditDto;
-import org.yaroslaavl.webappstarter.mapper.NotificationCreateEditMapper;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

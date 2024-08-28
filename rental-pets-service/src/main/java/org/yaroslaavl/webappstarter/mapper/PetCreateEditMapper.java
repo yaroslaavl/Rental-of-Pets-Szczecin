@@ -10,9 +10,6 @@ import org.yaroslaavl.webappstarter.dto.PetCreateEditDto;
 @RequiredArgsConstructor
 public class PetCreateEditMapper implements Mapper<PetCreateEditDto, Pet>{
 
-    private final MedicalRecordRepository medicalRecordRepository;
-    private final MedicalRecordReadMapper medicalRecordReadMapper;
-
     @Override
     public Pet map(PetCreateEditDto object) {
         Pet pet = new Pet();

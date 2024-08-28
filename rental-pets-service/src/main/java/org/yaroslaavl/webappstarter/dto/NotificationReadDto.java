@@ -2,8 +2,7 @@ package org.yaroslaavl.webappstarter.dto;
 
 
 import lombok.Value;
-import org.yaroslaavl.webappstarter.database.entity.Booking;
-import org.yaroslaavl.webappstarter.database.entity.User;
+
 
 import java.time.LocalDateTime;
 

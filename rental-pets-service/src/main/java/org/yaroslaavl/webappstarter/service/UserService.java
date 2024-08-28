@@ -22,8 +22,6 @@ import org.yaroslaavl.webappstarter.mapper.UserReadMapper;
 
 import java.io.*;
 import java.net.InetAddress;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;

@@ -3,24 +3,18 @@ package org.yaroslaavl.webappstarter.http.controller;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.yaroslaavl.webappstarter.database.entity.Notification;
 import org.yaroslaavl.webappstarter.database.entity.User;
-import org.yaroslaavl.webappstarter.dto.NotificationCreateEditDto;
 import org.yaroslaavl.webappstarter.service.NotificationService;
 import org.yaroslaavl.webappstarter.service.UserService;
 
 import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Controller
 @RequiredArgsConstructor
