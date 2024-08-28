@@ -23,7 +23,7 @@ import java.util.Set;
 
 import static org.yaroslaavl.webappstarter.database.entity.Role.ADMIN;
 
-@EnableWebSecurity(debug = true)
+@EnableWebSecurity
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -37,6 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) {
         http
+                .csrf().disable()
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")
                         .successHandler(new CustomAuthenticationSuccessHandler())
@@ -71,8 +72,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         .userInfoEndpoint(userInfoEndpoint -> userInfoEndpoint
                                 .oidcUserService(oidcUserService())
                         )
-                )
-                .apply(new CsrfConfig());
+                );
     }
 
     private OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService(){

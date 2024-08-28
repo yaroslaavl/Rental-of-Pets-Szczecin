@@ -157,7 +157,6 @@
 </header>
 <div class="container">
     <form id="bookingForm" th:action="@{'/pet/booking/' + ${petId}}" enctype="multipart/form-data" method="post" novalidate>
-        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         <div id="order-modal" class="modal">
             <div class="error" th:if="${errorsBooking != null || errorsUser != null}">
                 <ul>

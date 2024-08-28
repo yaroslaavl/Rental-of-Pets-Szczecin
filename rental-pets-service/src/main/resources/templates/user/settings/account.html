@@ -337,7 +337,6 @@
                 <h1 class="user_set" th:text="#{user.setting.account}"></h1>
               <div>
                 <form id="accountForm" th:action="@{/user/settings/account}" method="post" enctype="multipart/form-data">
-                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                     <div class="error" th:if="${errors != null}">
                         <ul>
                             <li th:each="error : ${errors}" th:text="${error.defaultMessage}"></li>

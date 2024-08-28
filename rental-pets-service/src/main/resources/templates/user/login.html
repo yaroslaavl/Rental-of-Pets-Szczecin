@@ -216,7 +216,6 @@
 <div class="my-account-form">
     <h1 th:text="#{menu.login}"></h1>
     <form th:action="@{/login}" method="post">
-        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         <div>
             <label for="username"><span th:text="#{registration.email}"></span>:<span class="required">*</span></label>
                 <input id="username" type="text" name="username" required>
