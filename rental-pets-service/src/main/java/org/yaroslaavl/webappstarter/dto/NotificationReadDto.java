@@ -2,8 +2,6 @@ package org.yaroslaavl.webappstarter.dto;
 
 
 import lombok.Value;
-
-
 import java.time.LocalDateTime;
 
 @Value

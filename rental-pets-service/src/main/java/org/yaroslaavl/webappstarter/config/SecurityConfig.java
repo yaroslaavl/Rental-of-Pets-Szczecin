@@ -3,18 +3,16 @@ package org.yaroslaavl.webappstarter.config;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
-import org.yaroslaavl.webappstarter.database.entity.Role;
+import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.service.UserService;
 
@@ -24,7 +22,6 @@ import java.lang.reflect.Proxy;
 import java.util.Set;
 
 import static org.yaroslaavl.webappstarter.database.entity.Role.ADMIN;
-import static org.yaroslaavl.webappstarter.database.entity.Role.USER;
 
 @EnableWebSecurity(debug = true)
 @Configuration
@@ -40,25 +37,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) {
         http
-                .apply(new CsrfConfig())
-                .and()
-                .authorizeHttpRequests(urlConfig -> urlConfig
-                                .antMatchers("/login", "/users/registration","/v3/api-docs/**", "/swagger-ui/**","/firstPage","/pets","/company-info","/blog","/api/pets","/api/users/**").permitAll()
-                                .antMatchers("/user/settings/**","/pet/booking/**","/pet/bookings/**","/user/notifications","/api/user/**").authenticated()
-                                .antMatchers("/admin/**").hasAuthority(ADMIN.getAuthority())
+                .formLogin(formLogin -> formLogin
+                        .loginPage("/login")
+                        .successHandler(new CustomAuthenticationSuccessHandler())
+                )
+                .requestCache(requestCache -> requestCache
+                        .requestCache(new HttpSessionRequestCache())
+                )
+                .authorizeHttpRequests(url -> url
+                        .antMatchers("/login", "/users/registration", "/v3/api-docs/**", "/swagger-ui/**", "/firstPage", "/pets", "/company-info", "/blog", "/api/pets", "/api/users/**").permitAll()
+                        .antMatchers("/user/settings/**", "/pet/booking/**", "/pet/bookings/**", "/user/notifications", "/api/user/**").authenticated()
+                        .antMatchers("/admin/**").hasAuthority(ADMIN.getAuthority())
                 )
                 .logout(logout -> logout
                         .logoutUrl("/logout")
                         .logoutSuccessUrl("/login")
-                        .deleteCookies("JSESSIONID"))
-                .formLogin(formLogin -> formLogin
-                        .loginPage("/login")
-                        .defaultSuccessUrl("/firstPage"))
+                        .deleteCookies("JSESSIONID")
+                )
                 .exceptionHandling()
-                .accessDeniedHandler(((request, response, accessDeniedException) -> {
+                .accessDeniedHandler((request, response, accessDeniedException) -> {
                     accessDeniedException.printStackTrace();
-                    response.sendRedirect("http://localhost:8080/forbidden-error");
-                }))
+                    response.sendRedirect("/forbidden-error");
+                })
                 .and()
                 .rememberMe()
                 .userDetailsService(userDetailsService)
@@ -67,9 +67,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .oauth2Login(oauth2Login -> oauth2Login
                         .loginPage("/login")
-                        .defaultSuccessUrl("/firstPage")
+                        .successHandler(new CustomAuthenticationSuccessHandler())
                         .userInfoEndpoint(userInfoEndpoint -> userInfoEndpoint
-                                .oidcUserService(oidcUserService())));
+                                .oidcUserService(oidcUserService())
+                        )
+                )
+                .apply(new CsrfConfig());
     }
 
     private OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService(){

@@ -3,7 +3,6 @@ package org.yaroslaavl.webappstarter.mapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.yaroslaavl.webappstarter.database.entity.Pet;
-import org.yaroslaavl.webappstarter.database.repository.MedicalRecordRepository;
 import org.yaroslaavl.webappstarter.dto.PetCreateEditDto;
 
 @Component
