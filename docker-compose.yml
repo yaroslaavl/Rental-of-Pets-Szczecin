@@ -4,9 +4,9 @@ services:
     image: postgres:16.1
     container_name: my-db
     environment:
-      POSTGRES_DB: company_repository
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: PROPER4321Qw
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - postgres-data:/var/lib/postgresql/data
     networks:
@@ -18,9 +18,9 @@ services:
       dockerfile: rental-pets-service/rental-app.Dockerfile
     container_name: rental-web
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://my-db:5432/company_repository
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: PROPER4321Qw
+      SPRING_DATASOURCE_URL: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
       SPRING_LIQUIBASE_CHANGELOG: db.changelog/db.changelog-master.yaml
     ports:
       - "8080:8080"
