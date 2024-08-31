@@ -1,0 +1,92 @@
+db:
+  username: ${DB_USERNAME:postgres}
+  password: ${DB_PASSWORD:}
+  driver: org.postgresql.Driver
+  url: jdbc:postgresql://${DB_HOST:my-db}:${DB_PORT:5432}/${DB_NAME:company_repository}
+  hosts: ${DB_HOSTS:my-db,127.0.0.1}
+logging:
+  file:
+    name: spring.log
+    path: /
+  level:
+    root: INFO
+    org.springframework: INFO
+    liquibase: DEBUG
+spring:
+  boot:
+    admin:
+      client:
+        url: http://${ADMIN_SERVER_HOST:admin-server}:${ADMIN_SERVER_PORT:8085}
+        instance:
+          name: Rental of pets
+          management-url: http://${ADMIN_SERVER_HOST:admin-server}:${ADMIN_SERVER_PORT:8085}/actuator
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:my-db}:${DB_PORT:5432}/${DB_NAME:company_repository}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:}
+  liquibase:
+    change-log: db.changelog/db.changelog-master.yaml
+    default-schema: webapp
+  mail:
+    host: ${MAIL_HOST:smtp.mail.ru}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 3000
+          writetimeout: 3000
+          connectiontimeout: 3000
+          socketFactory:
+            port: ${MAIL_SOCKET_FACTORY_PORT:465}
+          socketFactory.class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+  jpa:
+    properties.hibernate:
+      batch_size: 50
+      fetch_size: 50
+      show_sql: true
+      format_sql: true
+      hbm2ddl.auto: validate
+      default_schema: webapp
+    open-in-view: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID:}
+            client-secret: ${GOOGLE_CLIENT_SECRET:}
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            scope: openid,email,profile
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 8MB
+  messages:
+    basename: messages
+    encoding: UTF-8
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"
+  api-docs:
+    path: "/v3/api-docs"
+  packages-to-scan: "org.yaroslaavl.webappstarter.http"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    enabled: true
+    endpoint:
+      metrics:
+        enabled: true
