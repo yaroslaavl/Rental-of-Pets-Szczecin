@@ -1,0 +1,52 @@
+name: rental-pets-szczecin
+services:
+  db:
+    image: postgres:16.1
+    container_name: my-db
+    environment:
+      POSTGRES_DB: company_repository
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: PROPER4321Qw
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - rental-szczecin-net
+
+  app:
+    build:
+      context: .
+      dockerfile: rental-pets-service/rental-app.Dockerfile
+    container_name: rental-web
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://my-db:5432/company_repository
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: PROPER4321Qw
+      SPRING_LIQUIBASE_CHANGELOG: db.changelog/db.changelog-master.yaml
+    ports:
+      - "8080:8080"
+    networks:
+      - rental-szczecin-net
+    depends_on:
+      - db
+
+  admin-server:
+    build:
+      context: .
+      dockerfile: admin-server-service/admin-server-app.Dockerfile
+    container_name: admin-server
+    environment:
+      SPRING_BOOT_ADMIN_CLIENT_URL: http://admin-server:8085
+    ports:
+      - "8085:8085"
+    networks:
+      - rental-szczecin-net
+    depends_on:
+      - app
+
+networks:
+  rental-szczecin-net:
+    driver: bridge
+
+volumes:
+  postgres-data:
+    driver: local

@@ -13,11 +13,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.access.method.P;
 import org.yaroslaavl.webappstarter.database.entity.Gender;
 import org.yaroslaavl.webappstarter.database.entity.Pet;
 import org.yaroslaavl.webappstarter.database.entity.Species;
-import org.yaroslaavl.webappstarter.database.querydsl.QPredicate;
 import org.yaroslaavl.webappstarter.database.repository.PetRepository;
 import org.yaroslaavl.webappstarter.dto.PetFilter;
 import org.yaroslaavl.webappstarter.dto.PetReadDto;
@@ -27,10 +25,6 @@ import org.yaroslaavl.webappstarter.service.PetService;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 import static org.yaroslaavl.webappstarter.database.entity.QPet.pet;
 
@@ -56,16 +50,14 @@ public class PetServiceTest {
     @BeforeEach
     void setUp() {
         pet1 = Pet.builder()
-                .id(2L)
-                .species(Species.builder().id(1L).build())
+                .species(Species.builder().build())
                 .name("Dogger")
                 .age(3)
                 .gender(Gender.FEMALE)
                 .isAvailable(true)
                 .build();
         pet2 = Pet.builder()
-                .id(3L)
-                .species(Species.builder().id(1L).build())
+                .species(Species.builder().build())
                 .name("Shopper")
                 .age(3)
                 .gender(Gender.MALE)

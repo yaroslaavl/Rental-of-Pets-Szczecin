@@ -65,7 +65,6 @@ public class UserServiceTest {
         String activationToken = UUID.randomUUID().toString();
 
         user = User.builder()
-                .id(3L)
                 .username("ylopatkin@gmail.com")
                 .password("123passwordA")
                 .firstname("Dakart")
@@ -192,7 +191,6 @@ public class UserServiceTest {
         );
 
         User updatedUser = user.toBuilder()
-                .id(user.getId())
                 .username("ylopatk321in@gmail.com")
                 .password(user.getPassword())
                 .firstname(user.getFirstname())

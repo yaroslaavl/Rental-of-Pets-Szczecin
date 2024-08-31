@@ -23,8 +23,8 @@ public class MedicalRecordRepositoryTest {
     @Test
     public void find_by_id_with_pet_and_veterinarian_and_clinic(){
 
+
         Pet pet = Pet.builder()
-                .id(2L)
                 .age(2)
                 .breed("Dog")
                 .name("Jarek")
@@ -32,13 +32,11 @@ public class MedicalRecordRepositoryTest {
                 .build();
 
         Clinic clinic = Clinic.builder()
-                .id(3L)
                 .name("Clinic for pets")
                 .address("Chopina")
                 .build();
 
         Veterinarian veterinarian = Veterinarian.builder()
-                .id(1L)
                 .firstname("Dima")
                 .lastname("Sacha")
                 .vetCode("32HBM")
@@ -46,7 +44,6 @@ public class MedicalRecordRepositoryTest {
                 .build();
 
         MedicalRecord medicalRecord = MedicalRecord.builder()
-                .id(3L)
                 .pet(pet)
                 .veterinarian(veterinarian)
                 .build();

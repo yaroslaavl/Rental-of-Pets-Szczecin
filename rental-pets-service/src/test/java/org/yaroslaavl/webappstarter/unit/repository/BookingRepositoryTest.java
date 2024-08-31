@@ -42,12 +42,10 @@ public class BookingRepositoryTest {
     @Test
     public void find_by_status(){
         Booking booking = Booking.builder()
-                .id(2L)
                 .status(BookingStatus.AwaitingApproval)
                 .build();
 
         Booking booking2 = Booking.builder()
-                .id(2L)
                 .status(BookingStatus.AwaitingApproval)
                 .build();
 
@@ -74,19 +72,16 @@ public class BookingRepositoryTest {
     public void find_booking_by_user(){
 
         Booking booking1 = Booking.builder()
-                .id(2L)
                 .user(user)
                 .status(BookingStatus.AwaitingApproval)
                 .build();
 
         Booking booking2 = Booking.builder()
-                .id(3L)
                 .user(user)
                 .status(BookingStatus.CANCELED)
                 .build();
 
         Booking booking3 = Booking.builder()
-                .id(4L)
                 .user(user)
                 .status(BookingStatus.CANCELED)
                 .build();
@@ -104,7 +99,6 @@ public class BookingRepositoryTest {
     public void find_by_id(){
 
         Booking booking = Booking.builder()
-                .id(4L)
                 .status(BookingStatus.CANCELED)
                 .build();
 

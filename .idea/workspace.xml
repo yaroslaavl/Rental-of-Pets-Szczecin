@@ -4,22 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="28.08 - removed the unnecessary imports and added CustomAuthenticationSuccessHandler">
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="29.09 removed csrf(will do it in future), and upgraded my code">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/spring.DQKdyg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/81865d18-eebd-44b8-a7fe-599c70df5bb3/storage_v2/_src_/database/company_repository.TDSewg/schema/spring.DQKdyg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-server-service/src/main/java/org/yaroslaavl/adminserver/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/CsrfConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/CustomAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/CustomAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/listOfBookingDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/listOfBookingDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/update-pet.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/update-pet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/update-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/update-user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/user-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/user-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/pet/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/user/settings/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/database/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/db.changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/db.changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/newUsersOfApp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/newUsersOfApp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/repository/BookingRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/repository/BookingRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/repository/MedicalRecordRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/repository/MedicalRecordRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/service/PetServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/service/PetServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,12 +100,15 @@
     &quot;Maven.rental-of-pets [-pl,adminServer...].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rental-of-pets [admin,spring-boot:run].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rental-of-pets [adminServer...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [clean,package...].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rental-of-pets [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rental-of-pets [dependency:tree].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rental-of-pets [install].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rental-of-pets [spring-boot:run].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rental-pets-service [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rental-pets-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-pets-service [package].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rentalApp [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.rentalApp [install].executor&quot;: &quot;Run&quot;,
     &quot;OpenAPI/Swagger Code Generator.app.json.yml.executor&quot;: &quot;Run&quot;,
@@ -170,6 +168,8 @@
       <command value="mvn adminServer spring-boot:run " />
       <command value="mvn -pl adminServer spring-boot:run " />
       <command value="mvn spring-boot:run" />
+      <command value="mvn clean install " />
+      <command value="mvn clean package -DskipTests " />
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.WebAppStarterApplication">
@@ -388,7 +388,13 @@
       <workItem from="1724707793967" duration="124000" />
       <workItem from="1724708586408" duration="1083000" />
       <workItem from="1724718135466" duration="1850000" />
-      <workItem from="1724881112133" duration="2882000" />
+      <workItem from="1724881112133" duration="4217000" />
+      <workItem from="1725023276819" duration="1835000" />
+      <workItem from="1725040047138" duration="2193000" />
+      <workItem from="1725061398002" duration="63000" />
+      <workItem from="1725100911619" duration="1051000" />
+      <workItem from="1725102359896" duration="1100000" />
+      <workItem from="1725103476513" duration="18331000" />
     </task>
     <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
       <option name="closed" value="true" />
@@ -742,7 +748,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724861594334</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="29.09 removed csrf(will do it in future), and upgraded my code">
+      <option name="closed" value="true" />
+      <created>1724885338942</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1724885338942</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -760,7 +774,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="04.06 Frontend before Internationalization" />
     <MESSAGE value="05.06 Frontend before Internationalization" />
     <MESSAGE value="05.06 15:35 Frontend" />
     <MESSAGE value="06.06 Finished the frontend. Keep doing Internationalization" />
@@ -785,7 +798,8 @@
     <MESSAGE value="26.08 - upgrading my web-site" />
     <MESSAGE value="26.08 - added &quot;remember-me&quot;" />
     <MESSAGE value="28.08 - removed the unnecessary imports and added CustomAuthenticationSuccessHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="28.08 - removed the unnecessary imports and added CustomAuthenticationSuccessHandler" />
+    <MESSAGE value="29.09 removed csrf(will do it in future), and upgraded my code" />
+    <option name="LAST_COMMIT_MESSAGE" value="29.09 removed csrf(will do it in future), and upgraded my code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1720201128972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
