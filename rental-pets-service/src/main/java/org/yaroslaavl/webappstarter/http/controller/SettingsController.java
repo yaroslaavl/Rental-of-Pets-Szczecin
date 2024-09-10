@@ -68,6 +68,7 @@ public class SettingsController {
         return "redirect:/user/settings";
     }
 
+    @Operation(summary = "User settings next page")
     @GetMapping("/settings/account")
     public String account(Model model, @AuthenticationPrincipal UserDetails userDetails) {
         if (userDetails != null) {
@@ -96,6 +97,7 @@ public class SettingsController {
         return "redirect:/user/settings/account";
     }
 
+    @Operation(summary = "Resend account activation code")
     @PostMapping("/settings/account/resend-activation-code")
     public String resendActivationCode(@AuthenticationPrincipal UserDetails userDetails){
         String username = userDetails.getUsername();
@@ -107,6 +109,7 @@ public class SettingsController {
         }
     }
 
+    @Operation(summary = "Delete user account using password")
     @PostMapping("/settings/account/delete")
     public String delete(@ModelAttribute UserCreateEditDto userCreateEditDto) {
         User optionalUser = userService.findUserById(userCreateEditDto.getId());
@@ -119,6 +122,7 @@ public class SettingsController {
         return "redirect:/user/settings/account";
     }
 
+    @Operation(summary = "Image download")
     @GetMapping("/images/{userId}")
     public ResponseEntity<Resource> downloadImage(@PathVariable Long userId) {
         Optional<byte[]> image = userService.findAvatar(userId);

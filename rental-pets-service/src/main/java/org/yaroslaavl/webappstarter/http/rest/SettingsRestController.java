@@ -139,7 +139,7 @@ public class SettingsRestController {
         }
     }
 
-    @Operation(summary = "Image")
+    @Operation(summary = "Image download")
     @GetMapping("/images/{userId}")
     public ResponseEntity<Resource> downloadImage(@PathVariable Long userId) {
         Optional<byte[]> image = userService.findAvatar(userId);
