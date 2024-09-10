@@ -83,6 +83,7 @@ public class SettingsController {
         throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
 
+    @Operation(summary = "Update User Image")
     @PostMapping("/settings/account")
     public String updateImage(@ModelAttribute @Validated({ImageAction.class}) UserCreateEditDto user,
                               BindingResult bindingResult,
