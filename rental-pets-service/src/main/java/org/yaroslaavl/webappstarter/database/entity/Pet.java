@@ -1,20 +1,19 @@
 package org.yaroslaavl.webappstarter.database.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(schema = "webapp",name = "pets")
+@EqualsAndHashCode(callSuper = true)
 @Entity
+@Table(schema = "webapp",name = "pets")
 public class Pet extends BaseEntity<Long> {
 
     @ManyToOne

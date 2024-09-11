@@ -9,6 +9,6 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 public class WebAppStarterApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebAppStarterApplication.class, args);
-    }
 
+    }
 }

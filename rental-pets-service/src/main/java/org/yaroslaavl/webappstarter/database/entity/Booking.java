@@ -1,9 +1,6 @@
 package org.yaroslaavl.webappstarter.database.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -13,6 +10,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 @Entity
+@EqualsAndHashCode(callSuper = true)
 @Table(schema = "webapp",name = "bookings")
 public class Booking extends BaseEntity<Long> {
 

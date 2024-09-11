@@ -1,9 +1,6 @@
 package org.yaroslaavl.webappstarter.database.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,6 +9,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
+@EqualsAndHashCode(callSuper = true)
 @Table(schema = "webapp",name = "species")
 public class Species extends BaseEntity<Long> {
 

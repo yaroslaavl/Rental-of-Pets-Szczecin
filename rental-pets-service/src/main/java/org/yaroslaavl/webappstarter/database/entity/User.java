@@ -10,6 +10,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 @Entity
+@EqualsAndHashCode(callSuper = true)
 @Table(schema = "webapp", name = "users")
 public class User extends BaseEntity<Long> {
 
