@@ -16,6 +16,7 @@ import org.yaroslaavl.webappstarter.database.repository.UserRepository;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.dto.UserReadDto;
 import org.yaroslaavl.webappstarter.mapper.UserCreateEditMapper;
+import org.yaroslaavl.webappstarter.mapper.mapStruct.UserMapper;
 import org.yaroslaavl.webappstarter.service.MailService;
 import org.yaroslaavl.webappstarter.service.UserService;
 
@@ -47,10 +48,9 @@ public class UserServiceTest {
     private ArgumentCaptor<String> messageCaptor;
 
     @Mock
-    private UserCreateEditMapper userCreateEditMapper;
-
+    private UserMapper userMapper;
     @Mock
-    private UserReadMapper userReadMapper;
+    private UserCreateEditMapper userCreateEditMapper;
 
     @InjectMocks
     private UserService userService;
@@ -117,7 +117,7 @@ public class UserServiceTest {
 
         when(userCreateEditMapper.map(any(UserCreateEditDto.class))).thenReturn(user);
         when(userRepository.saveAndFlush(any(User.class))).thenReturn(user);
-        when(userReadMapper.map(any(User.class))).thenReturn(userReadDto);
+        when(userMapper.toDto(any(User.class))).thenReturn(userReadDto);
 
         UserReadDto readDto = userService.create(userCreateEditDto);
 
@@ -220,14 +220,14 @@ public class UserServiceTest {
         when(userRepository.findById(user.getId())).thenReturn(Optional.of(user));
         when(userCreateEditMapper.map(eq(userCreateEditDto), any(User.class))).thenReturn(updatedUser);
         when(userRepository.saveAndFlush(any(User.class))).thenReturn(updatedUser);
-        when(userReadMapper.map(any(User.class))).thenReturn(userReadDto);
+        when(userMapper.toDto(any(User.class))).thenReturn(userReadDto);
 
         Optional<UserReadDto> update = userService.update(user.getId(), userCreateEditDto);
 
         verify(userRepository).findById(user.getId());
         verify(userCreateEditMapper).map(eq(userCreateEditDto), any(User.class));
         verify(userRepository).saveAndFlush(updatedUser);
-        verify(userReadMapper).map(updatedUser);
+        verify(userMapper.toDto(updatedUser));
 
         log.info(updatedUser.getUsername());
 

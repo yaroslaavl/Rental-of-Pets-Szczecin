@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="15.09 - working">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="15.09 - fixed a bug" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +123,7 @@
     "Spring Boot.AdminServerApplication.executor": "Run",
     "Spring Boot.WebAppStarterApplication (1).executor": "Run",
     "Spring Boot.WebAppStarterApplication.executor": "Run",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/all/Java all/projectMaven/web-app-starter/web-app-starter",
     "list.type.of.created.stylesheet": "CSS",
@@ -412,23 +408,7 @@
       <workItem from="1726238064472" duration="25000" />
       <workItem from="1726269805950" duration="416000" />
       <workItem from="1726308348038" duration="5748000" />
-      <workItem from="1726393566079" duration="9923000" />
-    </task>
-    <task id="LOCAL-00005" summary="05.06 Frontend before Internationalization">
-      <option name="closed" value="true" />
-      <created>1717541727496</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1717541727496</updated>
-    </task>
-    <task id="LOCAL-00006" summary="05.06 Frontend before Internationalization">
-      <option name="closed" value="true" />
-      <created>1717541982779</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1717541982779</updated>
+      <workItem from="1726393566079" duration="10289000" />
     </task>
     <task id="LOCAL-00007" summary="05.06 15:35 Frontend">
       <option name="closed" value="true" />
@@ -806,7 +786,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726406831587</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="15.09 - working">
+      <option name="closed" value="true" />
+      <created>1726407083321</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1726407083321</updated>
+    </task>
+    <task id="LOCAL-00055" summary="15.09 - fixed a bug">
+      <option name="closed" value="true" />
+      <created>1726407157643</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1726407157643</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -836,7 +832,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixing the bags." />
     <MESSAGE value="Fixing the bags. Started writing tests for my web application" />
     <MESSAGE value="Writing Rest Controllers" />
     <MESSAGE value="made a method to save users who have made updates to their data" />
@@ -861,7 +856,8 @@
     <MESSAGE value="15.09 - added mapStruct mappers" />
     <MESSAGE value="15.09 - wrote some tests" />
     <MESSAGE value="15.09 - working" />
-    <option name="LAST_COMMIT_MESSAGE" value="15.09 - working" />
+    <MESSAGE value="15.09 - fixed a bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="15.09 - fixed a bug" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1720201128972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
