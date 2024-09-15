@@ -10,15 +10,12 @@ import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.web.multipart.MultipartFile;
 import org.yaroslaavl.webappstarter.database.entity.Role;
 import org.yaroslaavl.webappstarter.database.entity.User;
 import org.yaroslaavl.webappstarter.database.repository.UserRepository;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.dto.UserReadDto;
 import org.yaroslaavl.webappstarter.mapper.UserCreateEditMapper;
-import org.yaroslaavl.webappstarter.mapper.UserReadMapper;
-import org.yaroslaavl.webappstarter.service.ImageService;
 import org.yaroslaavl.webappstarter.service.MailService;
 import org.yaroslaavl.webappstarter.service.UserService;
 
