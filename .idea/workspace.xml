@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="11.09 - working">
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/spring.log.2024-07-07.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/mapper/mapStruct/BookingMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/mapper/mapStruct/PetMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/mapper/mapStruct/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/mapper/UserMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/dto/UserCreateEditDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/dto/UserCreateEditDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/mapper/BookingCreateEditMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/mapper/UserReadMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/PetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/java/org/yaroslaavl/webappstarter/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/newUsersOfApp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/newUsersOfApp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/pets-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/templates/admin/pets-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/test/java/org/yaroslaavl/webappstarter/unit/service/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring.log" afterDir="false" />
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="15.09 - working">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rental-pets-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rental-pets-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +127,7 @@
     "Spring Boot.AdminServerApplication.executor": "Run",
     "Spring Boot.WebAppStarterApplication (1).executor": "Run",
     "Spring Boot.WebAppStarterApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/all/Java all/projectMaven/web-app-starter/web-app-starter",
     "list.type.of.created.stylesheet": "CSS",
@@ -428,39 +412,7 @@
       <workItem from="1726238064472" duration="25000" />
       <workItem from="1726269805950" duration="416000" />
       <workItem from="1726308348038" duration="5748000" />
-      <workItem from="1726393566079" duration="9529000" />
-    </task>
-    <task id="LOCAL-00001" summary="01.06 close to finish the main logic">
-      <option name="closed" value="true" />
-      <created>1717258701323</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1717258701323</updated>
-    </task>
-    <task id="LOCAL-00002" summary="01.06 close to finish the main logic">
-      <option name="closed" value="true" />
-      <created>1717259491707</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1717259491707</updated>
-    </task>
-    <task id="LOCAL-00003" summary="02.06 added swagger">
-      <option name="closed" value="true" />
-      <created>1717285994794</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1717285994795</updated>
-    </task>
-    <task id="LOCAL-00004" summary="04.06 Frontend before Internationalization">
-      <option name="closed" value="true" />
-      <created>1717460935794</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1717460935794</updated>
+      <workItem from="1726393566079" duration="9923000" />
     </task>
     <task id="LOCAL-00005" summary="05.06 Frontend before Internationalization">
       <option name="closed" value="true" />
@@ -806,7 +758,55 @@
       <option name="project" value="LOCAL" />
       <updated>1726054538275</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="15.09 - using MapStruct">
+      <option name="closed" value="true" />
+      <created>1726406592202</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1726406592202</updated>
+    </task>
+    <task id="LOCAL-00049" summary="15.09 - deleted mappers">
+      <option name="closed" value="true" />
+      <created>1726406741511</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1726406741512</updated>
+    </task>
+    <task id="LOCAL-00050" summary="15.09 - added mapStruct mappers">
+      <option name="closed" value="true" />
+      <created>1726406759167</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1726406759168</updated>
+    </task>
+    <task id="LOCAL-00051" summary="15.09 - wrote some tests">
+      <option name="closed" value="true" />
+      <created>1726406773394</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1726406773394</updated>
+    </task>
+    <task id="LOCAL-00052" summary="15.09 - working">
+      <option name="closed" value="true" />
+      <created>1726406808739</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1726406808739</updated>
+    </task>
+    <task id="LOCAL-00053" summary="15.09 - working">
+      <option name="closed" value="true" />
+      <created>1726406831587</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1726406831587</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -836,11 +836,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="06.06 Finished the frontend. Keep doing Internationalization" />
-    <MESSAGE value="06.06 22:44 Finished the MVP(in my opinion). Version of project 1.0" />
-    <MESSAGE value="Fixing the bags" />
-    <MESSAGE value="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the post office" />
-    <MESSAGE value="Fixing the bags. Added another liquibase file,&#10;and changed the link for account verification through the e-mail" />
     <MESSAGE value="Fixing the bags." />
     <MESSAGE value="Fixing the bags. Started writing tests for my web application" />
     <MESSAGE value="Writing Rest Controllers" />
@@ -861,7 +856,12 @@
     <MESSAGE value="29.09 removed csrf(will do it in future), and upgraded my code" />
     <MESSAGE value="31.08 - added Docker compose" />
     <MESSAGE value="11.09 - working" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.09 - working" />
+    <MESSAGE value="15.09 - using MapStruct" />
+    <MESSAGE value="15.09 - deleted mappers" />
+    <MESSAGE value="15.09 - added mapStruct mappers" />
+    <MESSAGE value="15.09 - wrote some tests" />
+    <MESSAGE value="15.09 - working" />
+    <option name="LAST_COMMIT_MESSAGE" value="15.09 - working" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1720201128972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

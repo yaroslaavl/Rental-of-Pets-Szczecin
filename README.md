@@ -21,6 +21,7 @@
 - PostgreSQL
 - Lombok
 - Maven
+- Docker
 - QueryDSL
 - Liquibase
 - Swagger
@@ -32,6 +33,7 @@
 - JDK 17 or later
 - Maven
 - PostgreSQL
+- Docker (for containerization)
 
 # Install dependencies
  ```
@@ -103,6 +105,22 @@ mvn -pl adminServer spring-boot:run
  ```
 
 mvn spring-boot:run
+
+```
+
+## With Docker
+
+### Build Docker images:
+ ```
+
+docker-compose build
+
+```
+
+### Start Docker Containers:
+ ```
+
+docker-compose up
 
 ```
 
