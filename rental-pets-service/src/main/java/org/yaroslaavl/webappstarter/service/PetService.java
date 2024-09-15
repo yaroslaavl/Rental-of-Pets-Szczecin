@@ -14,7 +14,7 @@ import org.yaroslaavl.webappstarter.dto.PetCreateEditDto;
 import org.yaroslaavl.webappstarter.dto.PetFilter;
 import org.yaroslaavl.webappstarter.dto.PetReadDto;
 import org.yaroslaavl.webappstarter.mapper.PetCreateEditMapper;
-import org.yaroslaavl.webappstarter.mapper.PetReadMapper;
+import org.yaroslaavl.webappstarter.mapper.mapStruct.PetMapper;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.Optional;
@@ -28,8 +28,7 @@ import static org.yaroslaavl.webappstarter.database.entity.QPet.pet;
 public class PetService {
 
     private final PetRepository petRepository;
-    private final PetReadMapper petReadMapper;
-    private final PetCreateEditMapper petCreateEditMapper;
+    private final PetMapper petMapper;
 
     public Page<PetReadDto> findAll(PetFilter petFilter, Pageable pageable){
         var predicate = QPredicate.builder()
@@ -40,7 +39,7 @@ public class PetService {
                 .buildAnd();
         log.info("Filters: {} ",petFilter);
         return petRepository.findAll(predicate,pageable)
-                .map(petReadMapper::map);
+                .map(petMapper::toDto);
     }
 
     public Optional<Pet> findPetById(Long petId) {
@@ -52,7 +51,7 @@ public class PetService {
     public void updatePet(Long id, PetCreateEditDto petCreateEditDto) {
         Pet petToUpdate = petRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Pet not found with id: " + id));
-        petCreateEditMapper.map(petCreateEditDto, petToUpdate);
+        petMapper.toEntity(petCreateEditDto);
 
         petRepository.saveAndFlush(petToUpdate);
     }

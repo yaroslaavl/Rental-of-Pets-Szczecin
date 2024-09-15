@@ -8,6 +8,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -18,7 +19,7 @@ import org.yaroslaavl.webappstarter.database.repository.UserRepository;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.dto.UserReadDto;
 import org.yaroslaavl.webappstarter.mapper.UserCreateEditMapper;
-import org.yaroslaavl.webappstarter.mapper.UserReadMapper;
+import org.yaroslaavl.webappstarter.mapper.mapStruct.UserMapper;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -36,9 +37,10 @@ public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
     private final UserCreateEditMapper userCreateEditMapper;
-    private final UserReadMapper userReadMapper;
     private final ImageService imageService;
     private final MailService mailService;
+    private final UserMapper userMapper;
+    private final PasswordEncoder passwordEncoder;
 
     @SneakyThrows
     @Transactional
@@ -50,14 +52,14 @@ public class UserService implements UserDetailsService {
         String activationToken = UUID.randomUUID().toString();
         UserReadDto userReadDto = Optional.of(userDto)
                 .map(dto -> {
-                    User user = userCreateEditMapper.map(dto);
+                    User user = userMapper.toEntity(dto,passwordEncoder);
                     user.setRole(Role.USER);
                     user.setEmailVerificationToken(activationToken);
                     user.setEmailVerified(false);
                     usersOfApp(userDto);
                     return userRepository.saveAndFlush(user);
                 })
-                .map(userReadMapper::map)
+                .map(userMapper::toDto)
                 .orElseThrow();
 
         if (!StringUtils.isEmpty(userDto.getUsername())) {
@@ -159,7 +161,7 @@ public class UserService implements UserDetailsService {
                     return userCreateEditMapper.map(userCreateEditDto,user);
                 })
                 .map(userRepository::saveAndFlush)
-                .map(userReadMapper::map);
+                .map(userMapper::toDto);
     }
     @Transactional
     public boolean delete(Long id){
@@ -192,7 +194,7 @@ public class UserService implements UserDetailsService {
 
     public List<UserReadDto> findAll(){
         return userRepository.findAll().stream()
-                .map(userReadMapper::map)
+                .map(userMapper::toDto)
                 .toList();
     }
 

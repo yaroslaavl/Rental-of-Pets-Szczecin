@@ -12,7 +12,7 @@ import org.yaroslaavl.webappstarter.database.repository.NotificationRepository;
 import org.yaroslaavl.webappstarter.database.repository.PetRepository;
 import org.yaroslaavl.webappstarter.dto.BookingCreateEditDto;
 import org.yaroslaavl.webappstarter.dto.BookingReadDto;
-import org.yaroslaavl.webappstarter.mapper.BookingReadMapper;
+import org.yaroslaavl.webappstarter.mapper.mapStruct.BookingMapper;
 
 import javax.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 @Transactional(readOnly = true)
 public class BookingService {
 
-    private final BookingReadMapper bookingReadMapper;
+    private final BookingMapper bookingMapper;
     private final BookingRepository bookingRepository;
     private final UserService userService;
     private final NotificationRepository notificationRepository;
@@ -100,7 +100,7 @@ public class BookingService {
         long endTime = System.currentTimeMillis();
         log.info("Lazy fetch took {} ms",(endTime - startTime));
         return bookings.stream()
-                .map(bookingReadMapper::map)
+                .map(bookingMapper::toDto)
                 .collect(Collectors.toList());
     }
 
