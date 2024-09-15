@@ -1,5 +1,6 @@
 package org.yaroslaavl.webappstarter.dto;
 
+import lombok.Builder;
 import lombok.Value;
 import lombok.experimental.FieldNameConstants;
 import org.hibernate.validator.constraints.pl.PESEL;

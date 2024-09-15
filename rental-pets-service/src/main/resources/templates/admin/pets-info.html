@@ -272,11 +272,11 @@
             <p>No pets found.</p>
         </div>
         <div class="pagination">
-            <a th:href="@{/pets(page=${pets.previousOrFirstPageable().pageNumber})}" th:classappend="${!pets.hasPrevious()} ? ' disabled-btn' : ''">&lt; Previous</a>
+            <a th:href="@{/admin/pets-info(page=${pets.previousOrFirstPageable().pageNumber})}" th:classappend="${!pets.hasPrevious()} ? ' disabled-btn' : ''">&lt; Previous</a>
             <span th:each="i : ${#numbers.sequence(1, pets.totalPages)}">
-                    <a th:href="@{/pets(page=${i - 1})}" th:class="${i == pets.number + 1} ? 'active' : ''" th:text="${i}"></a>
+                    <a th:href="@{/admin/pets-info(page=${i - 1})}" th:class="${i == pets.number + 1} ? 'active' : ''" th:text="${i}"></a>
                 </span>
-            <a th:href="@{/pets(page=${pets.nextOrLastPageable().pageNumber})}" th:classappend="${!pets.hasNext()} ? ' disabled-btn' : ''">Next &gt;</a>
+            <a th:href="@{/admin/pets-info(page=${pets.nextOrLastPageable().pageNumber})}" th:classappend="${!pets.hasNext()} ? ' disabled-btn' : ''">Next &gt;</a>
         </div>
     </div>
 </div>
