@@ -1,0 +1,93 @@
+db:
+  username: postgres
+  password: PROPER4321Qw
+  driver: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/company_repository
+  hosts: my-db,127.0.0.1
+logging:
+  file:
+    name: spring.log
+    path: /
+  level:
+    root: INFO
+    org.springframework: INFO
+    liquibase: DEBUG
+spring:
+  boot:
+    admin:
+      client:
+        url: http://admin-server:8085
+        instance:
+          name: Rental of pets
+          management-url: http://admin-server:8085/actuator
+  datasource:
+    url: jdbc:postgresql://localhost:5432/company_repository
+    username: postgres
+    password: PROPER4321Qw
+  liquibase:
+    change-log: db.changelog/db.changelog-master.yaml
+    default-schema: webapp
+  mail:
+    host: smtp.mail.ru
+    port: 465
+    username: ylopatkin270380@mail.ru
+    password: K7jXuS5bEn0dPWncUAHf
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 3000
+          writetimeout: 3000
+          connectiontimeout: 3000
+          socketFactory:
+            port: 465
+          socketFactory.class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+  jpa:
+    properties.hibernate:
+      batch_size: 50
+      fetch_size: 50
+      show_sql: true
+      format_sql: true
+      hbm2ddl.auto: validate
+      default_schema: webapp
+    open-in-view: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 351015715121-8bff5immb5iroubfbigie9sd8u8rfoj7.apps.googleusercontent.com
+            client-secret: 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
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            scope: openid,email,profile
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 8MB
+  messages:
+    basename: messages
+    encoding: UTF-8
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"
+  api-docs:
+    path: "/v3/api-docs"
+  packages-to-scan: "org.yaroslaavl.webappstarter.http"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    enabled: true
+    endpoint:
+      metrics:
+        enabled: true
+
