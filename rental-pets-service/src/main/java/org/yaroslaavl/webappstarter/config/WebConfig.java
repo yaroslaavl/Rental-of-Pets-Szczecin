@@ -1,5 +1,6 @@
 package org.yaroslaavl.webappstarter.config;
 
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -13,6 +14,7 @@ import java.util.Locale;
 
 @Configuration
 @EnableAsync
+@EnableCaching
 public class WebConfig implements WebMvcConfigurer {
 
     @Override
