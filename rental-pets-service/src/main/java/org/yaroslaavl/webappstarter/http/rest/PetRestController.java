@@ -15,9 +15,8 @@ import org.yaroslaavl.webappstarter.dto.PetReadDto;
 import org.yaroslaavl.webappstarter.service.PetService;
 
 @RestController
-@RequestMapping("/api/pets")
-@Transactional
 @RequiredArgsConstructor
+@RequestMapping("/api/pets")
 @Tag(name = "Pet Rest Controller")
 public class PetRestController {
 

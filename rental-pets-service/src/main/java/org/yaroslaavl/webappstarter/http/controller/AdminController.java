@@ -24,13 +24,12 @@ import org.yaroslaavl.webappstarter.service.UserService;
 
 import javax.persistence.EntityNotFoundException;
 
+@Slf4j
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/admin")
-@PreAuthorize("hasAuthority('ADMIN')")
-@Transactional(readOnly = true)
-@Slf4j
 @Tag(name = "Admin Controller")
+@PreAuthorize("hasAuthority('ADMIN')")
 public class AdminController {
 
     private final BookingService bookingService;
@@ -64,7 +63,6 @@ public class AdminController {
     }
 
     @Operation(summary = "Update user status of booking")
-    @Transactional
     @PostMapping("/listOfBookingDetails/{id}")
     public String updateBookingStatus(@PathVariable("id") Long id, @ModelAttribute BookingCreateEditDto bookingCreateEditDto) {
         bookingService.updateStatus(id, bookingCreateEditDto);
@@ -95,7 +93,6 @@ public class AdminController {
     }
 
     @Operation(summary = "Update pet data")
-    @Transactional
     @PostMapping("/update-pet/{id}")
     public String updatePet(@PathVariable Long id, PetCreateEditDto petCreateEditDto, Model model) {
         var petToUpdate = petService.findPetById(id)
@@ -141,7 +138,6 @@ public class AdminController {
     }
 
     @Operation(summary = "Update user data")
-    @Transactional
     @PostMapping("/update-user/{id}")
     public String updateUser(@PathVariable("id") Long id, @ModelAttribute UserCreateEditDto user, Model model){
         model.addAttribute("user",userService.findByUsername(user.getUsername()));

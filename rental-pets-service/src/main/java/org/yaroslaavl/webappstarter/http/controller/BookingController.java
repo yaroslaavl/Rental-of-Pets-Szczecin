@@ -33,10 +33,10 @@ import java.util.Locale;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
+@Slf4j
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/pet")
-@Slf4j
 @Tag(name = "Booking Controller")
 public class BookingController {
 

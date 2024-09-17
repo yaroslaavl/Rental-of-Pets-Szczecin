@@ -17,9 +17,8 @@ import org.yaroslaavl.webappstarter.service.PetService;
 import org.yaroslaavl.webappstarter.service.SpeciesService;
 
 @Controller
-@RequestMapping("/pets")
-@Transactional
 @RequiredArgsConstructor
+@RequestMapping("/pets")
 @Tag(name = "Pet Controller")
 public class PetController {
 

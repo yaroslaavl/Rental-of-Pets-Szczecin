@@ -26,9 +26,9 @@ import org.yaroslaavl.webappstarter.validation.ImageAction;
 
 import java.util.Optional;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
-@Slf4j
 @RequestMapping("/api/user")
 @Tag(name = "Settings Rest Controller")
 public class SettingsRestController {

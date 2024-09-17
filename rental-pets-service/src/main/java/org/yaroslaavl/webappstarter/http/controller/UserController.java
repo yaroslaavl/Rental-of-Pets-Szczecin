@@ -16,9 +16,9 @@ import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.service.UserService;
 import org.yaroslaavl.webappstarter.validation.CreateAction;
 
+@Slf4j
 @Controller
 @RequiredArgsConstructor
-@Slf4j
 @RequestMapping("/users")
 @Tag(name = "User Controller")
 public class UserController {

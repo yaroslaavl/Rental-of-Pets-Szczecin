@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="15.09 - fixed a bug" />
+    <list default="true" id="8b95ca3d-0a57-45b6-8574-e62df3838d7d" name="Changes" comment="17.09 - working" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,81 +69,81 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "JUnit.BookingRepositoryTest.findByStatus_WhenNonExistingStatus_ReturnEmptyList.executor": "Run",
-    "JUnit.BookingRepositoryTest.find_booking_by_user.executor": "Run",
-    "JUnit.BookingRepositoryTest.find_by_id.executor": "Run",
-    "JUnit.BookingRepositoryTest.find_by_status.executor": "Run",
-    "JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic.executor": "Run",
-    "JUnit.PetServiceTest.find_all_pets_using_filters.executor": "Run",
-    "JUnit.PetServiceTest.testFindAll.executor": "Run",
-    "JUnit.UserMapperTest.userMapperToDto.executor": "Run",
-    "JUnit.UserMapperTest.userMapperToEntity.executor": "Run",
-    "JUnit.UserRepositoryTest.executor": "Run",
-    "JUnit.UserRepositoryTest.findUserByUsername.executor": "Run",
-    "JUnit.UserRepositoryTest.find_by_email_verification_code.executor": "Run",
-    "JUnit.UserRepositoryTest.find_by_username.executor": "Run",
-    "JUnit.UserRepositoryTest.find_user_by_username.executor": "Run",
-    "JUnit.UserRepositoryTest.save.executor": "Run",
-    "JUnit.UserServiceTest.activation_user_account.executor": "Run",
-    "JUnit.UserServiceTest.create_user.executor": "Run",
-    "JUnit.UserServiceTest.delete_user.executor": "Run",
-    "JUnit.UserServiceTest.executor": "Run",
-    "JUnit.UserServiceTest.resend_activation_code.executor": "Run",
-    "JUnit.UserServiceTest.update_user_details.executor": "Run",
-    "Maven.admin-server-service [clean].executor": "Run",
-    "Maven.admin-server-service [install].executor": "Run",
-    "Maven.rental-of-pets [-pl,admin-server...].executor": "Run",
-    "Maven.rental-of-pets [-pl,admin...].executor": "Run",
-    "Maven.rental-of-pets [-pl,adminServer...].executor": "Run",
-    "Maven.rental-of-pets [admin,spring-boot:run].executor": "Run",
-    "Maven.rental-of-pets [adminServer...].executor": "Run",
-    "Maven.rental-of-pets [clean,install].executor": "Run",
-    "Maven.rental-of-pets [clean,package...].executor": "Run",
-    "Maven.rental-of-pets [clean].executor": "Run",
-    "Maven.rental-of-pets [dependency:tree].executor": "Run",
-    "Maven.rental-of-pets [install].executor": "Run",
-    "Maven.rental-of-pets [spring-boot:run].executor": "Run",
-    "Maven.rental-pets-service [clean].executor": "Run",
-    "Maven.rental-pets-service [install].executor": "Run",
-    "Maven.rental-pets-service [package].executor": "Run",
-    "Maven.rentalApp [clean].executor": "Run",
-    "Maven.rentalApp [install].executor": "Run",
-    "OpenAPI/Swagger Code Generator.app.json.yml.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AdminServerApplication.executor": "Run",
-    "Spring Boot.WebAppStarterApplication (1).executor": "Run",
-    "Spring Boot.WebAppStarterApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/all/Java all/projectMaven/web-app-starter/web-app-starter",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2632184",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookingRepositoryTest.findByStatus_WhenNonExistingStatus_ReturnEmptyList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookingRepositoryTest.find_booking_by_user.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookingRepositoryTest.find_by_id.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BookingRepositoryTest.find_by_status.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MedicalRecordRepositoryTest.find_by_id_with_pet_and_veterinarian_and_clinic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PetServiceTest.find_all_pets_using_filters.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PetServiceTest.testFindAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserMapperTest.userMapperToDto.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserMapperTest.userMapperToEntity.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepositoryTest.findUserByUsername.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepositoryTest.find_by_email_verification_code.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepositoryTest.find_by_username.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepositoryTest.find_user_by_username.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepositoryTest.save.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.activation_user_account.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.create_user.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.delete_user.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.resend_activation_code.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.update_user_details.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.admin-server-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.admin-server-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [-pl,admin-server...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [-pl,admin...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [-pl,adminServer...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [admin,spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [adminServer...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [clean,package...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [dependency:tree].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-of-pets [spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-pets-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-pets-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rental-pets-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rentalApp [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rentalApp [install].executor&quot;: &quot;Run&quot;,
+    &quot;OpenAPI/Swagger Code Generator.app.json.yml.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AdminServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WebAppStarterApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WebAppStarterApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/all/Java all/projectMaven/web-app-starter/web-app-starter&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2632184&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -409,22 +409,6 @@
       <workItem from="1726269805950" duration="416000" />
       <workItem from="1726308348038" duration="5748000" />
       <workItem from="1726393566079" duration="10289000" />
-    </task>
-    <task id="LOCAL-00007" summary="05.06 15:35 Frontend">
-      <option name="closed" value="true" />
-      <created>1717594548163</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1717594548163</updated>
-    </task>
-    <task id="LOCAL-00008" summary="06.06 Finished the frontend. Keep doing Internationalization">
-      <option name="closed" value="true" />
-      <created>1717630918052</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1717630918052</updated>
     </task>
     <task id="LOCAL-00009" summary="06.06 Finished the frontend. Keep doing Internationalization">
       <option name="closed" value="true" />
@@ -802,7 +786,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726407157643</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="17.09 - working">
+      <option name="closed" value="true" />
+      <created>1726610363677</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1726610363677</updated>
+    </task>
+    <task id="LOCAL-00057" summary="17.09 - working">
+      <option name="closed" value="true" />
+      <created>1726610440217</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1726610440217</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -832,7 +832,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixing the bags. Started writing tests for my web application" />
     <MESSAGE value="Writing Rest Controllers" />
     <MESSAGE value="made a method to save users who have made updates to their data" />
     <MESSAGE value="Made a method to save users who have made updates to their data. Also&#10;renamed modules and updated project structure" />
@@ -857,7 +856,8 @@
     <MESSAGE value="15.09 - wrote some tests" />
     <MESSAGE value="15.09 - working" />
     <MESSAGE value="15.09 - fixed a bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="15.09 - fixed a bug" />
+    <MESSAGE value="17.09 - working" />
+    <option name="LAST_COMMIT_MESSAGE" value="17.09 - working" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/web_app_starter$UserRepositoryTest.ic" NAME="UserRepositoryTest Coverage Results" MODIFIED="1720201128972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

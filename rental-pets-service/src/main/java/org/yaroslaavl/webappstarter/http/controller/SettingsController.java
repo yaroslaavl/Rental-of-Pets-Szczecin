@@ -28,9 +28,9 @@ import org.yaroslaavl.webappstarter.validation.ImageAction;
 
 import java.util.Optional;
 
+@Slf4j
 @Controller
 @RequiredArgsConstructor
-@Slf4j
 @RequestMapping("/user")
 @Tag(name = "Settings Controller")
 public class SettingsController {

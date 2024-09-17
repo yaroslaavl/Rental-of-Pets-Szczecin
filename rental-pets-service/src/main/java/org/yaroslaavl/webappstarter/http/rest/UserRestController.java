@@ -18,9 +18,9 @@ import org.yaroslaavl.webappstarter.validation.CreateAction;
 
 import java.util.Map;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
-@Slf4j
 @RequestMapping("/api/users")
 @Tag(name = "User Rest Controller")
 public class UserRestController {
