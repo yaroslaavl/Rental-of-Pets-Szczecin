@@ -3,6 +3,8 @@ package org.yaroslaavl.webappstarter.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -87,8 +89,8 @@ public class BookingService {
                 .orElseThrow(() -> new EntityNotFoundException("Booking not found with id: " + id));
     }
 
-
     @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @Cacheable(value = "bookings", unless = "#result == null")
     public List<BookingReadDto> findAllBookings(BookingStatus status) {
         long startTime = System.currentTimeMillis();
         List<Booking> bookings;
@@ -104,11 +106,12 @@ public class BookingService {
                 .collect(Collectors.toList());
     }
 
+    @Cacheable(value = "bookings", key = "#id")
     public Booking findBookingById(Long id){
         return bookingRepository.findById(id).orElse(null);
     }
 
-
+    @Cacheable(value = "bookings", key = "#user.id")
     public List<Booking> findBookingByUser(User user){
         return bookingRepository.findBookingByUser(user);
     }

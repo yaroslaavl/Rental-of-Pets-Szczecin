@@ -2,6 +2,9 @@ package org.yaroslaavl.webappstarter.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -13,7 +16,6 @@ import org.yaroslaavl.webappstarter.database.repository.PetRepository;
 import org.yaroslaavl.webappstarter.dto.PetCreateEditDto;
 import org.yaroslaavl.webappstarter.dto.PetFilter;
 import org.yaroslaavl.webappstarter.dto.PetReadDto;
-import org.yaroslaavl.webappstarter.mapper.PetCreateEditMapper;
 import org.yaroslaavl.webappstarter.mapper.mapStruct.PetMapper;
 
 import javax.persistence.EntityNotFoundException;
@@ -30,6 +32,7 @@ public class PetService {
     private final PetRepository petRepository;
     private final PetMapper petMapper;
 
+    @Cacheable(value = "pets", unless = "#result == null")
     public Page<PetReadDto> findAll(PetFilter petFilter, Pageable pageable){
         var predicate = QPredicate.builder()
                 .add(petFilter.species(),pet.species::eq)
@@ -42,6 +45,7 @@ public class PetService {
                 .map(petMapper::toDto);
     }
 
+    @Cacheable(value = "pets", key = "#petId")
     public Optional<Pet> findPetById(Long petId) {
         return petRepository.findById(petId);
     }

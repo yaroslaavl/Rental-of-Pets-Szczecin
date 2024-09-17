@@ -2,6 +2,7 @@ package org.yaroslaavl.webappstarter.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.yaroslaavl.webappstarter.database.entity.Notification;
@@ -18,6 +19,7 @@ public class NotificationService {
 
     private final NotificationRepository notificationRepository;
 
+    @Cacheable(value = "notification",  unless = "#result == null")
     public List<Notification> notificationsForUser(Optional<User> userOptional) {
         User user = userOptional.orElseThrow(() -> new RuntimeException("User not found"));
         return notificationRepository.findAllByUser(user);

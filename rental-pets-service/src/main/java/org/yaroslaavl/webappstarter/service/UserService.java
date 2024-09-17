@@ -3,6 +3,9 @@ package org.yaroslaavl.webappstarter.service;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -130,10 +133,12 @@ public class UserService implements UserDetailsService {
         }
     }
 
+    @Cacheable(value = "users", unless = "#result == null")
     public Optional<User> findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
+    @Cacheable(value = "users", unless = "#result == null")
     public User findUserById(Long id){
         Optional<User> optionalUser = userRepository.findById(id);
         return optionalUser.orElse(null);
@@ -192,6 +197,7 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("Failed to retrieve user:" + username));
     }
 
+    @Cacheable(value = "users", unless = "#result == null")
     public List<UserReadDto> findAll(){
         return userRepository.findAll().stream()
                 .map(userMapper::toDto)
