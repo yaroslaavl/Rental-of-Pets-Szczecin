@@ -33,4 +33,5 @@ build/
 .vscode/
 
 # Ignore workspace.xml file
-workspace.xml
+.idea/workspace.xml
+
