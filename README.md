@@ -10,7 +10,7 @@
 - User Notifications
 - User settings
 - Admin Panel for Managing Pets, Bookings, Users
-- Admin Server
+- Spring Boot Server
 - Google Map
 - Internationalization
 
