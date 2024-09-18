@@ -12,6 +12,7 @@
 - Admin Panel for Managing Pets, Bookings, Users
 - Admin Server
 - Google Map
+- Internationalization
 
 ## Technologies Used
 - Java
