@@ -20,6 +20,7 @@
 - Thymeleaf
 - Hibernate
 - PostgreSQL
+- MapStruct
 - Lombok
 - Maven
 - Docker
