@@ -16,7 +16,7 @@
 
 ## Technologies Used
 - Java
-- Spring
+- Spring(Core,Boot,Data,MVC,Security,Validation)
 - Thymeleaf
 - Hibernate
 - PostgreSQL
