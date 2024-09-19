@@ -10,15 +10,17 @@
 - User Notifications
 - User settings
 - Admin Panel for Managing Pets, Bookings, Users
-- Admin Server
+- Spring Boot Server
 - Google Map
+- Internationalization
 
 ## Technologies Used
 - Java
-- Spring
+- Spring(Core,Boot,Data,MVC,Security,Validation)
 - Thymeleaf
 - Hibernate
 - PostgreSQL
+- MapStruct
 - Lombok
 - Maven
 - Docker
