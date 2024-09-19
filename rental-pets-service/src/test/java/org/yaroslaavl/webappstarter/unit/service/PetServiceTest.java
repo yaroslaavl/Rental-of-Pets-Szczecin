@@ -1,8 +1,6 @@
 package org.yaroslaavl.webappstarter.unit.service;
 
-import com.querydsl.core.types.Predicate;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -19,14 +17,12 @@ import org.yaroslaavl.webappstarter.database.entity.Species;
 import org.yaroslaavl.webappstarter.database.repository.PetRepository;
 import org.yaroslaavl.webappstarter.dto.PetFilter;
 import org.yaroslaavl.webappstarter.dto.PetReadDto;
-import org.yaroslaavl.webappstarter.mapper.PetCreateEditMapper;
-import org.yaroslaavl.webappstarter.mapper.PetReadMapper;
+import org.yaroslaavl.webappstarter.mapper.mapStruct.PetMapper;
 import org.yaroslaavl.webappstarter.service.PetService;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import static org.mockito.Mockito.*;
-import static org.yaroslaavl.webappstarter.database.entity.QPet.pet;
 
 @ExtendWith(MockitoExtension.class)
 @Slf4j
@@ -36,10 +32,7 @@ public class PetServiceTest {
     private PetRepository petRepository;
 
     @Mock
-    private PetReadMapper petReadMapper;
-
-    @Mock
-    private PetCreateEditMapper petCreateEditMapper;
+    private PetMapper petMapper;
 
     @InjectMocks
     private PetService petService;
@@ -77,7 +70,7 @@ public class PetServiceTest {
 
         when(petRepository.findAll(any(com.querydsl.core.types.Predicate.class), eq(pageable))).thenReturn(petPage);
 
-        when(petReadMapper.map(pet1)).thenReturn(petReadDto1);
+        when(petMapper.toDto(pet1)).thenReturn(petReadDto1);
 
         Page<PetReadDto> resultPets = petService.findAll(petFilter, pageable);
 

@@ -10,12 +10,12 @@ import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.yaroslaavl.webappstarter.database.entity.Role;
 import org.yaroslaavl.webappstarter.database.entity.User;
 import org.yaroslaavl.webappstarter.database.repository.UserRepository;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.dto.UserReadDto;
-import org.yaroslaavl.webappstarter.mapper.UserCreateEditMapper;
 import org.yaroslaavl.webappstarter.mapper.mapStruct.UserMapper;
 import org.yaroslaavl.webappstarter.service.MailService;
 import org.yaroslaavl.webappstarter.service.UserService;
@@ -49,8 +49,8 @@ public class UserServiceTest {
 
     @Mock
     private UserMapper userMapper;
-    @Mock
-    private UserCreateEditMapper userCreateEditMapper;
+
+    private PasswordEncoder passwordEncoder;
 
     @InjectMocks
     private UserService userService;
@@ -115,7 +115,7 @@ public class UserServiceTest {
                 activationToken
         );
 
-        when(userCreateEditMapper.map(any(UserCreateEditDto.class))).thenReturn(user);
+        when(userMapper.toEntity(any(UserCreateEditDto.class),passwordEncoder)).thenReturn(user);
         when(userRepository.saveAndFlush(any(User.class))).thenReturn(user);
         when(userMapper.toDto(any(User.class))).thenReturn(userReadDto);
 
@@ -218,14 +218,14 @@ public class UserServiceTest {
         );
 
         when(userRepository.findById(user.getId())).thenReturn(Optional.of(user));
-        when(userCreateEditMapper.map(eq(userCreateEditDto), any(User.class))).thenReturn(updatedUser);
+        when(userMapper.toEntity(eq(userCreateEditDto), (PasswordEncoder) any(User.class))).thenReturn(updatedUser);
         when(userRepository.saveAndFlush(any(User.class))).thenReturn(updatedUser);
         when(userMapper.toDto(any(User.class))).thenReturn(userReadDto);
 
-        Optional<UserReadDto> update = userService.update(user.getId(), userCreateEditDto);
+        Optional<User> update = userService.update(user.getId(), userCreateEditDto);
 
         verify(userRepository).findById(user.getId());
-        verify(userCreateEditMapper).map(eq(userCreateEditDto), any(User.class));
+        verify(userMapper).updateEntityFromDto(eq(userCreateEditDto), any(User.class));
         verify(userRepository).saveAndFlush(updatedUser);
         verify(userMapper.toDto(updatedUser));
 

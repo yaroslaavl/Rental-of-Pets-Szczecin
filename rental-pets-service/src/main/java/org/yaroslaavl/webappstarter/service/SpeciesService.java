@@ -16,7 +16,6 @@ public class SpeciesService {
     private final SpeciesRepository speciesRepository;
     private final SpeciesReadMapper speciesReadMapper;
 
-    @Cacheable(value = "species", unless = "#result == null")
     public List<SpeciesReadDto> findAll() {
         return speciesRepository.findAll().stream()
                 .map(speciesReadMapper::map)

@@ -44,7 +44,7 @@ public class BookingService {
     }
 
     @Transactional
-    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void updateStatus(Long id, BookingCreateEditDto bookingCreateEditDto) {
         bookingRepository.findById(id)
                 .map(booking -> {
@@ -89,8 +89,7 @@ public class BookingService {
                 .orElseThrow(() -> new EntityNotFoundException("Booking not found with id: " + id));
     }
 
-    @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @Cacheable(value = "bookings", unless = "#result == null")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<BookingReadDto> findAllBookings(BookingStatus status) {
         long startTime = System.currentTimeMillis();
         List<Booking> bookings;
@@ -106,12 +105,10 @@ public class BookingService {
                 .collect(Collectors.toList());
     }
 
-    @Cacheable(value = "bookings", key = "#id")
     public Booking findBookingById(Long id){
         return bookingRepository.findById(id).orElse(null);
     }
 
-    @Cacheable(value = "bookings", key = "#user.id")
     public List<Booking> findBookingByUser(User user){
         return bookingRepository.findBookingByUser(user);
     }

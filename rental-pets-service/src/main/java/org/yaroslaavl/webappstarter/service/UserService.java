@@ -21,7 +21,6 @@ import org.yaroslaavl.webappstarter.database.entity.User;
 import org.yaroslaavl.webappstarter.database.repository.UserRepository;
 import org.yaroslaavl.webappstarter.dto.UserCreateEditDto;
 import org.yaroslaavl.webappstarter.dto.UserReadDto;
-import org.yaroslaavl.webappstarter.mapper.UserCreateEditMapper;
 import org.yaroslaavl.webappstarter.mapper.mapStruct.UserMapper;
 
 import java.io.*;
@@ -39,7 +38,6 @@ import java.util.*;
 public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
-    private final UserCreateEditMapper userCreateEditMapper;
     private final ImageService imageService;
     private final MailService mailService;
     private final UserMapper userMapper;
@@ -76,6 +74,7 @@ public class UserService implements UserDetailsService {
         }
         return userReadDto;
     }
+
     @SneakyThrows
     public void usersOfApp(UserCreateEditDto userCreateEditDto) {
         ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("Europe/Warsaw"));
@@ -91,6 +90,7 @@ public class UserService implements UserDetailsService {
             log.error("Exception: " + e);
         }
     }
+
     @SneakyThrows
     @Transactional
     public boolean resendActivationCode(String username){
@@ -133,12 +133,10 @@ public class UserService implements UserDetailsService {
         }
     }
 
-    @Cacheable(value = "users", unless = "#result == null")
     public Optional<User> findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
-    @Cacheable(value = "users", unless = "#result == null")
     public User findUserById(Long id){
         Optional<User> optionalUser = userRepository.findById(id);
         return optionalUser.orElse(null);
@@ -159,15 +157,15 @@ public class UserService implements UserDetailsService {
     }
 
     @Transactional
-    public Optional<UserReadDto> update(Long id,UserCreateEditDto userCreateEditDto){
+    public Optional<User> update(Long id, UserCreateEditDto userCreateEditDto) {
         return userRepository.findById(id)
                 .map(user -> {
                     uploadImage(userCreateEditDto.getProfilePicture());
-                    return userCreateEditMapper.map(userCreateEditDto,user);
-                })
-                .map(userRepository::saveAndFlush)
-                .map(userMapper::toDto);
+                    userMapper.updateEntityFromDto(userCreateEditDto, user);
+                    return userRepository.saveAndFlush(user);
+                });
     }
+
     @Transactional
     public boolean delete(Long id){
         return userRepository.findById(id)
@@ -197,7 +195,6 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("Failed to retrieve user:" + username));
     }
 
-    @Cacheable(value = "users", unless = "#result == null")
     public List<UserReadDto> findAll(){
         return userRepository.findAll().stream()
                 .map(userMapper::toDto)
@@ -205,7 +202,7 @@ public class UserService implements UserDetailsService {
     }
 
     //TODO: method not finished
-    /*@Transactional
+    @Transactional
     public boolean resetPassword(String username,String password){
         Optional<User> userOptional = userRepository.findByUsername(username);
 
@@ -225,5 +222,5 @@ public class UserService implements UserDetailsService {
             }
         }
         return false;
-    }*/
+    }
 }

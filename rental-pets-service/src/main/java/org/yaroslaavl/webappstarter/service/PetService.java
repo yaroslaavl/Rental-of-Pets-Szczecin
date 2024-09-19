@@ -32,7 +32,6 @@ public class PetService {
     private final PetRepository petRepository;
     private final PetMapper petMapper;
 
-    @Cacheable(value = "pets", unless = "#result == null")
     public Page<PetReadDto> findAll(PetFilter petFilter, Pageable pageable){
         var predicate = QPredicate.builder()
                 .add(petFilter.species(),pet.species::eq)
@@ -45,17 +44,16 @@ public class PetService {
                 .map(petMapper::toDto);
     }
 
-    @Cacheable(value = "pets", key = "#petId")
     public Optional<Pet> findPetById(Long petId) {
         return petRepository.findById(petId);
     }
 
     @Transactional
-    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void updatePet(Long id, PetCreateEditDto petCreateEditDto) {
         Pet petToUpdate = petRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Pet not found with id: " + id));
-        petMapper.toEntity(petCreateEditDto);
+        petMapper.updateEntityFromDto(petCreateEditDto,petToUpdate);
 
         petRepository.saveAndFlush(petToUpdate);
     }

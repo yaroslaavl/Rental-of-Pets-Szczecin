@@ -85,7 +85,7 @@ public class BookingController {
             return "pet/booking";
         }
 
-        User optionalUser = userService.findUserById(userBooking.getId());
+        var optionalUser = userService.findUserById(userBooking.getId());
 
         Optional<Pet> optionalPet = petService.findPetById(petId);
         Pet petEntity = optionalPet.orElseThrow(() -> new NoSuchElementException("Pet not found"));

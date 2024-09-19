@@ -19,7 +19,6 @@ public class NotificationService {
 
     private final NotificationRepository notificationRepository;
 
-    @Cacheable(value = "notification",  unless = "#result == null")
     public List<Notification> notificationsForUser(Optional<User> userOptional) {
         User user = userOptional.orElseThrow(() -> new RuntimeException("User not found"));
         return notificationRepository.findAllByUser(user);
