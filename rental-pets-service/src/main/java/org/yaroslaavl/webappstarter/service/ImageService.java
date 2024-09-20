@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class ImageService {
 
-    @Value("${app.image.bucket:C:\\all\\Java all\\projectMaven\\web-app-starter\\rentalApp\\images}")
+    @Value("${app.image.bucket:rental-pets-service/images}")
     private String bucket;
 
     @SneakyThrows
