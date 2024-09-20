@@ -4,17 +4,12 @@ server:
 spring:
   application:
     name: SpringAdmin
+  security:
+    user:
+      name: admin
+      password: javaguru
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-  metrics:
-    enabled: true
-    endpoint:
-      metrics:
-        enabled: true
+logging:
+  level:
+    org.springframework.security: DEBUG
+

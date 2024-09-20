@@ -1,9 +1,10 @@
 db:
-  username: ${DB_USERNAME}
-  password: ${DB_PASSWORD}
+  username: ${DB_USERNAME:postgres}
+  password: ${DB_PASSWORD:PROPER4321Qw}
   driver: org.postgresql.Driver
-  url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
-  hosts: ${DB_HOST},127.0.0.1
+  url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/company_repository
+  hosts: my-db,127.0.0.1
+
 logging:
   file:
     name: spring.log
@@ -12,63 +13,66 @@ logging:
     root: INFO
     org.springframework: INFO
     liquibase: DEBUG
+
 spring:
-  boot:
-    admin:
-      client:
-        url: http://${ADMIN_SERVER_HOST}:${ADMIN_SERVER_PORT}
-        instance:
-          name: Rental of pets
-          management-url: http://${ADMIN_SERVER_HOST}:${ADMIN_SERVER_PORT}/actuator
   datasource:
-    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/company_repository
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:PROPER4321Qw}
   liquibase:
     change-log: db.changelog/db.changelog-master.yaml
-    default-schema: ${LIQUIBASE_DEFAULT_SCHEMA}
+    default-schema: webapp
   mail:
-    host: ${MAIL_HOST}
-    port: ${MAIL_PORT}
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    host: ${MAIL_HOST:smtp.mail.ru}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME:ylopatkin270380@mail.ru}
+    password: ${MAIL_PASSWORD:K7jXuS5bEn0dPWncUAHf}
     properties:
       mail:
         smtp:
           auth: true
-          timeout: ${MAIL_TIMEOUT}
-          writetimeout: ${MAIL_WRITETIMEOUT}
-          connectiontimeout: ${MAIL_CONNECTIONTIMEOUT}
+          timeout: 3000
+          writetimeout: 3000
+          connectiontimeout: 3000
           socketFactory:
-            port: ${MAIL_PORT}
+            port: 465
           socketFactory.class: javax.net.ssl.SSLSocketFactory
           starttls:
             enable: true
   jpa:
     properties.hibernate:
-      batch_size: ${HIBERNATE_BATCH_SIZE}
-      fetch_size: ${HIBERNATE_FETCH_SIZE}
-      show_sql: ${HIBERNATE_SHOW_SQL}
-      format_sql: ${HIBERNATE_FORMAT_SQL}
-      hbm2ddl.auto: ${HIBERNATE_HBM2DDL_AUTO}
-      default_schema: ${HIBERNATE_DEFAULT_SCHEMA}
+      batch_size: 50
+      fetch_size: 50
+      show_sql: true
+      format_sql: true
+      hbm2ddl.auto: validate
+      default_schema: webapp
     open-in-view: false
   security:
     oauth2:
       client:
         registration:
           google:
-            client-id: ${GOOGLE_CLIENT_ID}
-            client-secret: ${GOOGLE_CLIENT_SECRET}
-            redirect-uri: ${GOOGLE_REDIRECT_URI}
-            scope: ${GOOGLE_SCOPE}
+            client-id: ${GOOGLE_CLIENT_ID:351015715121-8bff5immb5iroubfbigie9sd8u8rfoj7.apps.googleusercontent.com}
+            client-secret: ${GOOGLE_CLIENT_SECRET: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}
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            scope: openid,email,profile
   servlet:
     multipart:
-      max-file-size: ${MULTIPART_MAX_FILE_SIZE}
-      max-request-size: ${MULTIPART_MAX_REQUEST_SIZE}
+      max-file-size: 2MB
+      max-request-size: 8MB
   messages:
-    basename: ${MESSAGES_BASENAME}
-    encoding: ${MESSAGES_ENCODING}
+    basename: messages
+    encoding: UTF-8
+  boot:
+    admin:
+      client:
+        url: http://localhost:8085
+        instance:
+          name: Rental of pets
+          management-url: http://localhost:8080/actuator
+        username: admin
+        password: javaguru
 
 springdoc:
   swagger-ui:
