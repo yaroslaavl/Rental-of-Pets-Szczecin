@@ -23,8 +23,8 @@ import java.util.Set;
 
 import static org.yaroslaavl.webappstarter.database.entity.Role.ADMIN;
 
-@EnableWebSecurity
 @Configuration
+@EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
